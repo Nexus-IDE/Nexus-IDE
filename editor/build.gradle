@@ -1,0 +1,39 @@
+plugins {
+    id 'com.android.library'
+}
+
+android {
+    namespace 'com.silva.editor'
+    compileSdk 34
+    
+    defaultConfig {
+        minSdk 21
+        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+    
+}
+
+dependencies {
+    api fileTree(dir: 'libs', include: ['*.jar']);
+    //implementation platform("io.github.Rosemoe.sora-editor:bom:0.23.4")
+    implementation "io.github.Rosemoe.sora-editor:editor:0.23.4"
+    implementation "io.github.Rosemoe.sora-editor:language-textmate:0.23.4"
+    implementation("androidx.constraintlayout:constraintlayout:2.1.4")
+    implementation("androidx.appcompat:appcompat:1.6.1")
+    implementation("com.google.android.material:material:1.9.0")
+    implementation 'com.google.code.gson:gson:2.10.1'
+    implementation 'com.google.guava:guava:32.0.1-android'
+    implementation project(":util")
+}

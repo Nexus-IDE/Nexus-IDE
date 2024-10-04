@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/undo"
+        android:title="@string/undo"
+        android:icon="@drawable/ic_undo"
+        app:showAsAction="always"/>
+    
+    <item
+        android:id="@+id/redo"
+        android:title="@string/redo"
+        android:icon="@drawable/ic_redo"
+        android:visible="false"
+        app:showAsAction="always"/>
+    
+    <item
+        android:id="@+id/execute"
+        android:title="@string/execute"
+        android:icon="@drawable/ic_play_arrow"
+        app:showAsAction="always"/>
+    
+    <item
+        android:id="@+id/save"
+        android:title="@string/save"
+        android:icon="@drawable/ic_save"
+        app:showAsAction="always"/>
+    
+    <item
+        android:id="@+id/more"
+        android:title="@string/more_options">
+        
+        <!-- <menu> -->
+            <item
+                android:id="@+id/search"
+                android:name="@string/search"
+                android:title="@string/search"
+                android:icon="@drawable/ic_search"/>
+            <item
+                android:id="@+id/reload_color_scheme"
+                android:name="@string/reload_color_scheme"
+                android:title="@string/reload_color_scheme"
+                android:icon="@drawable/ic_replay"/>
+        <!-- </menu> -->
+        
+    </item>
+
+</menu>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Nexus IDE</string>
+    
+    <!-- Permissions Denied -->
+    <string name="permission">Permissão</string>
+    <string name="permission_warning">Para continuar, é necessário algumas permissões.</string>
+    
+    <!-- common -->
+    <string name="create">Criar</string>
+    <string name="exit">Sair</string>
+    
+    <!-- home -->
+    <string name="create_project">Criar projeto</string>
+    <string name="open_project">Abrir projeto</string>
+    <string name="git_clone">Clonar repositório git</string>
+    <string name="terminal">Terminal</string>
+    <string name="settings">Configurações</string>
+    
+    <!-- wizard template -->
+    <string name="wizard_templates_title">Exemplos</string>
+    <string name="wizard_templates_androidx">AndroidX Project</string>
+    <string name="wizard_templates_empty">Empty Project</string>
+    <string name="wizard_templates_game">LibGDX Project</string>
+    
+    <!-- wizard details -->
+    <string name="wizard_application_name">Nome do aplicativo</string>
+    <string name="wizard_package_name">Nome do pacote</string>
+    <string name="wizard_save_location">Local de salvamento</string>
+    <string name="wizard_default_language">Linguagem Padrão</string>
+    <string name="wizard_min_sdk">SDK Mínimo</string>
+    
+    <!-- wizard details errors -->
+    
+    <string name="wizard_app_name_is_null">O nome do aplicativo não pode estar vazio.</string>
+    <string name="wizard_app_name_exists">O nome do aplicativo já existe.</string>
+    
+    <string name="wizard_pkg_name_is_null">O nome do pacote não pode estar vazio.</string>
+    <string name="wizard_pkg_name_incorrect_characters">O nome do pacote contém carácteres incorretos.</string>
+    <string name="wizard_pkg_name_is_very_short">O nome do pacote é muito curto.</string>
+    
+    <string name="wizard_save_directory_not_exists">O Diretório não existe</string>
+    <string name="wizard_save_is_a_file">Deve ser um Diretório</string>
+    
+    <!-- about -->
+    <string name="app_slogan">Imagine, Crie, Compartilhe</string>
+    
+    <!-- code editor menu -->
+    
+    <string name="undo">Desfazer</string>
+    <string name="redo">Refazer</string>
+    <string name="execute">Executar</string>
+    <string name="save">Salvar</string>
+    <string name="more_options">Mais opções</string>
+    <string name="search">Procurar</string>
+    <string name="reload_color_scheme">Recarregar esquema de cores</string>
+    
+    <!-- fileManager -->
+    
+    <string name="fileManager">Explorador de arquivos</string>
+    
+    <!-- editor -->
+    
+    <string name="no_files_opened">Nenhum arquivo aberto</string>
+    
+</resources>

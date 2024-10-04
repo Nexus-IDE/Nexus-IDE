@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+     xmlns:android="http://schemas.android.com/apk/res/android"
+     xmlns:app="http://schemas.android.com/apk/res-auto"
+     android:layout_height="match_parent"
+     android:layout_width="match_parent"
+     android:fitsSystemWindows="true">
+
+    <com.google.android.material.appbar.AppBarLayout
+         android:layout_height="wrap_content"
+         android:layout_width="match_parent"
+         app:layout_behavior="com.google.android.material.appbar.AppBarLayout$Behavior"
+         android:hapticFeedbackEnabled="true"
+         app:layout_scrollFlags="scroll|enterAlways"
+         android:fitsSystemWindows="true"
+         android:id="@+id/appbar"
+         android:layout_gravity="top">
+
+        <com.google.android.material.appbar.MaterialToolbar
+             android:layout_height="wrap_content"
+             android:layout_width="match_parent"
+             android:hapticFeedbackEnabled="true"
+             app:title="@string/wizard_templates_empty"
+             app:layout_collapseMode="pin"
+             app:titleCentered="true"
+             android:id="@+id/toolbar" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+         android:layout_height="match_parent"
+         android:layout_width="match_parent"
+         app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+             android:layout_height="match_parent"
+             android:layout_width="match_parent"
+             android:orientation="vertical"
+             android:paddingHorizontal="10dp"
+             android:paddingTop="20dp">
+
+            <LinearLayout
+                 android:layout_height="match_parent"
+                 android:layout_width="match_parent"
+                 android:orientation="vertical"
+                 android:clipChildren="false"
+                 android:clipToPadding="false"
+                 android:layout_weight="1">
+
+                <com.google.android.material.textfield.TextInputLayout
+                     android:layout_height="wrap_content"
+                     android:layout_width="match_parent"
+                     android:padding="10dp"
+                     android:layout_margin="4dp"
+                     style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                     app:hintAnimationEnabled="true"
+                     android:id="@+id/til_application_name">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                         android:layout_height="match_parent"
+                         android:layout_width="match_parent"
+                         android:imeOptions="actionNext"
+                         android:hint="@string/wizard_application_name"
+                         android:singleLine="true"
+                         android:id="@+id/et_application_name" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                     android:layout_height="wrap_content"
+                     android:layout_width="match_parent"
+                     android:hint="@string/wizard_package_name"
+                     android:padding="10dp"
+                     android:layout_margin="4dp"
+                     style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                     app:hintAnimationEnabled="true"
+                     android:id="@+id/til_package_name">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                         android:layout_height="match_parent"
+                         android:layout_width="match_parent"
+                         android:imeOptions="actionNext"
+                         android:singleLine="true"
+                         android:id="@+id/et_package_name" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                     android:layout_height="wrap_content"
+                     android:layout_width="match_parent"
+                     android:hint="@string/wizard_save_location"
+                     android:padding="10dp"
+                     android:layout_margin="4dp"
+                     app:endIconMode="custom"
+                     app:endIconDrawable="@drawable/ic_folder_open"
+                     style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                     app:hintAnimationEnabled="true"
+                     android:id="@+id/til_save_location_name">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                         android:layout_height="match_parent"
+                         android:layout_width="match_parent"
+                         android:enabled="false"
+                         android:singleLine="true"
+                         android:id="@+id/et_save_location_name" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                     android:layout_height="wrap_content"
+                     android:layout_width="match_parent"
+                     android:hint="@string/wizard_default_language"
+                     android:padding="10dp"
+                     android:layout_margin="4dp"
+                     style="@style/Widget.Material3.TextInputLayout.FilledBox.ExposedDropdownMenu"
+                     app:hintAnimationEnabled="true"
+                     android:id="@+id/til_language">
+
+                    <AutoCompleteTextView
+                         android:layout_height="match_parent"
+                         android:layout_width="match_parent"
+                         android:editable="false"
+                         android:focusable="true"
+                         android:id="@+id/et_language" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                     android:layout_height="wrap_content"
+                     android:layout_width="match_parent"
+                     android:hint="@string/wizard_min_sdk"
+                     android:padding="10dp"
+                     android:layout_margin="4dp"
+                     style="@style/Widget.Material3.TextInputLayout.FilledBox.ExposedDropdownMenu"
+                     app:hintAnimationEnabled="true"
+                     android:id="@+id/til_min_sdk">
+
+                    <AutoCompleteTextView
+                         android:layout_height="match_parent"
+                         android:layout_width="match_parent"
+                         android:editable="false"
+                         android:focusable="true"
+                         android:id="@+id/et_min_sdk" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+            <FrameLayout
+                 android:layout_height="wrap_content"
+                 android:layout_width="match_parent">
+
+                <Button
+                     android:layout_height="wrap_content"
+                     android:layout_width="wrap_content"
+                     android:layout_margin="8dp"
+                     style="@style/Widget.Material3.Button.TextButton"
+                     android:layout_gravity="left|center_vertical"
+                     android:text="@string/exit"
+                     android:id="@+id/exit" />
+
+                <Button
+                     android:layout_height="wrap_content"
+                     android:layout_width="wrap_content"
+                     android:layout_margin="8dp"
+                     android:layout_gravity="right|center_vertical"
+                     android:text="@string/create"
+                     android:id="@+id/create" />
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

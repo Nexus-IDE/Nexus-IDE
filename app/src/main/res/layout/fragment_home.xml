@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+     xmlns:android="http://schemas.android.com/apk/res/android"
+     xmlns:app="http://schemas.android.com/apk/res-auto"
+     android:layout_height="match_parent"
+     android:layout_width="match_parent"
+     android:id="@+id/coordinator"
+     android:fitsSystemWindows="true">
+
+    <com.google.android.material.appbar.AppBarLayout
+         android:layout_height="wrap_content"
+         android:layout_width="match_parent"
+         android:hapticFeedbackEnabled="true"
+         app:layout_scrollFlags="scroll|enterAlways"
+         android:fitsSystemWindows="true"
+         android:id="@+id/appbar"
+         android:layout_gravity="top">
+
+        <com.google.android.material.appbar.MaterialToolbar
+             android:layout_height="wrap_content"
+             android:layout_width="match_parent"
+             android:hapticFeedbackEnabled="true"
+             app:title="@string/app_name"
+             app:layout_collapseMode="pin"
+             app:titleCentered="true"
+             android:id="@+id/toolbar" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+         android:layout_height="match_parent"
+         android:layout_width="match_parent"
+         app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+             android:layout_height="match_parent"
+             android:layout_width="match_parent"
+             android:gravity="center_horizontal"
+             android:orientation="vertical">
+
+            <View
+                 android:layout_height="100dp"
+                 android:layout_width="10dp" />
+
+            <ImageView
+                 android:layout_height="100dp"
+                 android:layout_width="100dp"
+                 android:src="@drawable/androide"
+                 android:scaleType="centerCrop"
+                 android:tint="?colorOnSurface" />
+
+            <TextView
+                 android:layout_height="wrap_content"
+                 android:layout_width="wrap_content"
+                 android:text="@string/app_slogan" />
+
+            <View
+                 android:layout_height="50dp"
+                 android:layout_width="10dp" />
+
+            <Button
+                 android:layout_height="50dp"
+                 android:layout_width="206dp"
+                 app:icon="@drawable/ic_add"
+                 android:layout_margin="4dp"
+                 app:iconTint="?colorOnSurface"
+                 android:textColor="?colorOnSurface"
+                 style="@style/Widget.Material3.Button.TextButton.Icon"
+                 android:text="@string/create_project"
+                 android:id="@+id/create_project" />
+
+            <Button
+                 android:layout_height="50dp"
+                 android:layout_width="206dp"
+                 app:icon="@drawable/ic_folder_open"
+                 android:layout_margin="4dp"
+                 app:iconTint="?colorOnSurface"
+                 android:textColor="?colorOnSurface"
+                 style="@style/Widget.Material3.Button.TextButton.Icon"
+                 android:text="@string/open_project"
+                 android:id="@+id/open_project" />
+
+            <Button
+                 android:layout_height="50dp"
+                 android:layout_width="206dp"
+                 app:icon="@drawable/ic_github"
+                 android:layout_margin="4dp"
+                 app:iconTint="?colorOnSurface"
+                 android:textColor="?colorOnSurface"
+                 style="@style/Widget.Material3.Button.TextButton.Icon"
+                 android:text="@string/git_clone"
+                 android:id="@+id/git_clone" />
+
+            <Button
+                 android:layout_height="50dp"
+                 android:layout_width="206dp"
+                 app:icon="@drawable/ic_terminal"
+                 android:layout_margin="4dp"
+                 app:iconTint="?colorOnSurface"
+                 android:textColor="?colorOnSurface"
+                 style="@style/Widget.Material3.Button.TextButton.Icon"
+                 android:text="@string/terminal"
+                 android:id="@+id/terminal" />
+
+            <Button
+                 android:layout_height="50dp"
+                 android:layout_width="206dp"
+                 app:icon="@drawable/ic_settings"
+                 android:layout_margin="4dp"
+                 app:iconTint="?colorOnSurface"
+                 android:textColor="?colorOnSurface"
+                 style="@style/Widget.Material3.Button.TextButton.Icon"
+                 android:text="@string/settings"
+                 android:id="@+id/settings" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

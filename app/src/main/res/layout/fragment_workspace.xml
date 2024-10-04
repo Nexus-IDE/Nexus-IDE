@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/coordinator"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.navigationrail.NavigationRailView
+        android:layout_height="match_parent"
+        android:layout_width="60dp"
+        android:background="@android:color/transparent"
+        app:labelVisibilityMode="unlabeled"
+        app:menu="@menu/menu_nav_workspace"
+        android:id="@+id/nav_rail" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
