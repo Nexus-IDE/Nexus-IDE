@@ -1,6 +1,6 @@
 package com.silva.nexuside.project;
 
-import com.silva.nexuside.ui.wizard.enums.WizardTemplates;
+import com.silva.nexuside.enums.WizardTemplates;
 import java.io.File;
 
 public class Project {
