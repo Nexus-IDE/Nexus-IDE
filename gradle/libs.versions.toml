@@ -12,6 +12,7 @@ androidx-desugar = { module = "com.android.tools:desugar_jdk_libs", version = "2
 # Common
 common-editor = { module = "io.github.Rosemoe.sora-editor:editor", version.ref = "editor" }
 common-editor-textmate = { module = "io.github.Rosemoe.sora-editor:language-textmate", version.ref = "editor" }
+common-prdownloader = { module = "com.github.amitshekhariitbhu:PRDownloader", version = "1.0.1" }
 
 # Google
 google-guava = { module = "com.google.guava:guava", version = "33.0.0-jre" }
