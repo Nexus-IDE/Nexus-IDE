@@ -4,9 +4,14 @@ plugins {
 
 android {
   namespace = "com.silva.nexuside"
+  compileSdk = 34
 
   defaultConfig {
     applicationId = "com.silva.nexuside"
+    minSdk = 26
+    targetSdk = 34
+    versionCode = 1
+    versionName = "1.0"
 
     vectorDrawables.useSupportLibrary = true
 
