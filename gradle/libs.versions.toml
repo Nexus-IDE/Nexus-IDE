@@ -1,7 +1,26 @@
 [versions]
-editor = "0.23.4"
+editor = "0.23.4-96c0abc-SNAPSHOT"
+glide = "4.12.0"
 
 [libraries]
 
+# AndroidX
+androidx-annotation = { module = "androidx.annotation:annotation", version = "1.8.2" }
+androidx-appcompat = { module = "androidx.appcompat:appcompat", version = "1.7.0" }
+
 # Common
 common-editor = { module = "io.github.Rosemoe.sora-editor:editor", version.ref = "editor" }
+common-editor-textmate = { module = "io.github.Rosemoe.sora-editor:language-textmate", version.ref = "editor" }
+
+# Google
+google-guava = { module = "com.google.guava:guava", version = "33.0.0-jre" }
+google-gson = { module = "com.google.code.gson:gson", version = "2.11.0" }
+google-material = { module = "com.google.android.material:material", version = "1.12.0" }
+
+# Glide
+glide-glide = { module = "com.github.bumptech.glide:glide", version.ref = "glide" }
+glide-compiler = { module = "com.github.bumptech.glide:compiler", version.ref = "glide" }
+
+[plugins]
+android-application = { id = "com.android.application", version = "8.6.0" }
+android-library = { id = "com.android.library", version = "8.6.0" }

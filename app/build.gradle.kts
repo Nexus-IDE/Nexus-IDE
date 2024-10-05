@@ -1,0 +1,62 @@
+plugins {
+  id 'com.android.application'
+}
+
+android {
+  namespace = "com.silva.nexuside"
+
+  defaultConfig {
+    applicationId = "com.silva.nexuside"
+
+    vectorDrawables.useSupportLibrary = true
+
+    ndk {
+      abiFilters += listOf("arm64-v8a", "x86_64", "armeabi-v7a")
+    }
+  }
+
+  buildTypes {
+    release {
+      isMinifyEnabled = false
+      proguardFiles("proguard-rules.pro")
+    }
+    debug {
+      isMinifyEnabled = false
+      proguardFiles("proguard-rules.pro")
+    }
+  }
+
+  compileOptions { isCoreLibraryDesugaringEnabled = true }
+
+  packaging {
+    resources.excludes.addAll(
+      arrayOf("META-INF/README.md", "META-INF/CHANGES", "bundle.properties", "plugin.properties")
+    )
+
+    jniLibs { useLegacyPackaging = true }
+  }
+
+  lint { abortOnError = false }
+
+  buildFeatures {
+    viewBinding = true
+    buildConfig = true
+  }
+}
+
+dependencies {
+  implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
+  
+  implementation(libs.androidx.annotation)
+  implementation(libs.androidx.appcompat)
+
+  implementation(libs.google.material)
+  implementation(libs.google.guava)
+  implementation(libs.google.gson)
+  
+  implementation(libs.common.editor)
+  implementation(libs.common.editor.textmate)
+  
+  implementation(project(":editor"))
+  implementation(project(":util"))
+}
