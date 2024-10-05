@@ -67,6 +67,9 @@ dependencies {
   implementation(libs.common.editor)
   implementation(libs.common.editor.textmate)
   
+  implementation(libs.glide.glide)
+  implementation(libs.glide.compiler)
+  
   implementation(project(":editor"))
   implementation(project(":util"))
 }
