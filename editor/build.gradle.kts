@@ -4,6 +4,11 @@ plugins {
 
 android {
   namespace = "com.silva.editor"
+  compileSdk = 34
+  
+  defaultConfig {
+     minSdk = 26
+  }
 
   buildTypes {
     release {
