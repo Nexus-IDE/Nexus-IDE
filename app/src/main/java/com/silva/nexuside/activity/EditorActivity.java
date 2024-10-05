@@ -36,7 +36,7 @@ public class EditorActivity extends AppCompatActivity {
                 public void onDrawerSlide(View v, float slideOffset) {
                     super.onDrawerSlide(v, slideOffset);
                 float sliderX = v.getWidth() * slideOffset;
-                binding.contraint.setTranslationX(sliderX);
+                binding.coordinator.setTranslationX(sliderX);
                 }
                 
             };
