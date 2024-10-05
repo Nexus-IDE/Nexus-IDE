@@ -47,25 +47,29 @@
             app:layout_constraintBottom_toTopOf="@+id/bottomSheetView"
             app:layout_constraintTop_toBottomOf="@+id/appbar"
             android:id="@+id/container" />
-        
-        <LinearLayout
-            android:layout_height="wrap_content"
-            android:layout_width="match_parent"
-            android:orientation="vertical"
-            app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
-            app:behavior_peekHeight="45dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/container"
-            android:id="@+id/bottomSheetView">
             
-            <com.silva.nexuside.ui.SymbolInputView
-                android:layout_height="45dp"
-                android:layout_width="match_parent"
-                android:id="@+id/symbol_input" />
+         
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+              android:layout_height="match_parent"
+              android:layout_width="match_parent">
+              
+              <LinearLayout
+                  android:layout_height="wrap_content"
+                  android:layout_width="match_parent"
+                  android:orientation="vertical"
+                  app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+                  app:behavior_peekHeight="45dp"
+                  android:layout_gravity="bottom"
+                  android:id="@+id/bottomSheetView">
             
-        </LinearLayout>
+                   <com.silva.nexuside.ui.SymbolInputView
+                        android:layout_height="45dp"
+                        android:layout_width="match_parent"
+                        android:id="@+id/symbol_input" />
+            
+             </LinearLayout>
+              
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
         
         <View
             android:layout_height="0.5dp"
