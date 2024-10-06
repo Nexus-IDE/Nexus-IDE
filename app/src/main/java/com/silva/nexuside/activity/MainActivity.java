@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity{
     
     private int downloadID;
     
-    private TAG = "Downloader";
+    private String TAG = "Downloader";
     
     @Override
     protected void onCreate(Bundle savedInstanceState) {
