@@ -10,7 +10,6 @@
          android:id="@+id/install_progress_text"
          android:layout_width="wrap_content"
          android:layout_height="wrap_content"
-         android:layout_gravity="right"
          android:layout_marginBottom="4dp"
          android:visibility="gone" />
               

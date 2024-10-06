@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity{
     	super.onCreate(savedInstanceState);
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-        checkPerms(Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.WRITE_EXTERNAL_STORAGE);
+        if(checkPerms(Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.WRITE_EXTERNAL_STORAGE))
         init();
     }
     
@@ -70,16 +70,14 @@ public class MainActivity extends AppCompatActivity{
     @Override
     public void onRequestPermissionsResult(int request, String[] perms, int[] results) {
         super.onRequestPermissionsResult(request, perms, results);
-        if(request == 1000) {
-        	init();
-        }
+        init();
     }
     
     public boolean checkResourcesInstalled() {
         if(new File(getApplicationContext().getFilesDir() + "/completion/editor/index.json").exists()) {
         	return true;
         } else {
-            DownloaderUtil downloader = new DownloaderUtil(this);
+            DownloaderUtil downloader = new DownloaderUtil(getWindow().getDecorView().getContext());
             LayoutInstallResourcesBinding bindingDialog = LayoutInstallResourcesBinding.inflate(getLayoutInflater());
             new MaterialAlertDialogBuilder(this)
             .setIcon(R.drawable.ic_download)
