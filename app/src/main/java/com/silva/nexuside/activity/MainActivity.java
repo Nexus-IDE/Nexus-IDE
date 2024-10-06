@@ -149,67 +149,71 @@ public class MainActivity extends AppCompatActivity{
     
     public void downloadResources(LayoutInstallResourcesBinding binding) {
         File indexPath = new File(getApplicationContext().getFilesDir(), "completion/java/");
-    	if(Status.RUNNING == PRDownloader.getStatus(downloadID) || Status.PAUSED == PRDownloader.getStatus(downloadID)) {
-    		return;
-    	}
-        
+    
+        if (Status.RUNNING == PRDownloader.getStatus(downloadID) || Status.PAUSED == PRDownloader.getStatus(downloadID)) {
+            return;
+        }
+
         try {
-        	new URL(url);
-            downloadID = PRDownloader.download("https://firebasestorage.googleapis.com/v0/b/wavechat-53b2a.appspot.com/o/index.json?alt=media&token=afd80b57-6263-46a4-a65c-9b1829f2e08b",indexPath.getAbsolutePath(), "index.json").build()
+           new URL("https://firebasestorage.googleapis.com/v0/b/wavechat-53b2a.appspot.com/o/index.json?alt=media&token=afd80b57-6263-46a4-a65c-9b1829f2e08b");
+
+           downloadID = PRDownloader.download(
+                "https://firebasestorage.googleapis.com/v0/b/wavechat-53b2a.appspot.com/o/index.json?alt=media&token=afd80b57-6263-46a4-a65c-9b1829f2e08b",
+                indexPath.getAbsolutePath(),
+                "index.json")
+            .build()
             .setOnStartOrResumeListener(new OnStartOrResumeListener() {
                 @Override
                 public void onStartOrResume() {
                     // TODO: Implement this method
                 }
-                
             })
             .setOnPauseListener(new OnPauseListener() {
                 @Override
                 public void onPause() {
                     // TODO: Implement this method
                 }
-                
             })
             .setOnCancelListener(new OnCancelListener() {
                 @Override
                 public void onCancel() {
                     // TODO: Implement this method
                 }
-                
             })
             .setOnProgressListener(new OnProgressListener() {
-              @Override
-              public void onProgress(Progress progress) {
+                @Override
+                public void onProgress(Progress progress) {
                     long currentBytes = progress.currentBytes;
                     long totalBytes = progress.totalBytes;
-                    
-                    if(totalBytes != -1) {
-                    	long progressPercent = currentBytes * 100 / totalBytes;
-                        int progresss = (int)progressPercent;
+
+                    if (totalBytes != -1) {
+                        long progressPercent = currentBytes * 100 / totalBytes;
+                        int progresss = (int) progressPercent;
                         binding.installProgress.setIndeterminate(false);
                         binding.installProgress.setProgress(progresss);
                         binding.installProgressText.setText(progresss + "%");
                     } else {
-                        progressIndicator.setIndeterminate(true);
-                        textProgress.setText("0%");
+                        binding.installProgress.setIndeterminate(true);
+                        binding.installProgressText.setText("0%");
                     }
+                }
             })
             .start(new OnDownloadListener() {
                 @Override
                 public void onDownloadComplete() {
                     dialog.dismiss();
                 }
+
                 @Override
                 public void onError(Error error) {
                     dialog.dismiss();
                 }
             });
-        } catch(MalformedURLException err) {
-        	Log.e(TAG, err.getMessage());
-        } catch(Exception | OutOfMemoryError err) {
-            Log.e(TAG, err.getMessage());
-        }
-    }
-  }
+          } catch (MalformedURLException err) {
+               Log.e(TAG, err.getMessage());
+          } catch (Exception | OutOfMemoryError err) {
+               Log.e(TAG, err.getMessage());
+          }
+       }
     
 }
