@@ -55,7 +55,7 @@ public class WizardDetailsFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setEnterTransition(new MaterialSharedAxis(MaterialSharedAxis.X, false));
+        //setEnterTransition(new MaterialSharedAxis(MaterialSharedAxis.X, false));
         setExitTransition(new MaterialSharedAxis(MaterialSharedAxis.X, true));
     }
     
@@ -115,6 +115,10 @@ public class WizardDetailsFragment extends Fragment {
         });
         
         binding.create.setOnClickListener(v -> createProject());
+        binding.exit.setOnClickListener(v -> {
+             MainActivity mainActivity = (MainActivity) getActivity();
+             mainActivity.onBackPressed();
+        });
         
         checkErrors();
     }

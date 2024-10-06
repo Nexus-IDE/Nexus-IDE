@@ -42,6 +42,11 @@
     <string name="wizard_save_directory_not_exists">O Diretório não existe</string>
     <string name="wizard_save_is_a_file">Deve ser um Diretório</string>
     
+    <!-- open projects -->
+    
+    <string name="projects_title">Projetos</string>
+    <string name="no_projects_found">Nenhum projeto encontrado</string>
+    
     <!-- about -->
     <string name="app_slogan">Imagine, Crie, Compartilhe</string>
     

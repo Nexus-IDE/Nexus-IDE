@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="horizontal">
+
+	<com.google.android.material.appbar.AppBarLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:hapticFeedbackEnabled="true"
+        app:layout_scrollFlags="scroll|enterAlways"
+        android:fitsSystemWindows="true"
+        android:id="@+id/appbar"
+        android:layout_gravity="top">
+
+		<com.google.android.material.appbar.MaterialToolbar
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:hapticFeedbackEnabled="true"
+            app:title="@string/projects_title"
+            app:layout_collapseMode="pin"
+            android:id="@+id/toolbar" />
+
+	</com.google.android.material.appbar.AppBarLayout>
+	
+	<LinearLayout
+         android:layout_height="match_parent"
+         android:layout_width="match_parent"
+         app:layout_behavior="@string/appbar_scrolling_view_behavior">
+         
+         <com.google.android.material.card.MaterialCardView
+              android:layout_height="wrap_content"
+              android:layout_width="match_parent"
+              style="?attr/materialCardViewElevatedStyle"
+              app:cardCornerRadius="28dp"
+              android:layout_marginHorizontal="20dp"
+              android:layout_marginVertical="10dp">
+              
+              <LinearLayout
+                  android:layout_height="match_parent"
+                  android:layout_width="match_parent" >
+              
+                 <ListView
+                     android:layout_height="wrap_content"
+                     android:layout_width="wrap_content"
+                     android:choiceMode="none"
+                     android:id="@+id/listView" />
+                  
+                 <TextView
+                     android:layout_height="wrap_content"
+                     android:layout_width="wrap_content"
+                     android:textSize="16dp"
+                     android:text="@string/no_projects_found"
+                     android:id="@+id/no_projects_found" />
+                  
+              </LinearLayout>
+         
+         </com.google.android.material.card.MaterialCardView>
+         
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

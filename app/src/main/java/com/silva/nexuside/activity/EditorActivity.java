@@ -36,8 +36,8 @@ public class EditorActivity extends AppCompatActivity {
                 @Override
                 public void onDrawerSlide(View v, float slideOffset) {
                     super.onDrawerSlide(v, slideOffset);
-                float sliderX = v.getWidth() * slideOffset;
-                binding.constraint.setTranslationX(sliderX);
+                    float sliderX = v.getWidth() * slideOffset;
+                    binding.constraint.setTranslationX(sliderX);
                 }
                 
             };
