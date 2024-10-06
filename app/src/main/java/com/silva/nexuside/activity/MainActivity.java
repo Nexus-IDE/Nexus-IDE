@@ -37,6 +37,10 @@ public class MainActivity extends AppCompatActivity{
     private String mLast;
     private AlertDialog dialog = null;
     
+    private int downloadID;
+    
+    private TAG = "Downloader";
+    
     @Override
     protected void onCreate(Bundle savedInstanceState) {
     	super.onCreate(savedInstanceState);
