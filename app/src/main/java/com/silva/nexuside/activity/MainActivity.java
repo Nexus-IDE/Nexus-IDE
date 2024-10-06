@@ -72,9 +72,10 @@ public class MainActivity extends AppCompatActivity{
     @SuppressWarnings("deprecation")
     @Override
     public void onBackPressed() {
-    	super.onBackPressed();
         if (getSupportFragmentManager().getBackStackEntryCount() > 0) {
             getSupportFragmentManager().popBackStack();
+        } else {
+            super.onBackPressed();
         }
     }
     

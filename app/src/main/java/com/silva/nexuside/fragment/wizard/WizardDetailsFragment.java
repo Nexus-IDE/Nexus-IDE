@@ -56,7 +56,7 @@ public class WizardDetailsFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         //setEnterTransition(new MaterialSharedAxis(MaterialSharedAxis.Z, false));
-        setExitTransition(new MaterialSharedAxis(MaterialSharedAxis.Z, true));
+        setExitTransition(new MaterialSharedAxis(MaterialSharedAxis.Y, true));
     }
     
     @Override
