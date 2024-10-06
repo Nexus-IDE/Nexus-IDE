@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.GravityCompat;
 import com.silva.nexuside.R;
 import com.silva.nexuside.databinding.ActivityEditorBinding;
+import com.google.android.material.transition.MaterialSharedAxis;
 
 public class EditorActivity extends AppCompatActivity {
     
