@@ -93,7 +93,7 @@ public class MainActivity extends AppCompatActivity{
             builder.setTitle(R.string.install_required_rscs);
             builder.setMessage(R.string.required_rscs_description);
             builder.setView(bindingDialog.getRoot());
-            dialog = builder.create()
+            dialog = builder.create();
             bindingDialog.installButton.setOnClickListener((v) -> {
                 bindingDialog.installButton.setEnabled(false);
                     bindingDialog.installProgressText.setVisibility(View.VISIBLE);
