@@ -18,7 +18,8 @@
              android:layout_height="wrap_content"
              android:layout_width="wrap_content"
              android:layout_marginHorizontal="20dp"
-             app:trackCornerRadius="6dp" />
+             app:trackCornerRadius="6dp"
+             android:weight="1" />
              
         <TextView
              android:id="@+id/install_progress_text"
