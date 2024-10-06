@@ -79,13 +79,11 @@ public class MainActivity extends AppCompatActivity{
         } else {
             DownloaderUtil downloader = new DownloaderUtil(getWindow().getDecorView().getContext());
             LayoutInstallResourcesBinding bindingDialog = LayoutInstallResourcesBinding.inflate(getLayoutInflater());
-            new MaterialAlertDialogBuilder(this)
-            .setIcon(R.drawable.ic_download)
-            .setTitle(R.string.install_required_rscs)
-            .setMessage(R.string.required_rscs_description)
-            .setView(bindingDialog.getRoot())
-            .create()
-            .show();
+            MaterialAlertDialogBuilder builder = new MaterialAlertDialogBuilder(this);
+            builder.setIcon(R.drawable.ic_download);
+            builder.setTitle(R.string.install_required_rscs);
+            builder.setMessage(R.string.required_rscs_description);
+            builder.setView(bindingDialog.getRoot());
             bindingDialog.installButton.setOnClickListener((v) -> {
                 bindingDialog.installButton.setEnabled(false);
                     bindingDialog.installProgressText.setVisibility(View.VISIBLE);
@@ -103,6 +101,7 @@ public class MainActivity extends AppCompatActivity{
                         
                     });
             });
+            builder.create().show();
         }
         return false;
     }
