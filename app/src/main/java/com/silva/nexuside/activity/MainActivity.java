@@ -85,7 +85,7 @@ public class MainActivity extends AppCompatActivity{
     }
     
     public boolean checkResourcesInstalled() {
-        if(new File(getApplicationContext().getFilesDir() + "/completion/editor/index.json").exists()) {
+        if(new File(getApplicationContext().getFilesDir(), "completion/java/index.json").exists()) {
         	return true;
         } else {
             PRDownloaderConfig config = PRDownloaderConfig.newBuilder()
