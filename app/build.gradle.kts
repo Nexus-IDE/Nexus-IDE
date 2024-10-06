@@ -66,6 +66,7 @@ dependencies {
   
   implementation(libs.common.editor)
   implementation(libs.common.editor.textmate)
+  implementation(libs.common.prdownloader)
   
   implementation(libs.glide.glide)
   implementation(libs.glide.compiler)
