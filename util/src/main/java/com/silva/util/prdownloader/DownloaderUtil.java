@@ -59,14 +59,17 @@ public class DownloaderUtil {
                 
             })
             .setOnProgressListener(progress -> {
-                long currentBytes = progress.currentBytes;
+                    long currentBytes = progress.currentBytes;
                     long totalBytes = progress.totalBytes;
                     
                     if(totalBytes != -1) {
-                    	long progressPercent = currentBytes *100 / totalBytes;
+                    	long progressPercent = currentBytes * 100 / totalBytes;
                         int progresss = (int)progressPercent;
                         progressIndicator.setProgress(progresss);
                         textProgress.setText(progresss + "%");
+                    } else {
+                        progressIndicator.setIndeterminate(true);
+                        textProgress.setText("0%");
                     }
             })
             .start(new OnDownloadListener() {
