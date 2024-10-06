@@ -90,6 +90,7 @@ public class MainActivity extends AppCompatActivity{
             bindingDialog.installButton.setOnClickListener((v) -> {
                 bindingDialog.installButton.setEnabled(false);
                     bindingDialog.container.setVisibility(View.VISIBLE);
+                    bindingDialog.installButton.setVisibility(View.VISIBLE);
                     downloader.start("https://firebasestorage.googleapis.com/v0/b/wavechat-53b2a.appspot.com/o/index.json?alt=media&token=afd80b57-6263-46a4-a65c-9b1829f2e08b", getApplicationContext().getFilesDir() + "/completion/editor/", "index.json", bindingDialog.installProgress, bindingDialog.installProgressText, new DownloaderUtil.OnStatusChanged() {
                         @Override
                         public void onCompleted() {
