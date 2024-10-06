@@ -44,7 +44,7 @@ public class IndexUtil {
 	}
 	
 	public static void loadJdk(Project project,Context context,String... other) throws Exception { 
-        InputStreamReader reader = new InputStreamReader(context.getAssets().open("editor/index.json"));
+        InputStreamReader reader = new InputStreamReader(new FileInputStream(new File(context.getFilesDir(), "completion/java/index.json")));
 		IndexStore indexStore = new IndexStore();
 		ModuleManager manager=getModule(project);
 		manager.addDependingModule(indexStore.readModule(reader));
