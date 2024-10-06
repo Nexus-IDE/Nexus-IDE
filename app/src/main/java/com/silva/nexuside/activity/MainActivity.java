@@ -30,6 +30,7 @@ import com.downloader.Error;
 import java.net.MalformedURLException;
 import java.net.URL;
 import androidx.appcompat.app.AlertDialog;
+import android.util.Log;
 
 public class MainActivity extends AppCompatActivity{
     
