@@ -19,8 +19,6 @@ public class EditorActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = ActivityEditorBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-        setEnterTransition(new MaterialSharedAxis(MaterialSharedAxis.X, false));
-        setExitTransition(new MaterialSharedAxis(MaterialSharedAxis.X, true));
         init();
     }
     
