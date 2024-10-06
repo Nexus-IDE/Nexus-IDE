@@ -19,13 +19,13 @@
           android:layout_height="wrap_content"
           android:layout_width="wrap_content"
           android:layout_marginHorizontal="20dp"
-          app:trackCornerRadius="4dp" />
+          app:trackCornerRadius="4dp"
+          android:visibility="gone" />
      
      <com.google.android.material.button.MaterialButton
           android:layout_height="wrap_content"
           android:layout_width="match_parent"
           android:layout_marginHorizontal="20dp"
-          android:layout_marginBottom="22dp"
           android:text="@string/install_resources"
           android:id="@+id/install_button" />
      
