@@ -8,9 +8,10 @@
      
      <LinearLayout
          android:layout_height="wrap_content"
-         android:layout_width="match_patent"
+         android:layout_width="match_parent"
          android:orientation="horizontal"
-         android:visibility="gone">
+         android:visibility="gone"
+         android:id="@+id/container">
               
         <com.google.android.material.progressindicator.LinearProgressIndicator
              android:id="@+id/install_progress"

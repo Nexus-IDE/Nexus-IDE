@@ -18,7 +18,7 @@
         android:supportsRtl="true" 
         android:theme="@style/AppTheme">
         <activity 
-            android:name=".activity.EditorActivity" 
+            android:name=".activity.MainActivity" 
             android:exported="true">
             <intent-filter>
                 <action 
@@ -27,6 +27,6 @@
                     android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity.MainActivity" />
+        <activity android:name=".activity.EditorActivity" />
     </application>
 </manifest>

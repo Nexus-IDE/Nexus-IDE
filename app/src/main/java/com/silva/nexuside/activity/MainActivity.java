@@ -8,6 +8,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
 import android.provider.Settings;
+import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import androidx.appcompat.app.AppCompatActivity;
@@ -15,10 +16,14 @@ import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
+import com.downloader.Error;
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.silva.nexuside.R;
 import com.silva.nexuside.databinding.ActivityMainBinding;
+import com.silva.nexuside.databinding.LayoutInstallResourcesBinding;
 import com.silva.nexuside.fragment.HomeFragment;
+import com.silva.util.prdownloader.DownloaderUtil;
+import java.io.File;
 
 public class MainActivity extends AppCompatActivity{
     
@@ -36,6 +41,7 @@ public class MainActivity extends AppCompatActivity{
     
     public void init() {
     	openFragment(new HomeFragment(), "Home");
+        checkResourcesInstalled();
     }
     
     @Override
@@ -69,7 +75,35 @@ public class MainActivity extends AppCompatActivity{
     }
     
     public boolean checkResourcesInstalled() {
-         
+        if(new File(getApplicationContext().getFilesDir() + "/completion/editor/index.json").exists()) {
+        	return true;
+        } else {
+            DownloaderUtil downloader = new DownloaderUtil(this);
+            LayoutInstallResourcesBinding bindingDialog = LayoutInstallResourcesBinding.inflate(getLayoutInflater());
+            new MaterialAlertDialogBuilder(this)
+            .setIcon(R.drawable.ic_download)
+            .setTitle(R.string.install_required_rscs)
+            .setMessage(R.string.install_resources)
+            .setView(bindingDialog.getRoot())
+            .create()
+            .show();
+            bindingDialog.installButton.setOnClickListener((v) -> {
+                bindingDialog.installButton.setEnabled(false);
+                    bindingDialog.container.setVisibility(View.VISIBLE);
+                    downloader.start("https://firebasestorage.googleapis.com/v0/b/wavechat-53b2a.appspot.com/o/index.json?alt=media&token=afd80b57-6263-46a4-a65c-9b1829f2e08b", getApplicationContext().getFilesDir() + "/completion/editor/", "index.json", bindingDialog.installProgress, bindingDialog.installProgressText, new DownloaderUtil.OnStatusChanged() {
+                        @Override
+                        public void onCompleted() {
+                            //TODO
+                        }
+                        @Override
+                        public void onError(Error error) {
+                            //TODO
+                        }
+                        
+                    });
+            });
+        }
+        return false;
     }
     
     
