@@ -25,11 +25,17 @@ import com.silva.nexuside.fragment.HomeFragment;
 import com.silva.util.prdownloader.DownloaderUtil;
 import java.io.File;
 import android.widget.Toast;
+import com.downloader.*;
+import com.downloader.Error;
+import java.net.MalformedURLException;
+import java.net.URL;
+import androidx.appcompat.app.AlertDialog;
 
 public class MainActivity extends AppCompatActivity{
     
     private ActivityMainBinding binding;
     private String mLast;
+    private AlertDialog dialog = null;
     
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -77,31 +83,23 @@ public class MainActivity extends AppCompatActivity{
         if(new File(getApplicationContext().getFilesDir() + "/completion/editor/index.json").exists()) {
         	return true;
         } else {
-            DownloaderUtil downloader = new DownloaderUtil(getWindow().getDecorView().getContext());
+            PRDownloaderConfig config = PRDownloaderConfig.newBuilder()
+            .setDatabaseEnabled(true)
+            .build();
+            PRDownloader.initialize(getWindow().getDecorView().getContext(), config);
             LayoutInstallResourcesBinding bindingDialog = LayoutInstallResourcesBinding.inflate(getLayoutInflater());
             MaterialAlertDialogBuilder builder = new MaterialAlertDialogBuilder(this);
             builder.setIcon(R.drawable.ic_download);
             builder.setTitle(R.string.install_required_rscs);
             builder.setMessage(R.string.required_rscs_description);
             builder.setView(bindingDialog.getRoot());
+            dialog = builder.create()
             bindingDialog.installButton.setOnClickListener((v) -> {
                 bindingDialog.installButton.setEnabled(false);
                     bindingDialog.installProgressText.setVisibility(View.VISIBLE);
                     bindingDialog.installProgress.setVisibility(View.VISIBLE);
-                    bindingDialog.installButton.setVisibility(View.GONE);
-                    downloader.start("https://firebasestorage.googleapis.com/v0/b/wavechat-53b2a.appspot.com/o/index.json?alt=media&token=afd80b57-6263-46a4-a65c-9b1829f2e08b", getApplicationContext().getFilesDir() + "/completion/editor/", "index.json", bindingDialog.installProgress, bindingDialog.installProgressText, new DownloaderUtil.OnStatusChanged() {
-                        @Override
-                        public void onCompleted() {
-                            Toast.makeText(getApplicationContext(), "success", Toast.LENGTH_SHORT).show();
-                        }
-                        @Override
-                        public void onError(Error error) {
-                            Toast.makeText(getApplicationContext(), "error", Toast.LENGTH_SHORT).show();
-                        }
-                        
-                    });
+                    downloadResources(bindingDialog);
             });
-            builder.create().show();
         }
         return false;
     }
@@ -147,6 +145,70 @@ public class MainActivity extends AppCompatActivity{
             }
         }
     	return true;
+    }
+    
+    public void downloadResources(LayoutInstallResourcesBinding binding) {
+        File indexPath = new File(getApplicationContext().getFilesDir(), "completion/java/");
+    	if(Status.RUNNING == PRDownloader.getStatus(downloadID) || Status.PAUSED == PRDownloader.getStatus(downloadID)) {
+    		return;
+    	}
+        
+        try {
+        	new URL(url);
+            downloadID = PRDownloader.download("https://firebasestorage.googleapis.com/v0/b/wavechat-53b2a.appspot.com/o/index.json?alt=media&token=afd80b57-6263-46a4-a65c-9b1829f2e08b",indexPath.getAbsolutePath(), "index.json").build()
+            .setOnStartOrResumeListener(new OnStartOrResumeListener() {
+                @Override
+                public void onStartOrResume() {
+                    // TODO: Implement this method
+                }
+                
+            })
+            .setOnPauseListener(new OnPauseListener() {
+                @Override
+                public void onPause() {
+                    // TODO: Implement this method
+                }
+                
+            })
+            .setOnCancelListener(new OnCancelListener() {
+                @Override
+                public void onCancel() {
+                    // TODO: Implement this method
+                }
+                
+            })
+            .setOnProgressListener(new OnProgressListener() {
+              @Override
+              public void onProgress(Progress progress) {
+                    long currentBytes = progress.currentBytes;
+                    long totalBytes = progress.totalBytes;
+                    
+                    if(totalBytes != -1) {
+                    	long progressPercent = currentBytes * 100 / totalBytes;
+                        int progresss = (int)progressPercent;
+                        binding.installProgress.setIndeterminate(false);
+                        binding.installProgress.setProgress(progresss);
+                        binding.installProgressText.setText(progresss + "%");
+                    } else {
+                        progressIndicator.setIndeterminate(true);
+                        textProgress.setText("0%");
+                    }
+            })
+            .start(new OnDownloadListener() {
+                @Override
+                public void onDownloadComplete() {
+                    dialog.dismiss();
+                }
+                @Override
+                public void onError(Error error) {
+                    dialog.dismiss();
+                }
+            });
+        } catch(MalformedURLException err) {
+        	Log.e(TAG, err.getMessage());
+        } catch(Exception | OutOfMemoryError err) {
+            Log.e(TAG, err.getMessage());
+        }
     }
     
 }
