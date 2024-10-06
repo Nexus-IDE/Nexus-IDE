@@ -6,26 +6,20 @@
      android:layout_height="wrap_content"
      android:layout_width="match_parent">
      
-     <LinearLayout
+     <TextView
+         android:id="@+id/install_progress_text"
+         android:layout_width="wrap_content"
          android:layout_height="wrap_content"
-         android:layout_width="match_parent"
-         android:orientation="vertical"
-         android:visibility="gone"
-         android:id="@+id/container">
-         
-         <TextView
-             android:id="@+id/install_progress_text"
-             android:layout_width="wrap_content"
-             android:layout_height="wrap_content"
-             android:layout_gravity="right"
-             android:layout_marginBottom="4dp" />
+         android:layout_gravity="right"
+         android:layout_marginBottom="4dp"
+         android:visibility="gone" />
               
-        <com.google.android.material.progressindicator.LinearProgressIndicator
-             android:id="@+id/install_progress"
-             android:layout_height="wrap_content"
-             android:layout_width="wrap_content"
-             android:layout_marginHorizontal="20dp"
-             app:trackCornerRadius="6dp" />
+     <com.google.android.material.progressindicator.LinearProgressIndicator
+          android:id="@+id/install_progress"
+          android:layout_height="wrap_content"
+          android:layout_width="wrap_content"
+          android:layout_marginHorizontal="20dp"
+          app:trackCornerRadius="4dp" />
           
      </LinearLayout>
      
