@@ -45,7 +45,7 @@
             <ImageView
                  android:layout_height="100dp"
                  android:layout_width="100dp"
-                 android:src="@mipmap/ic_launcher"
+                 android:src="@drawable/androide"
                  android:scaleType="centerCrop"
                  android:tint="?colorOnSurface" />
 
@@ -79,12 +79,13 @@
                          android:id="@+id/create_project">
 
                         <Button
-                             android:layout_height="60dp"
-                             android:layout_width="60dp"
+                             android:layout_height="45dp"
+                             android:layout_width="45dp"
                              app:icon="@drawable/ic_add"
                              app:iconSize="25dp"
                              android:layout_margin="10dp"
                              app:iconTint="?colorOnSurface"
+                             android:layout_gravity="center"
                              style="@style/Widget.Material3.Button.TextButton.Icon" />
 
                     </com.google.android.material.card.MaterialCardView>
@@ -113,12 +114,13 @@
                          android:id="@+id/open_project">
 
                         <Button
-                             android:layout_height="60dp"
-                             android:layout_width="60dp"
+                             android:layout_height="45dp"
+                             android:layout_width="45dp"
                              app:icon="@drawable/ic_folder_open"
                              app:iconSize="25dp"
                              android:layout_margin="10dp"
                              app:iconTint="?colorOnSurface"
+                             android:layout_gravity="center"
                              style="@style/Widget.Material3.Button.TextButton.Icon" />
 
                     </com.google.android.material.card.MaterialCardView>
@@ -147,12 +149,13 @@
                          android:id="@+id/git_clone">
 
                         <Button
-                             android:layout_height="60dp"
-                             android:layout_width="60dp"
+                             android:layout_height="45dp"
+                             android:layout_width="45dp"
                              app:icon="@drawable/ic_settings"
                              app:iconSize="25dp"
                              android:layout_margin="10dp"
                              app:iconTint="?colorOnSurface"
+                             android:layout_gravity="center"
                              style="@style/Widget.Material3.Button.TextButton.Icon" />
 
                     </com.google.android.material.card.MaterialCardView>
