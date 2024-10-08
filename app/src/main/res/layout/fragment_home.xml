@@ -4,8 +4,8 @@
      xmlns:app="http://schemas.android.com/apk/res-auto"
      android:layout_height="match_parent"
      android:layout_width="match_parent"
-     android:id="@+id/coordinator"
-     android:fitsSystemWindows="true">
+     android:fitsSystemWindows="true"
+     android:id="@+id/coordinator">
 
     <com.google.android.material.appbar.AppBarLayout
          android:layout_height="wrap_content"
@@ -45,7 +45,7 @@
             <ImageView
                  android:layout_height="100dp"
                  android:layout_width="100dp"
-                 android:src="@drawable/androide"
+                 android:src="@mipmap/ic_launcher"
                  android:scaleType="centerCrop"
                  android:tint="?colorOnSurface" />
 
@@ -58,60 +58,125 @@
                  android:layout_height="50dp"
                  android:layout_width="10dp" />
 
-            <Button
-                 android:layout_height="50dp"
-                 android:layout_width="206dp"
-                 app:icon="@drawable/ic_add"
-                 android:layout_margin="4dp"
-                 app:iconTint="?colorOnSurface"
-                 android:textColor="?colorOnSurface"
-                 style="@style/Widget.Material3.Button.TextButton.Icon"
-                 android:text="@string/create_project"
-                 android:id="@+id/create_project" />
+            <LinearLayout
+                 android:layout_height="wrap_content"
+                 android:layout_width="match_parent"
+                 android:gravity="center">
+
+                <LinearLayout
+                     android:layout_height="wrap_content"
+                     android:layout_width="wrap_content"
+                     android:layout_marginVertical="5dp"
+                     android:gravity="center"
+                     android:layout_marginHorizontal="10dp"
+                     android:orientation="vertical">
+
+                    <com.google.android.material.card.MaterialCardView
+                         android:layout_height="wrap_content"
+                         android:layout_width="wrap_content"
+                         style="?attr/materialCardViewFilledStyle"
+                         app:cardCornerRadius="8dp"
+                         android:id="@+id/create_project">
+
+                        <Button
+                             android:layout_height="60dp"
+                             android:layout_width="60dp"
+                             app:icon="@drawable/ic_add"
+                             app:iconSize="25dp"
+                             android:layout_margin="10dp"
+                             app:iconTint="?colorOnSurface"
+                             style="@style/Widget.Material3.Button.TextButton.Icon" />
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <TextView
+                         android:layout_height="wrap_content"
+                         android:layout_width="wrap_content"
+                         android:layout_marginVertical="5dp"
+                         android:text="@string/create_project" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                     android:layout_height="wrap_content"
+                     android:layout_width="wrap_content"
+                     android:layout_marginVertical="5dp"
+                     android:gravity="center"
+                     android:layout_marginHorizontal="10dp"
+                     android:orientation="vertical">
+
+                    <com.google.android.material.card.MaterialCardView
+                         android:layout_height="wrap_content"
+                         android:layout_width="wrap_content"
+                         style="?attr/materialCardViewFilledStyle"
+                         app:cardCornerRadius="8dp"
+                         android:id="@+id/open_project">
+
+                        <Button
+                             android:layout_height="60dp"
+                             android:layout_width="60dp"
+                             app:icon="@drawable/ic_folder_open"
+                             app:iconSize="25dp"
+                             android:layout_margin="10dp"
+                             app:iconTint="?colorOnSurface"
+                             style="@style/Widget.Material3.Button.TextButton.Icon" />
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <TextView
+                         android:layout_height="wrap_content"
+                         android:layout_width="wrap_content"
+                         android:layout_marginVertical="5dp"
+                         android:text="@string/open_project" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                     android:layout_height="wrap_content"
+                     android:layout_width="wrap_content"
+                     android:layout_marginVertical="5dp"
+                     android:gravity="center"
+                     android:orientation="vertical"
+                     android:layout_marginLeft="10dp">
+
+                    <com.google.android.material.card.MaterialCardView
+                         android:layout_height="wrap_content"
+                         android:layout_width="wrap_content"
+                         style="?attr/materialCardViewFilledStyle"
+                         app:cardCornerRadius="8dp"
+                         android:id="@+id/git_clone">
+
+                        <Button
+                             android:layout_height="60dp"
+                             android:layout_width="60dp"
+                             app:icon="@drawable/ic_settings"
+                             app:iconSize="25dp"
+                             android:layout_margin="10dp"
+                             app:iconTint="?colorOnSurface"
+                             style="@style/Widget.Material3.Button.TextButton.Icon" />
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <TextView
+                         android:layout_height="wrap_content"
+                         android:layout_width="wrap_content"
+                         android:layout_marginVertical="5dp"
+                         android:text="@string/settings" />
+
+                </LinearLayout>
+
+            </LinearLayout>
 
             <Button
                  android:layout_height="50dp"
                  android:layout_width="206dp"
-                 app:icon="@drawable/ic_folder_open"
-                 android:layout_margin="4dp"
-                 app:iconTint="?colorOnSurface"
-                 android:textColor="?colorOnSurface"
+                 app:icon="@drawable/ic_arrow_down"
+                 app:iconTint="?colorPrimary"
+                 android:textColor="?colorPrimary"
                  style="@style/Widget.Material3.Button.TextButton.Icon"
-                 android:text="@string/open_project"
-                 android:id="@+id/open_project" />
-
-            <Button
-                 android:layout_height="50dp"
-                 android:layout_width="206dp"
-                 app:icon="@drawable/ic_github"
-                 android:layout_margin="4dp"
-                 app:iconTint="?colorOnSurface"
-                 android:textColor="?colorOnSurface"
-                 style="@style/Widget.Material3.Button.TextButton.Icon"
-                 android:text="@string/git_clone"
-                 android:id="@+id/git_clone" />
-
-            <Button
-                 android:layout_height="50dp"
-                 android:layout_width="206dp"
-                 app:icon="@drawable/ic_terminal"
-                 android:layout_margin="4dp"
-                 app:iconTint="?colorOnSurface"
-                 android:textColor="?colorOnSurface"
-                 style="@style/Widget.Material3.Button.TextButton.Icon"
-                 android:text="@string/terminal"
-                 android:id="@+id/terminal" />
-
-            <Button
-                 android:layout_height="50dp"
-                 android:layout_width="206dp"
-                 app:icon="@drawable/ic_settings"
-                 android:layout_margin="4dp"
-                 app:iconTint="?colorOnSurface"
-                 android:textColor="?colorOnSurface"
-                 style="@style/Widget.Material3.Button.TextButton.Icon"
-                 android:text="@string/settings"
-                 android:id="@+id/settings" />
+                 android:layout_marginTop="10dp"
+                 android:text="@string/more_options"
+                 android:id="@+id/more" />
 
         </LinearLayout>
 
