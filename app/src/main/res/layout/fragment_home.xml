@@ -75,7 +75,6 @@
                          android:layout_height="wrap_content"
                          android:layout_width="wrap_content"
                          style="?attr/materialCardViewFilledStyle"
-                         android:padding="10dp"
                          app:cardCornerRadius="8dp"
                          android:id="@+id/create_project">
 
@@ -85,6 +84,7 @@
                              app:icon="@drawable/ic_add"
                              app:iconSize="25dp"
                              app:iconTint="?colorOnSurface"
+                             android:layout_margin="10dp"
                              android:layout_gravity="center"
                              style="@style/Widget.Material3.Button.TextButton.Icon" />
 
@@ -111,7 +111,6 @@
                          android:layout_width="wrap_content"
                          style="?attr/materialCardViewFilledStyle"
                          app:cardCornerRadius="8dp"
-                         android:padding="10dp"
                          android:id="@+id/open_project">
 
                         <Button
@@ -120,6 +119,7 @@
                              app:icon="@drawable/ic_folder_open"
                              app:iconSize="25dp"
                              app:iconTint="?colorOnSurface"
+                             android:layout_margin="10dp"
                              android:layout_gravity="center"
                              style="@style/Widget.Material3.Button.TextButton.Icon" />
 
@@ -145,7 +145,6 @@
                          android:layout_height="wrap_content"
                          android:layout_width="wrap_content"
                          style="?attr/materialCardViewFilledStyle"
-                         android:padding="10dp"
                          app:cardCornerRadius="8dp"
                          android:id="@+id/git_clone">
 
@@ -155,6 +154,7 @@
                              app:icon="@drawable/ic_settings"
                              app:iconSize="25dp"
                              app:iconTint="?colorOnSurface"
+                             android:layout_margin="10dp"
                              android:layout_gravity="center"
                              style="@style/Widget.Material3.Button.TextButton.Icon" />
 
