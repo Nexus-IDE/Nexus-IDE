@@ -11,6 +11,6 @@ public class NexusIDEApplication extends Application {
         // Registrar o CrashHandler
         CrashHandler crashHandler = new CrashHandler(this);
         Thread.setDefaultUncaughtExceptionHandler(crashHandler);
-        DynamicColors.applyToActivitiesIfAvailable(this);
+        if (DynamicColors.isDynamicColorAvailable()) DynamicColors.applyToActivitiesIfAvailable(this);
     }
 }
