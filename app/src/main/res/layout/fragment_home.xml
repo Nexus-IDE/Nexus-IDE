@@ -81,12 +81,12 @@
                         <Button
                              android:layout_height="45dp"
                              android:layout_width="45dp"
-                             app:icon="@drawable/ic_add"
-                             app:iconSize="25dp"
+                             android:clickable="false"
                              android:layout_margin="10dp"
-                             app:iconTint="?colorOnSurface"
-                             style="@style/Widget.Material3.Button.Icon"
-                             android:layout_gravity="center" />
+                             android:drawable="@drawable/ic_add"
+                             style="@style/Widget.Material3.Button.IconButton"
+                             android:layout_gravity="center"
+                             tools:ignore="RtlHardcoded" />
 
                     </com.google.android.material.card.MaterialCardView>
 
@@ -116,12 +116,12 @@
                         <Button
                              android:layout_height="45dp"
                              android:layout_width="45dp"
-                             app:icon="@drawable/ic_folder_open"
-                             app:iconSize="25dp"
+                             android:clickable="false"
                              android:layout_margin="10dp"
-                             app:iconTint="?colorOnSurface"
-                             style="@style/Widget.Material3.Button.Icon"
-                             android:layout_gravity="center" />
+                             android:drawable="@drawable/ic_folder_open"
+                             style="@style/Widget.Material3.Button.IconButton"
+                             android:layout_gravity="center"
+                             tools:ignore="RtlHardcoded" />
 
                     </com.google.android.material.card.MaterialCardView>
 
@@ -151,12 +151,12 @@
                         <Button
                              android:layout_height="45dp"
                              android:layout_width="45dp"
-                             app:icon="@drawable/ic_settings"
-                             app:iconSize="25dp"
+                             android:clickable="false"
                              android:layout_margin="10dp"
-                             app:iconTint="?colorOnSurface"
-                             style="@style/Widget.Material3.Button.Icon"
-                             android:layout_gravity="center" />
+                             android:drawable="@drawable/ic_settings"
+                             style="@style/Widget.Material3.Button.IconButton"
+                             android:layout_gravity="center"
+                             tools:ignore="RtlHardcoded" />
 
                     </com.google.android.material.card.MaterialCardView>
 
