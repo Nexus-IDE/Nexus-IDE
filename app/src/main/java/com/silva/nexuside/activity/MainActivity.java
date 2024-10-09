@@ -88,7 +88,7 @@ public class MainActivity extends AppCompatActivity{
     }
     
     public boolean checkResourcesInstalled() {
-        if(new File(getApplicationContext().getFilesDir(), Paths.INDEX_JSON_PATH = "index.json").exists()) {
+        if(new File(getApplicationContext().getFilesDir(), Paths.INDEX_JSON_PATH, "index.json").exists()) {
         	return true;
         } else {
             PRDownloaderConfig config = PRDownloaderConfig.newBuilder()
