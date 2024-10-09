@@ -23,6 +23,8 @@ import com.silva.nexuside.databinding.ActivityMainBinding;
 import com.silva.nexuside.databinding.LayoutInstallResourcesBinding;
 import com.silva.nexuside.fragment.HomeFragment;
 import com.silva.util.prdownloader.DownloaderUtil;
+import com.silva.nexuside.values.Urls;
+import com.silva.nexuside.values.Paths;
 import java.io.File;
 import android.widget.Toast;
 import com.downloader.*;
@@ -86,7 +88,7 @@ public class MainActivity extends AppCompatActivity{
     }
     
     public boolean checkResourcesInstalled() {
-        if(new File(getApplicationContext().getFilesDir(), "completion/java/index.json").exists()) {
+        if(new File(getApplicationContext().getFilesDir(), Paths.INDEX_JSON_PATH + "index.json").exists()) {
         	return true;
         } else {
             PRDownloaderConfig config = PRDownloaderConfig.newBuilder()
@@ -155,17 +157,17 @@ public class MainActivity extends AppCompatActivity{
     }
     
     public void downloadResources(LayoutInstallResourcesBinding binding) {
-        File indexPath = new File(getApplicationContext().getFilesDir(), "completion/java/");
+        File indexPath = new File(getApplicationContext().getFilesDir(), Paths.INDEX_JSON_PATH);
     
         if (Status.RUNNING == PRDownloader.getStatus(downloadID) || Status.PAUSED == PRDownloader.getStatus(downloadID)) {
             return;
         }
 
         try {
-           new URL("https://firebasestorage.googleapis.com/v0/b/wavechat-53b2a.appspot.com/o/index.json?alt=media&token=afd80b57-6263-46a4-a65c-9b1829f2e08b");
+           new URL(Urls.INITIAL_INDEX_JSON);
 
            downloadID = PRDownloader.download(
-                "https://firebasestorage.googleapis.com/v0/b/wavechat-53b2a.appspot.com/o/index.json?alt=media&token=afd80b57-6263-46a4-a65c-9b1829f2e08b",
+                Urls.INITIAL_INDEX_JSON,
                 indexPath.getAbsolutePath(),
                 "index.json")
             .build()
