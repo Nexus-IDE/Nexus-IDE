@@ -3,11 +3,9 @@ package com.silva.nexuside.transition.navigation
 import com.google.android.material.transition.MaterialSharedAxis
 import android.view.animation.AccelerateDecelerateInterpolator
 
-class NavigationTransitions {
+object NavigationTransitions {
 
-    companion object {
-    
-      val enterTransition: MaterialSharedAxis = MaterialSharedAxis(
+      const val enterTransition = MaterialSharedAxis(
           MaterialSharedAxis.Z,
           true
       ).apply {
@@ -15,14 +13,12 @@ class NavigationTransitions {
          interpolator = AccelerateDecelerateInterpolator()
       }
     
-      val exitTransition: MaterialSharedAxis = MaterialSharedAxis(
+      const val exitTransition = MaterialSharedAxis(
           MaterialSharedAxis.Z,
           false
       ).apply {
          duration = 700
          interpolator = AccelerateDecelerateInterpolator()
       }
-    
-    }
     
 }
