@@ -21,8 +21,8 @@ public class HomeFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
     	super.onCreate(savedInstanceState);
-        setEnterTransition(NavigationTransitions.INSTANCE.getEnterTransition());
-        setExitTransition(NavigationTransitions.INSTANCE.getExitTransition());
+        setEnterTransition(NavigationTransitions.enterTransition);
+        setExitTransition(NavigationTransitions.exitTransition);
     }
     
     @Override

@@ -5,7 +5,7 @@ import android.view.animation.AccelerateDecelerateInterpolator
 
 object NavigationTransitions {
 
-      const val enterTransition = MaterialSharedAxis(
+      val enterTransition = MaterialSharedAxis(
           MaterialSharedAxis.Z,
           true
       ).apply {
@@ -13,7 +13,7 @@ object NavigationTransitions {
          interpolator = AccelerateDecelerateInterpolator()
       }
     
-      const val exitTransition = MaterialSharedAxis(
+      val exitTransition = MaterialSharedAxis(
           MaterialSharedAxis.Z,
           false
       ).apply {
