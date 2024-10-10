@@ -78,18 +78,18 @@
                          style="?attr/materialCardViewFilledStyle"
                          android:clickable="true"
                          app:cardCornerRadius="8dp"
-                         android:id="@+id/create_project">
-
-                        <Button
-                             android:layout_height="45dp"
-                             android:layout_width="45dp"
+                         android:id="@+id/open_project">
+                         
+                         <Button
+                             style="@style/Widget.Material3.Button.IconButton"
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
                              android:clickable="false"
                              android:layout_margin="10dp"
+                             android:contentDescription="@string/create_project"
                              android:drawableLeft="@drawable/ic_add"
-                             style="@style/Widget.Material3.Button.IconButton"
-                             android:layout_gravity="center"
                              tools:ignore="RtlHardcoded" />
-
+                             
                     </com.google.android.material.card.MaterialCardView>
 
                     <TextView
@@ -115,17 +115,17 @@
                          android:clickable="true"
                          app:cardCornerRadius="8dp"
                          android:id="@+id/open_project">
-
-                        <Button
-                             android:layout_height="45dp"
-                             android:layout_width="45dp"
+                         
+                         <Button
+                             style="@style/Widget.Material3.Button.IconButton"
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
                              android:clickable="false"
                              android:layout_margin="10dp"
+                             android:contentDescription="@string/open_project"
                              android:drawableLeft="@drawable/ic_folder_open"
-                             style="@style/Widget.Material3.Button.IconButton"
-                             android:layout_gravity="center"
                              tools:ignore="RtlHardcoded" />
-
+                             
                     </com.google.android.material.card.MaterialCardView>
 
                     <TextView
@@ -150,18 +150,18 @@
                          style="?attr/materialCardViewFilledStyle"
                          android:clickable="true"
                          app:cardCornerRadius="8dp"
-                         android:id="@+id/git_clone">
-
-                        <Button
-                             android:layout_height="45dp"
-                             android:layout_width="45dp"
+                         android:id="@+id/open_project">
+                         
+                         <Button
+                             style="@style/Widget.Material3.Button.IconButton"
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
                              android:clickable="false"
                              android:layout_margin="10dp"
+                             android:contentDescription="@string/settings"
                              android:drawableLeft="@drawable/ic_settings"
-                             style="@style/Widget.Material3.Button.IconButton"
-                             android:layout_gravity="center"
                              tools:ignore="RtlHardcoded" />
-
+                             
                     </com.google.android.material.card.MaterialCardView>
 
                     <TextView
