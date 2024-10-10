@@ -77,7 +77,7 @@
                          android:layout_width="wrap_content"
                          style="?attr/materialCardViewFilledStyle"
                          android:clickable="true"
-                         app:cardCornerRadius="8dp"
+                         app:cardCornerRadius="16dp"
                          android:id="@+id/create_project">
                          
                          <Button
@@ -113,7 +113,7 @@
                          android:layout_width="wrap_content"
                          style="?attr/materialCardViewFilledStyle"
                          android:clickable="true"
-                         app:cardCornerRadius="8dp"
+                         app:cardCornerRadius="16dp"
                          android:id="@+id/open_project">
                          
                          <Button
@@ -149,7 +149,7 @@
                          android:layout_width="wrap_content"
                          style="?attr/materialCardViewFilledStyle"
                          android:clickable="true"
-                         app:cardCornerRadius="8dp"
+                         app:cardCornerRadius="16dp"
                          android:id="@+id/settings">
                          
                          <Button

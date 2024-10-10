@@ -12,6 +12,13 @@ public class ProjectsFragment extends Fragment {
     FragmentProjectsBinding binding;
     
     @Override
+    public void onCreate(Bundle savedInstanceState) {
+    	super.onCreate(savedInstanceState);
+        setEnterTransition(new MaterialSharedAxis(MaterialSharedAxis.Z, true));
+        setExitTransition(new MaterialSharedAxis(MaterialSharedAxis.Z, false));
+    }
+    
+    @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         super.onCreateView(inflater, container, savedInstanceState);
         binding = FragmentProjectsBinding.inflate(inflater);

@@ -1,15 +1,18 @@
 package com.silva.nexuside.fragment;
 
 import android.os.Bundle;
+import android.transition.Transition;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.AccelerateDecelerateInterpolator;
 import androidx.fragment.app.Fragment;
 import com.google.android.material.transition.MaterialSharedAxis;
 import com.silva.nexuside.activity.MainActivity;
 import com.silva.nexuside.databinding.FragmentHomeBinding;
 import com.silva.nexuside.R;
 import com.silva.nexuside.fragment.wizard.*;
+import com.silva.nexuside.transition.navigation.NavigationTransitions;
 
 public class HomeFragment extends Fragment {
     
@@ -18,7 +21,8 @@ public class HomeFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
     	super.onCreate(savedInstanceState);
-        setExitTransition(new MaterialSharedAxis(MaterialSharedAxis.X, true));
+        setEnterTransition(NavigationTransitions.enterTransition);
+        setExitTransition(NavigationTransitions.exitTransition);
     }
     
     @Override
