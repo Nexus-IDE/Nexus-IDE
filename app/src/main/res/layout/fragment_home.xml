@@ -78,7 +78,7 @@
                          style="?attr/materialCardViewFilledStyle"
                          android:clickable="true"
                          app:cardCornerRadius="8dp"
-                         android:id="@+id/open_project">
+                         android:id="@+id/create_project">
                          
                          <Button
                              style="@style/Widget.Material3.Button.IconButton"
@@ -150,7 +150,7 @@
                          style="?attr/materialCardViewFilledStyle"
                          android:clickable="true"
                          app:cardCornerRadius="8dp"
-                         android:id="@+id/open_project">
+                         android:id="@+id/settings">
                          
                          <Button
                              style="@style/Widget.Material3.Button.IconButton"
