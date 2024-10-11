@@ -41,11 +41,13 @@
                   
               <LinearLayout
                   android:layout_height="match_parent"
-                  android:layout_width="match_parent">
+                  android:layout_width="match_parent"
+                  android:gravity="center_vertical">
                   
                  <TextView
                      android:layout_height="wrap_content"
                      android:layout_width="wrap_content"
+                     android:layout_marginHorizontal="8dp"
                      android:textSize="16dp"
                      android:text="@string/no_projects_found" />
                   
