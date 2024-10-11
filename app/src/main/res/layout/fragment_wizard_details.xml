@@ -54,6 +54,7 @@
                      android:layout_margin="4dp"
                      style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
                      app:hintAnimationEnabled="true"
+                     android:transitionGroup="true"
                      android:id="@+id/til_application_name">
 
                     <com.google.android.material.textfield.TextInputEditText
@@ -74,6 +75,7 @@
                      android:layout_margin="4dp"
                      style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
                      app:hintAnimationEnabled="true"
+                     android:transitionGroup="true"
                      android:id="@+id/til_package_name">
 
                     <com.google.android.material.textfield.TextInputEditText
@@ -95,6 +97,7 @@
                      app:endIconDrawable="@drawable/ic_folder_open"
                      style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
                      app:hintAnimationEnabled="true"
+                     android:transitionGroup="true"
                      android:id="@+id/til_save_location_name">
 
                     <com.google.android.material.textfield.TextInputEditText
@@ -114,6 +117,7 @@
                      android:layout_margin="4dp"
                      style="@style/Widget.Material3.TextInputLayout.FilledBox.ExposedDropdownMenu"
                      app:hintAnimationEnabled="true"
+                     android:transitionGroup="true"
                      android:id="@+id/til_language">
 
                     <AutoCompleteTextView
@@ -133,6 +137,7 @@
                      android:layout_margin="4dp"
                      style="@style/Widget.Material3.TextInputLayout.FilledBox.ExposedDropdownMenu"
                      app:hintAnimationEnabled="true"
+                     android:transitionGroup="true"
                      android:id="@+id/til_min_sdk">
 
                     <AutoCompleteTextView
