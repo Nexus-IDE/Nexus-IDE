@@ -19,9 +19,9 @@ jobs:
       - name: Notify the commit on Telegram
         uses: EverythingSuckz/github-telegram-notify@main
         with:
-          bot_token: '${{ secrets.BOT_TOKEN }}'
-          chat_id: '${{ secrets.CHAT_ID }}'
-          topic_id: '${{ secrets.TOPIC_ID }}'
+          bot_token: '${{ secrets.NEXUS_BOT_TOKEN }}'
+          chat_id: '${{ secrets.NEXUS_CHAT_ID }}'
+          topic_id: '${{ secrets.NEXUS_GITHUB_TOPIC_ID }}'
 
   build:
     name: Build APKs
