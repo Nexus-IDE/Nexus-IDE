@@ -13,6 +13,7 @@
          android:focusableInTouchMode="false"
          style="?materialCardViewFilledStyle"
          android:layout_margin="4dp"
+         android:transitionGroup="true"
          android:id="@+id/card">
 
         <ImageView
