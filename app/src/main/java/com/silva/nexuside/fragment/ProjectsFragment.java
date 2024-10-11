@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import androidx.fragment.app.Fragment;
+import com.google.android.material.transition.MaterialSharedAxis;
 import com.silva.nexuside.databinding.FragmentProjectsBinding;
 
 public class ProjectsFragment extends Fragment {
