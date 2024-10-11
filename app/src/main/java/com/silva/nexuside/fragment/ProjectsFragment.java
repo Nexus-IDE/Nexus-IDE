@@ -30,7 +30,7 @@ public class ProjectsFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         super.onCreateView(inflater, container, savedInstanceState);
         binding = FragmentProjectsBinding.inflate(inflater);
-        binding.listView.setVisibility(View.GONE);
+        
         return binding.getRoot();
     }
     
