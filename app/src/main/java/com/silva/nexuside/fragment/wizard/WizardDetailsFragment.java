@@ -57,11 +57,11 @@ public class WizardDetailsFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        MaterialSharedAxis enterTransition = new MaterialSharedAxis(MaterialSharedAxis.X, true);
+        MaterialSharedAxis enterTransition = new MaterialSharedAxis(MaterialSharedAxis.X, false);
     	enterTransition.setDuration(700);
     	enterTransition.setInterpolator(new AccelerateDecelerateInterpolator());
         setEnterTransition(enterTransition);
-        MaterialSharedAxis exitTransition = new MaterialSharedAxis(MaterialSharedAxis.X, false);
+        MaterialSharedAxis exitTransition = new MaterialSharedAxis(MaterialSharedAxis.X, true);
     	enterTransition.setDuration(700);
     	enterTransition.setInterpolator(new AccelerateDecelerateInterpolator());
         setExitTransition(exitTransition);
