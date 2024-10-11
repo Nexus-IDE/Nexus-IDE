@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import androidx.fragment.app.Fragment;
 import com.google.android.material.transition.MaterialSharedAxis;
 import com.silva.nexuside.databinding.FragmentProjectsBinding;
+import android.view.animation.AccelerateDecelerateInterpolator;
 
 public class ProjectsFragment extends Fragment {
     
@@ -15,8 +16,14 @@ public class ProjectsFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
     	super.onCreate(savedInstanceState);
-        setEnterTransition(new MaterialSharedAxis(MaterialSharedAxis.Z, true));
-        setExitTransition(new MaterialSharedAxis(MaterialSharedAxis.Z, false));
+        MaterialSharedAxis enterTransition = new MaterialSharedAxis(MaterialSharedAxis.X, true);
+    	enterTransition.setDuration(700);
+    	enterTransition.setInterpolator(new AccelerateDecelerateInterpolator());
+        setEnterTransition(enterTransition);
+        MaterialSharedAxis exitTransition = new MaterialSharedAxis(MaterialSharedAxis.X, false);
+    	enterTransition.setDuration(700);
+    	enterTransition.setInterpolator(new AccelerateDecelerateInterpolator());
+        setExitTransition(exitTransition);
     }
     
     @Override

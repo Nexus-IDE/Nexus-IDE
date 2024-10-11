@@ -15,6 +15,7 @@ import com.silva.nexuside.enums.WizardTemplates;
 import com.silva.nexuside.fragment.HomeFragment;
 import com.silva.nexuside.R;
 import java.util.List;
+import android.view.animation.AccelerateDecelerateInterpolator;
 
 public class WizardTemplatesFragment extends Fragment {
     
@@ -27,8 +28,14 @@ public class WizardTemplatesFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
     	super.onCreate(savedInstanceState);
-        setEnterTransition(new MaterialSharedAxis(MaterialSharedAxis.Z, true));
-        setExitTransition(new MaterialSharedAxis(MaterialSharedAxis.Z, false));
+        MaterialSharedAxis enterTransition = new MaterialSharedAxis(MaterialSharedAxis.X, true);
+    	enterTransition.setDuration(700);
+    	enterTransition.setInterpolator(new AccelerateDecelerateInterpolator());
+        setEnterTransition(enterTransition);
+        MaterialSharedAxis exitTransition = new MaterialSharedAxis(MaterialSharedAxis.X, false);
+    	enterTransition.setDuration(700);
+    	enterTransition.setInterpolator(new AccelerateDecelerateInterpolator());
+        setExitTransition(exitTransition);
     }
     
     @Override
