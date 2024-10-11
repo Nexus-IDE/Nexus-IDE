@@ -12,7 +12,6 @@ import com.silva.nexuside.activity.MainActivity;
 import com.silva.nexuside.databinding.FragmentHomeBinding;
 import com.silva.nexuside.R;
 import com.silva.nexuside.fragment.wizard.*;
-import com.silva.nexuside.transition.navigation.NavigationTransitions;
 
 public class HomeFragment extends Fragment {
     
@@ -21,8 +20,14 @@ public class HomeFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
     	super.onCreate(savedInstanceState);
-        setEnterTransition(NavigationTransitions.enterTransition);
-        setExitTransition(NavigationTransitions.exitTransition);
+    	MaterialSharedAxis enterTransition = new MaterialSharedAxis(MaterialSharedAxis.Z, true);
+    	enterTransition.setDuration(700);
+    	enterTransition.setInterpolator(new AccelerateDecelerateInterpolator());
+        setEnterTransition(enterTransition);
+        MaterialSharedAxis exitTransition = new MaterialSharedAxis(MaterialSharedAxis.Z, false);
+    	enterTransition.setDuration(700);
+    	enterTransition.setInterpolator(new AccelerateDecelerateInterpolator());
+        setExitTransition(exitTransition);
     }
     
     @Override
