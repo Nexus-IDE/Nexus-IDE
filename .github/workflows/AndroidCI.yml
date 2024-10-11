@@ -59,6 +59,7 @@ jobs:
           path: app/build/outputs/apk/${{ matrix.build-type }}/app-${{ matrix.build-type }}.apk
           
       - name: Send APK to Telegram
+        continue-on-error: true
         run: |
           curl -X POST "https://api.telegram.org/bot${{ secrets.NEXUS_BOT_TOKEN }}/sendDocument" \
             -F chat_id="${{ secrets.NEXUS_CHAT_ID }}" \
