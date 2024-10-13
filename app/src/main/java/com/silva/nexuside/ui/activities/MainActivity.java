@@ -18,7 +18,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import com.downloader.Error;
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
-import com.silva.nexuside.R;
+import com.silva.nexuside.resources.res;
 import com.silva.nexuside.databinding.ActivityMainBinding;
 import com.silva.nexuside.databinding.LayoutInstallResourcesBinding;
 import com.silva.nexuside.ui.fragments.HomeFragment;
@@ -97,9 +97,9 @@ public class MainActivity extends AppCompatActivity{
             PRDownloader.initialize(getWindow().getDecorView().getContext(), config);
             LayoutInstallResourcesBinding bindingDialog = LayoutInstallResourcesBinding.inflate(getLayoutInflater());
             MaterialAlertDialogBuilder builder = new MaterialAlertDialogBuilder(this);
-            builder.setIcon(R.drawable.ic_download);
-            builder.setTitle(R.string.install_required_rscs);
-            builder.setMessage(R.string.required_rscs_description);
+            builder.setIcon(Drawables.ic_download);
+            builder.setTitle(Strings.install_required_rscs);
+            builder.setMessage(Strings.required_rscs_description);
             builder.setView(bindingDialog.getRoot());
             dialog = builder.create();
             dialog.show();
@@ -118,8 +118,8 @@ public class MainActivity extends AppCompatActivity{
         if(Build.VERSION.SDK_INT > Build.VERSION_CODES.R) {
         	if(!Environment.isExternalStorageManager()) {
         	   new MaterialAlertDialogBuilder(this)
-        	     .setTitle(R.string.permission)
-        	     .setMessage(R.string.permission_message)
+        	     .setTitle(Strings.permission)
+        	     .setMessage(Strings.permission_message)
         	     .setCancelable(false)
         	     .setPositiveButton(android.R.string.ok, (dialog, which) -> {
         	         try {
@@ -141,8 +141,8 @@ public class MainActivity extends AppCompatActivity{
             for(String s : permissions) {
             	if(ContextCompat.checkSelfPermission(this, s) == PackageManager.PERMISSION_DENIED) {
             		new MaterialAlertDialogBuilder(this)
-                    .setTitle(R.string.permission)
-                    .setMessage(R.string.permission_message)
+                    .setTitle(Strings.permission)
+                    .setMessage(Strings.permission_message)
                     .setCancelable(false)
                     .setPositiveButton(android.R.string.ok, (dialog, which) -> {
                         ActivityCompat.requestPermissions(MainActivity.this, permissions, 1000);

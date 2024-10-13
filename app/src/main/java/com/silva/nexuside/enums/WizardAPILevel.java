@@ -1,6 +1,5 @@
 package com.silva.nexuside.enums;
 
-import com.silva.nexuside.R;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
