@@ -88,4 +88,4 @@ jobs:
             -F chat_id="${{ secrets.NEXUS_CHAT_ID }}" \
             -F message_thread_id="${{ secrets.NEXUS_CI_TOPIC_ID }}" \
             -F caption="${{ github.event.head_commit.message }} by ${{ github.actor }}" \
-            -F document=@"app/build/outputs/apk/release/app-release-unsigned-signed.apk
+            -F document=@"app/build/outputs/apk/release/app-release-unsigned-signed.apk"
