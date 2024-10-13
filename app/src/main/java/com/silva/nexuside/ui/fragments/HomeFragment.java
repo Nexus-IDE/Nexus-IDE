@@ -8,7 +8,7 @@ import android.view.ViewGroup;
 import android.view.animation.AccelerateDecelerateInterpolator;
 import androidx.fragment.app.Fragment;
 import com.google.android.material.transition.MaterialSharedAxis;
-import com.silva.nexuside.activity.MainActivity;
+import com.silva.nexuside.ui.activities.MainActivity;
 import com.silva.nexuside.databinding.FragmentHomeBinding;
 import com.silva.nexuside.R;
 import com.silva.nexuside.ui.fragments.wizard.*;
