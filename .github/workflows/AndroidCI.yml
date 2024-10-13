@@ -52,8 +52,31 @@ jobs:
       - name: Generate APK
         run: ./gradlew assemble${{ matrix.build-type }}
 
+      - name: Sign APK (only for release)
+        if: matrix.build-type == 'release'
+        id: sign_apk
+        uses: noriban/sign-android-release@v5
+        with:
+          releaseDirectory: app/build/outputs/apk/release
+          signingKeyBase64: ${{ secrets.KEYSTORE_FILE }}
+          alias: ${{ secrets.KEYSTORE_ALIAS }}
+          keyStorePassword: ${{ secrets.KEYSTORE_PASSWORD }}
+          keyPassword: ${{ secrets.KEY_PASSWORD }}
+        env:
+          BUILD_TOOLS_VERSION: "34.0.0"     
+        continue-on-error: true 
+
+      - name: Upload release apk (only for release)
+        if: matrix.build-type == 'release'
+        uses: actions/upload-artifact@v4
+        continue-on-error: true
+        with:
+          name: nexus-release
+          compression-level: 0
+          path: ${{ steps.sign_apk.outputs.signedReleaseFile }}
+
       - name: Upload APK
-        uses: actions/upload-artifact@master
+        uses: actions/upload-artifact@v4
         with:
           name: app-${{ matrix.build-type }}
           path: app/build/outputs/apk/${{ matrix.build-type }}/app-${{ matrix.build-type }}.apk
@@ -66,4 +89,3 @@ jobs:
             -F message_thread_id="${{ secrets.NEXUS_CI_TOPIC_ID }}" \
             -F caption="${{ github.event.head_commit.message }} by ${{ github.actor }}" \
             -F document=@"app/build/outputs/apk/${{ matrix.build-type }}/app-${{ matrix.build-type }}.apk"
-            
