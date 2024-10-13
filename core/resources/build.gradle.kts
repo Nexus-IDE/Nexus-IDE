@@ -8,6 +8,8 @@ android {
   
   defaultConfig {
      minSdk = 26
+     
+     vectorDrawables.useSupportLibrary = true
   }
   
   compileOptions {
