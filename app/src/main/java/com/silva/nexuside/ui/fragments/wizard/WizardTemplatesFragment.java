@@ -8,7 +8,7 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import com.google.android.material.transition.MaterialSharedAxis;
-import com.silva.nexuside.activity.MainActivity;
+import com.silva.nexuside.ui.activities.MainActivity;
 import com.silva.nexuside.adapters.TemplatesAdapter;
 import com.silva.nexuside.databinding.FragmentWizardTemplatesBinding;
 import com.silva.nexuside.enums.WizardTemplates;

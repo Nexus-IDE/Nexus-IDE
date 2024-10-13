@@ -21,7 +21,7 @@ import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.silva.nexuside.R;
 import com.silva.nexuside.databinding.ActivityMainBinding;
 import com.silva.nexuside.databinding.LayoutInstallResourcesBinding;
-import com.silva.nexuside.fragment.HomeFragment;
+import com.silva.nexuside.ui.fragments.HomeFragment;
 import com.silva.util.prdownloader.DownloaderUtil;
 import com.silva.nexuside.values.Urls;
 import com.silva.nexuside.values.Paths;

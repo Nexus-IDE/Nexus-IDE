@@ -28,7 +28,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.regex.*;
-import com.silva.nexuside.activity.MainActivity;
+import com.silva.nexuside.ui.activities.MainActivity;
 import android.view.animation.AccelerateDecelerateInterpolator;
 
 public class WizardDetailsFragment extends Fragment {
