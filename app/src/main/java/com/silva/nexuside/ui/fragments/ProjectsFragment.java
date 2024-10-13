@@ -1,4 +1,4 @@
-package com.silva.nexuside.fragment;
+package com.silva.nexuside.ui.fragments;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;

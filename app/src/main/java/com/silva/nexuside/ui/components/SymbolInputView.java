@@ -1,4 +1,4 @@
-package com.silva.nexuside.ui;
+package com.silva.nexuside.ui.components;
 
 import android.content.Context;
 import android.util.AttributeSet;

@@ -1,4 +1,4 @@
-package com.silva.nexuside.fragment.wizard;
+package com.silva.nexuside.ui.fragments.wizard;
 
 import android.app.Activity;
 import android.content.Intent;

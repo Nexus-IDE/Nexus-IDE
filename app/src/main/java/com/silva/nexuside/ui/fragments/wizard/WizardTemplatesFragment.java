@@ -1,4 +1,4 @@
-package com.silva.nexuside.fragment.wizard;
+package com.silva.nexuside.ui.fragments.wizard;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -12,7 +12,7 @@ import com.silva.nexuside.activity.MainActivity;
 import com.silva.nexuside.adapters.TemplatesAdapter;
 import com.silva.nexuside.databinding.FragmentWizardTemplatesBinding;
 import com.silva.nexuside.enums.WizardTemplates;
-import com.silva.nexuside.fragment.HomeFragment;
+import com.silva.nexuside.ui.fragments.HomeFragment;
 import com.silva.nexuside.R;
 import java.util.List;
 import android.view.animation.AccelerateDecelerateInterpolator;

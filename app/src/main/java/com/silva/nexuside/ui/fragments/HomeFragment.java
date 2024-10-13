@@ -1,4 +1,4 @@
-package com.silva.nexuside.fragment;
+package com.silva.nexuside.ui.fragments;
 
 import android.os.Bundle;
 import android.transition.Transition;
@@ -11,7 +11,7 @@ import com.google.android.material.transition.MaterialSharedAxis;
 import com.silva.nexuside.activity.MainActivity;
 import com.silva.nexuside.databinding.FragmentHomeBinding;
 import com.silva.nexuside.R;
-import com.silva.nexuside.fragment.wizard.*;
+import com.silva.nexuside.ui.fragments.wizard.*;
 
 public class HomeFragment extends Fragment {
     

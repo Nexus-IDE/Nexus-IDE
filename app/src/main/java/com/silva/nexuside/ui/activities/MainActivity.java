@@ -1,4 +1,4 @@
-package com.silva.nexuside.activity;
+package com.silva.nexuside.ui.activities;
 
 import android.Manifest;
 import android.content.Intent;

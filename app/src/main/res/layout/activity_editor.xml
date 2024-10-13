@@ -48,7 +48,7 @@
             app:layout_constraintTop_toBottomOf="@+id/appbar"
             android:id="@+id/container" />
             
-        <com.silva.nexuside.ui.SymbolInputView
+        <com.silva.nexuside.ui.components.SymbolInputView
             android:layout_height="45dp"
             android:layout_width="match_parent"
             android:id="@+id/symbol_input"
