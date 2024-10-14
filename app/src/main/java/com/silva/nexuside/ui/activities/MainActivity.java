@@ -18,7 +18,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import com.downloader.Error;
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
-import com.silva.nexuside.resources.res;
+import com.silva.nexuside.resources.*;
 import com.silva.nexuside.databinding.ActivityMainBinding;
 import com.silva.nexuside.databinding.LayoutInstallResourcesBinding;
 import com.silva.nexuside.ui.fragments.HomeFragment;

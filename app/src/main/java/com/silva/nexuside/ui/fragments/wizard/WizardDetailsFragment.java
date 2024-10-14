@@ -16,7 +16,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import com.google.android.material.transition.MaterialSharedAxis;
-import com.silva.nexuside.resources.res;
+import com.silva.nexuside.resources.*;
 import com.silva.nexuside.databinding.FragmentWizardDetailsBinding;
 import com.silva.nexuside.enums.WizardAPILevel;
 import com.silva.nexuside.enums.WizardTemplates;

@@ -2,7 +2,7 @@ package com.silva.nexuside.enums;
 
 import androidx.annotation.StringRes;
 import androidx.annotation.StyleRes;
-import com.silva.nexuside.resources.res;
+import com.silva.nexuside.resources.*;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Arrays;
