@@ -1,5 +1,6 @@
 plugins {
-  id("com.android.library")
+  alias(libs.plugins.android.application)
+  alias(libs.plugins.kotlin.android)
 }
 
 android {
