@@ -1,5 +1,5 @@
 plugins {
-  id("com.android.library")
+  aliss(libs.plugins.android.library)
 }
 
 android {
