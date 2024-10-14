@@ -6,7 +6,6 @@ plugins {
 android {
   namespace = "com.silva.nexuside.resources"
   compileSdk = 34
-  buildToolsVersion '34.0.0'
   
   defaultConfig {
      minSdk = 26
