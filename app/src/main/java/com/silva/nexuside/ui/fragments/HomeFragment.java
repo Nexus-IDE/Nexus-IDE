@@ -10,7 +10,7 @@ import androidx.fragment.app.Fragment;
 import com.google.android.material.transition.MaterialSharedAxis;
 import com.silva.nexuside.ui.activities.MainActivity;
 import com.silva.nexuside.databinding.FragmentHomeBinding;
-import com.silva.nexuside.resources.Ids;
+import com.silva.nexuside.resources.R;
 import com.silva.nexuside.ui.fragments.wizard.*;
 
 public class HomeFragment extends Fragment {
@@ -35,13 +35,13 @@ public class HomeFragment extends Fragment {
     	binding = FragmentHomeBinding.inflate(inflater);
         binding.createProject.setOnClickListener(view -> {
             getParentFragmentManager().beginTransaction()
-                .replace(Ids.fragment, new WizardTemplatesFragment(), "WizardTemplates")
+                .replace(R.id.fragment, new WizardTemplatesFragment(), "WizardTemplates")
                 .addToBackStack(null)
                 .commit();
         });
         binding.openProject.setOnClickListener(v -> {
             getParentFragmentManager().beginTransaction()
-                 .replace(Ids.fragment, new ProjectsFragment(), "Projects")
+                 .replace(R.id.fragment, new ProjectsFragment(), "Projects")
                  .addToBackStack(null)
                  .commit();
         });

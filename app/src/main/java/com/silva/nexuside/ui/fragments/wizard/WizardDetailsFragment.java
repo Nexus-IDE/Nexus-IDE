@@ -16,7 +16,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import com.google.android.material.transition.MaterialSharedAxis;
-import com.silva.nexuside.resources.*;
+import com.silva.nexuside.resources.R;
 import com.silva.nexuside.databinding.FragmentWizardDetailsBinding;
 import com.silva.nexuside.enums.WizardAPILevel;
 import com.silva.nexuside.enums.WizardTemplates;
@@ -177,10 +177,10 @@ public class WizardDetailsFragment extends Fragment {
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
                 if(s.equals(null)) {
-                	error = getString(Strings.wizard_app_name_is_null);
+                	error = getString(R.string.wizard_app_name_is_null);
                     binding.tilApplicationName.setError(error);
                 } else if(new File(binding.etSaveLocationName.getText().toString(), s.toString()).exists()) {
-                	error = getString(Strings.wizard_app_name_exists);
+                	error = getString(R.string.wizard_app_name_exists);
                     binding.tilApplicationName.setError(error);
                 } else {
                     binding.tilApplicationName.setErrorEnabled(false);
@@ -200,13 +200,13 @@ public class WizardDetailsFragment extends Fragment {
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
                 if(s.equals(null)) {
-                    error = getString(Strings.wizard_pkg_name_is_null);
+                    error = getString(R.string.wizard_pkg_name_is_null);
                 	binding.tilPackageName.setError(error);
                 } else if(s.length() < 5) {
-                    error = getString(Strings.wizard_pkg_name_is_very_short);
+                    error = getString(R.string.wizard_pkg_name_is_very_short);
                     binding.tilPackageName.setError(error);
                 } else if(s.toString().matches(".*[^a-zA-Z0-9.].*") || s.toString().substring(0, 1).matches(".*\\d.*") || s.toString().endsWith(".")) {
-                    error = getString(Strings.wizard_pkg_name_incorrect_characters);
+                    error = getString(R.string.wizard_pkg_name_incorrect_characters);
                     binding.tilPackageName.setError(error);
                 } else {
                     error = null;

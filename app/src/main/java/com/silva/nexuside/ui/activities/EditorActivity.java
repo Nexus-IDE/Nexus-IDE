@@ -6,7 +6,7 @@ import android.view.View;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.GravityCompat;
-import com.silva.nexuside.resources.Strings;
+import com.silva.nexuside.resources.R;
 import com.silva.nexuside.databinding.ActivityEditorBinding;
 import com.google.android.material.transition.MaterialSharedAxis;
 
@@ -30,8 +30,8 @@ public class EditorActivity extends AppCompatActivity {
             EditorActivity.this,
             binding.drawer,
             binding.toolbar,
-            Strings.app_name,
-            Strings.app_name
+            R.string.app_name,
+            R.string.app_name
             ) {
                 @Override
                 public void onDrawerSlide(View v, float slideOffset) {
