@@ -13,7 +13,6 @@ import com.silva.nexuside.adapters.TemplatesAdapter;
 import com.silva.nexuside.databinding.FragmentWizardTemplatesBinding;
 import com.silva.nexuside.enums.WizardTemplates;
 import com.silva.nexuside.ui.fragments.HomeFragment;
-import com.silva.nexuside.resources.*;
 import java.util.List;
 import android.view.animation.AccelerateDecelerateInterpolator;
 
