@@ -4,7 +4,6 @@
 	xmlns:app="http://schemas.android.com/apk/res-auto"
 	android:layout_width="match_parent"
 	android:layout_height="wrap_content"
-	styles="@style/Widget.Material3.CardView.Filled"
 	android:layout_marginHorizontal="16dp"
     android:layout_marginVertical="8dp">
 	
@@ -13,14 +12,13 @@
 	    android:layout_height="match_parent"
 	    android:background="?colorSurfaceVariant"
 	    android:orientation="vertical"
-	    android:padding="8dp">
+	    android:paddingHorizontal="16dp"
+	    android:paddingVertical="12dp">
 	    
 	    <com.google.android.material.textview.MaterialTextView
             android:id="@android:id/title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="10dp"
-            android:layout_marginTop="10dp"
             android:ellipsize="marquee"
             android:singleLine="true"
             android:textAppearance="?android:attr/textAppearanceListItem" />
@@ -29,8 +27,6 @@
             android:id="@android:id/summary"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="10dp"
-            android:layout_marginBottom="10dp"
             android:layout_alignLeft="@android:id/title"
             android:layout_alignStart="@android:id/title"
             android:layout_below="@android:id/title"
