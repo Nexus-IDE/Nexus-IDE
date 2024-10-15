@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public enum WizardAPILevel {
+public enum APILevel {
 	
     API16("API 16: Android 4.1 (Jelly Bean)", 16),
     API17("API 17: Android 4.2 (Jelly Bean)", 17),
@@ -30,7 +30,7 @@ public enum WizardAPILevel {
     
     private final int apiLevel;
     
-    WizardAPILevel(String description, int apiLevel) {
+    APILevel(String description, int apiLevel) {
         this.description = description;
         this.apiLevel = apiLevel;
     }
@@ -44,13 +44,13 @@ public enum WizardAPILevel {
     	return apiLevel;
     }
     
-    public static List<WizardAPILevel> getAvailableList() {
-        List<WizardAPILevel> list = new ArrayList<>(Arrays.asList(values()));
+    public static List<APILevel> getAvailableList() {
+        List<APILevel> list = new ArrayList<>(Arrays.asList(values()));
         return list;
     }
     
-    public static WizardAPILevel safeValueOf(String name) {
-        for(WizardAPILevel template : values()) {
+    public static APILevel safeValueOf(String name) {
+        for(APILevel template : values()) {
         	if (template.name().equals(name)) {
                 return template;
             }

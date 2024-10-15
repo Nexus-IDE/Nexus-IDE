@@ -33,7 +33,7 @@
          <com.google.android.material.card.MaterialCardView
               android:layout_height="60dp"
               android:layout_width="match_parent"
-              style="?attr/materialCardViewElevatedStyle"
+              style="?attr/materialCardViewFilledStyle"
               app:cardCornerRadius="16dp"
               android:layout_marginHorizontal="20dp"
               android:layout_marginVertical="10dp"

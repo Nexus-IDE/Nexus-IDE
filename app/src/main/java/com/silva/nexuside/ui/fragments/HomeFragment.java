@@ -11,7 +11,6 @@ import com.google.android.material.transition.MaterialSharedAxis;
 import com.silva.nexuside.ui.activities.MainActivity;
 import com.silva.nexuside.databinding.FragmentHomeBinding;
 import com.silva.nexuside.R;
-import com.silva.nexuside.ui.fragments.wizard.*;
 
 public class HomeFragment extends Fragment {
     

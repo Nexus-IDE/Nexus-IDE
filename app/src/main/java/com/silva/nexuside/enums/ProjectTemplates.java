@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public enum WizardTemplates {
+public enum ProjectTemplates {
 	
     EMPTY("templates/icons/empty_project.png", R.string.wizard_templates_empty, "templates/Empty.zip", "Empty Activity"),
     ANDROIDX("templates/icons/androidx_project.png", R.string.wizard_templates_androidx, "templates/AndroidX.zip", "Androidx Activity"),
@@ -23,7 +23,7 @@ public enum WizardTemplates {
     
     private String name;
     
-    WizardTemplates(String iconPath, @StringRes int titleResId, String path, String name) {
+    ProjectTemplates(String iconPath, @StringRes int titleResId, String path, String name) {
         this.iconPath = iconPath;
         this.titleResId = titleResId;
         this.path = path;
@@ -47,13 +47,13 @@ public enum WizardTemplates {
         return name;
     }
     
-    public static List<WizardTemplates> getAvailableList() {
-        List<WizardTemplates> list = new ArrayList<>(Arrays.asList(values()));
+    public static List<ProjectTemplates> getAvailableList() {
+        List<ProjectTemplates> list = new ArrayList<>(Arrays.asList(values()));
         return list;
     }
     
-    public static WizardTemplates safeValueOf(String name) {
-        for(WizardTemplates template : values()) {
+    public static ProjectTemplates safeValueOf(String name) {
+        for(ProjectTemplates template : values()) {
         	if (template.name().equals(name)) {
                 return template;
             }

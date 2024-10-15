@@ -1,4 +1,4 @@
-package com.silva.nexuside.ui.fragments.wizard;
+package com.silva.nexuside.ui.fragments;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -19,7 +19,7 @@ import com.google.android.material.transition.MaterialSharedAxis;
 import com.silva.nexuside.resources.R;
 import com.silva.nexuside.databinding.FragmentWizardDetailsBinding;
 import com.silva.nexuside.enums.WizardAPILevel;
-import com.silva.nexuside.enums.WizardTemplates;
+import com.silva.nexuside.enums.ProjectTemplates;
 import com.silva.nexuside.project.CreateProjectTask;
 import com.silva.nexuside.project.Project;
 import static com.silva.util.FileUtil.*;
@@ -36,7 +36,7 @@ public class WizardDetailsFragment extends Fragment {
     private FragmentWizardDetailsBinding binding;
     
     //commons
-    private WizardTemplates template;
+    private ProjectTemplates template;
     private String error;
     private int apiLevelPos = 0;
     
@@ -50,7 +50,7 @@ public class WizardDetailsFragment extends Fragment {
     private List<WizardAPILevel> apiList = WizardAPILevel.getAvailableList();
     private List<String> apiLevels;
     
-    public WizardDetailsFragment(WizardTemplates template) {
+    public WizardDetailsFragment(ProjectTemplates template) {
     	this.template = template;
     }
     

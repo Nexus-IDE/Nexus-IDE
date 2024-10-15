@@ -1,4 +1,4 @@
-package com.silva.nexuside.ui.fragments.wizard;
+package com.silva.nexuside.ui.fragments;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -11,7 +11,7 @@ import com.google.android.material.transition.MaterialSharedAxis;
 import com.silva.nexuside.ui.activities.MainActivity;
 import com.silva.nexuside.adapters.TemplatesAdapter;
 import com.silva.nexuside.databinding.FragmentWizardTemplatesBinding;
-import com.silva.nexuside.enums.WizardTemplates;
+import com.silva.nexuside.enums.ProjectTemplates;
 import com.silva.nexuside.ui.fragments.HomeFragment;
 import java.util.List;
 import android.view.animation.AccelerateDecelerateInterpolator;
@@ -20,7 +20,7 @@ public class WizardTemplatesFragment extends Fragment {
     
     private FragmentWizardTemplatesBinding binding;
     
-    private List<WizardTemplates> templates = WizardTemplates.getAvailableList();
+    private List<ProjectTemplates> templates = ProjectTemplates.getAvailableList();
     
     private MainActivity mainActivity;
     

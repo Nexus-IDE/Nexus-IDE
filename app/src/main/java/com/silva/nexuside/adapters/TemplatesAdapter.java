@@ -13,7 +13,7 @@ import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.silva.nexuside.ui.activities.MainActivity;
 import com.silva.nexuside.databinding.ItemTemplateWizardBinding;
 import com.silva.nexuside.ui.fragments.wizard.WizardDetailsFragment;
-import com.silva.nexuside.enums.WizardTemplates;
+import com.silva.nexuside.enums.ProjectTemplates;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
@@ -22,12 +22,12 @@ import java.util.List;
 
 public class TemplatesAdapter extends RecyclerView.Adapter<TemplatesAdapter.ViewHolder> {
 		
-		List<WizardTemplates> data;
+		List<ProjectTemplates> data;
         ItemTemplateWizardBinding binding;
         MainActivity main;
         Context context;
 		
-		public TemplatesAdapter(Context context, List<WizardTemplates> data, MainActivity main) {
+		public TemplatesAdapter(Context context, List<ProjectTemplates> data, MainActivity main) {
 			this.data = data;
             this.context = context;
             this.main = main;
@@ -45,7 +45,7 @@ public class TemplatesAdapter extends RecyclerView.Adapter<TemplatesAdapter.View
 		@Override
 		public void onBindViewHolder(ViewHolder holder, final int position) {
         
-            WizardTemplates template = WizardTemplates.safeValueOf(data.get(position).name());
+            ProjectTemplates template = ProjectTemplates.safeValueOf(data.get(position).name());
             	
                  Glide.with(context) 
                       .asBitmap()
