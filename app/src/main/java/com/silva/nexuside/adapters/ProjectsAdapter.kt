@@ -8,10 +8,13 @@ import com.silva.nexuside.databinding.LayoutProjectItemBinding
 
 class ProjectsAdapter(private val arr: List<String>) : RecyclerView.Adapter<ProjectsAdapter.ViewHolder>() {
     
-    class ViewHolder(binding: LayoutProjectItemBinding) : RecyclerView.ViewHolder(binding.root)
+    class ViewHolder(binding: LayoutProjectItemBinding) : RecyclerView.ViewHolder(binding.root) {
+    
+    }
     
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) : ViewHolder {
-        val binding: LayoutProjectItemBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        val inflater = LayoutInflater.from(parent.context)
+        val binding = LayoutProjectItemBinding.inflate(inflater, parent, false)
         return ViewHolder(binding)
     }
     
