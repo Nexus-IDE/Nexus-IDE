@@ -10,7 +10,8 @@ class ProjectManager {
     
     fun listOfProjects(): List<String> {
         val projectList = mutableListOf<String>()
-        val temp = listDir(LocationOfSave?.absolutePath)
+        val temp = muteblaListOf<String>()
+        listDir(LocationOfSave?.absolutePath, temp)
         
         temp.forEach { path ->
             if(path.isDirectory) {
