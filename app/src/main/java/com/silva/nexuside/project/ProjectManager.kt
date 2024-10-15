@@ -9,10 +9,10 @@ class ProjectManager {
     var LocationOfSave: File? = File(getExternalStorageDir(), "NexusIDEProjects")
     
     fun listOfProjects(): List<String> {
-        val projectList = mutableListOf<String>()
+        val projectList = List<String>()
         val temp = listDir(LocationOfSave?.absolutePath)
         
-        for (var path in temp) {
+        temp.forEach { path ->
             if(path.isDirectory) {
                 projectList.add(path)
             }
