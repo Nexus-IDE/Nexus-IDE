@@ -12,7 +12,7 @@ import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.silva.nexuside.ui.activities.MainActivity;
 import com.silva.nexuside.databinding.ItemTemplateWizardBinding;
-import com.silva.nexuside.ui.fragments.wizard.WizardDetailsFragment;
+import com.silva.nexuside.ui.fragments.WizardDetailsFragment;
 import com.silva.nexuside.enums.ProjectTemplates;
 import java.io.IOException;
 import java.io.InputStream;
