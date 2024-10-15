@@ -101,6 +101,7 @@ public class MainActivity extends AppCompatActivity{
             builder.setTitle(R.string.install_required_rscs);
             builder.setMessage(R.string.required_rscs_description);
             builder.setView(bindingDialog.getRoot());
+            builder.setCancelable(false);
             dialog = builder.create();
             dialog.show();
             bindingDialog.installButton.setOnClickListener((v) -> {
