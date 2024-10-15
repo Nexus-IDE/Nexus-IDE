@@ -8,9 +8,7 @@ import com.silva.nexuside.databinding.LayoutProjectItemBinding
 
 class ProjectsAdapter(private val arr: List<String>) : RecyclerView.Adapter<ProjectsAdapter.ViewHolder>() {
     
-    class ViewHolder(binding: LayoutProjectItemBinding) : RecyclerView.ViewHolder(binding.root) {
-    
-    }
+    class ViewHolder(var binding: LayoutProjectItemBinding) : RecyclerView.ViewHolder(binding.root)
     
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) : ViewHolder {
         val inflater = LayoutInflater.from(parent.context)
@@ -19,8 +17,8 @@ class ProjectsAdapter(private val arr: List<String>) : RecyclerView.Adapter<Proj
     }
     
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.binding.title.text = Uri.parse(arr[position]).lastSegmentPath
-        holder.binding.summary.text = arr[position]
+        holder.title.text = Uri.parse(arr[position]).lastSegmentPath
+        holder.summary.text = arr[position]
     }
     
     override fun getItemCount(): Int = return arr.size

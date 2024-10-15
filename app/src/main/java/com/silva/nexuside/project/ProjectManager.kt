@@ -11,7 +11,7 @@ class ProjectManager {
     
     fun listOfProjects(): List<String> {
         val projectList = ArrayList<String>()
-        val temp = listDir(LocationOfSave.toString())
+        val temp = listDir(LocationOfSave?.absolutePath)
         
         for (path in temp) {
             if(path.isDirectory) {
