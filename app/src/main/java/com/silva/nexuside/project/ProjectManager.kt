@@ -13,7 +13,7 @@ class ProjectManager {
         val projectList = ArrayList<String>()
         val temp = listDir(LocationOfSave?.absolutePath)
         
-        for (path in temp) {
+        for (var path in temp) {
             if(path.isDirectory) {
                 projectList.add(path)
             }
