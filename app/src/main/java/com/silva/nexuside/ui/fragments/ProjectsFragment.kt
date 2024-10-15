@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.appcompat.app.AppCompatActivity;
 import com.google.android.material.transition.MaterialSharedAxis
 import com.silva.nexuside.databinding.FragmentProjectsBinding
 import android.view.animation.AccelerateDecelerateInterpolator
@@ -36,7 +37,7 @@ class ProjectsFragment: Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         super.onCreateView(inflater, container, savedInstanceState)
         binding = FragmentProjectsBinding.inflate(inflater)
-        setSupportActionBar(binding.toolbar)
+        (activity as AppCompatActivity).setSupportActionBar(binding.toolbar)
         init()
         return binding.root
     }
@@ -47,7 +48,7 @@ class ProjectsFragment: Fragment() {
     }
     
     fun configureToolbar() {
-        supportActionBar?.apply {
+        (activity as AppCompatActivity).supportActionBar?.apply {
             setDisplayHomeAsUpEnabled(true)
             setHomeButtonEnabled(true)
         }
