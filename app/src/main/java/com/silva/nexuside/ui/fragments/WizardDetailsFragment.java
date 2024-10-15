@@ -18,7 +18,7 @@ import androidx.fragment.app.Fragment;
 import com.google.android.material.transition.MaterialSharedAxis;
 import com.silva.nexuside.resources.R;
 import com.silva.nexuside.databinding.FragmentWizardDetailsBinding;
-import com.silva.nexuside.enums.WizardAPILevel;
+import com.silva.nexuside.enums.APILevel;
 import com.silva.nexuside.enums.ProjectTemplates;
 import com.silva.nexuside.project.CreateProjectTask;
 import com.silva.nexuside.project.Project;
@@ -47,7 +47,7 @@ public class WizardDetailsFragment extends Fragment {
     
     //Arrays
     private List<String> languages = Arrays.asList("Java", "Kotlin");
-    private List<WizardAPILevel> apiList = WizardAPILevel.getAvailableList();
+    private List<APILevel> apiList = APILevel.getAvailableList();
     private List<String> apiLevels;
     
     public WizardDetailsFragment(ProjectTemplates template) {
@@ -79,7 +79,7 @@ public class WizardDetailsFragment extends Fragment {
         
         //list api
         apiLevels = new ArrayList<>();
-        for(WizardAPILevel apiLevel : apiList) {
+        for(APILevel apiLevel : apiList) {
         	apiLevels.add(apiLevel.getDescription());
         }
         
