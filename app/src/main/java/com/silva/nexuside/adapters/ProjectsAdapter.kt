@@ -17,8 +17,8 @@ class ProjectsAdapter(private val arr: List<String>) : RecyclerView.Adapter<Proj
     }
     
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.title.text = Uri.parse(arr[position]).lastPathSegment
-        holder.summary.text = arr[position]
+        holder.binding.title.text = Uri.parse(arr[position]).lastPathSegment
+        holder.binding.summary.text = arr[position]
     }
     
     override fun getItemCount(): Int {
