@@ -68,7 +68,7 @@ class ProjectsFragment: Fragment() {
         } else {
             binding.noProjectsFound.visibility = View.GONE
             binding.projects.visibility = View.VISIBLE
-            binding.projects.layoutManager = LinearLayoutManager(this)
+            binding.projects.layoutManager = LinearLayoutManager(requireContext)
             val adapter = ProjectsAdapter(projectList)
             binding.projects.adapter = adapter
         }
