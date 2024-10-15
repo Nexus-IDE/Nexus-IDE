@@ -15,7 +15,7 @@ class ProjectManager {
         listDir(LocationOfSave?.absolutePath, temp)
         
         temp.forEach { path ->
-            if(path.isDirectory) {
+            if(isDirectory(path)) {
                 projectList.add(path)
             }
         }
