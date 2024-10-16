@@ -25,7 +25,10 @@ class SettingsFragment(
         return binding.root
     }
 
-    private fun openFragment(fragment: Fragment, lue: String) {
+    private fun openFragment(
+        fragment: Fragment,
+        lue: String = fragment.toString()
+    ) {
         parentFragmentManager.beginTransaction()
             .replace(binding.fragmentSettings.id, fragment, lue)
             .addToBackStack(null)
