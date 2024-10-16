@@ -9,7 +9,7 @@
 
     <SwitchPreferenceCompat
         android:defaultValue="true"
-        android:icon="@drawable/androidide"
+        android:icon="@drawable/androide"
         android:key="pref_switch_key"
         android:layout="@layout/preference_material"
         android:summaryOff="Pref ON"
