@@ -11,8 +11,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.silva.nexuside.ui.activities.MainActivity;
-import com.silva.nexuside.databinding.ItemTemplateWizardBinding;
-import com.silva.nexuside.ui.fragments.WizardDetailsFragment;
+import com.silva.nexuside.databinding.ItemTemplateBinding;
+import com.silva.nexuside.ui.fragments.CreateProjectFragment;
 import com.silva.nexuside.enums.ProjectTemplates;
 import java.io.IOException;
 import java.io.InputStream;
@@ -22,10 +22,10 @@ import java.util.List;
 
 public class TemplatesAdapter extends RecyclerView.Adapter<TemplatesAdapter.ViewHolder> {
 		
-		List<ProjectTemplates> data;
-        ItemTemplateWizardBinding binding;
-        MainActivity main;
-        Context context;
+		private List<ProjectTemplates> data;
+        private ItemTemplateBinding binding;
+        private MainActivity main;
+        private Context context;
 		
 		public TemplatesAdapter(Context context, List<ProjectTemplates> data, MainActivity main) {
 			this.data = data;
@@ -36,7 +36,7 @@ public class TemplatesAdapter extends RecyclerView.Adapter<TemplatesAdapter.View
 		@Override
 		public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
             LayoutInflater inflater = LayoutInflater.from(parent.getContext());
-			binding = ItemTemplateWizardBinding.inflate(inflater, parent, false);
+			binding = ItemTemplateBinding.inflate(inflater, parent, false);
 			RecyclerView.LayoutParams layoutParams = new RecyclerView.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
             binding.getRoot().setLayoutParams(layoutParams);
 			return new ViewHolder(binding.getRoot());
@@ -56,7 +56,7 @@ public class TemplatesAdapter extends RecyclerView.Adapter<TemplatesAdapter.View
                       .into(binding.image);
             binding.title.setText(context.getString(template.getTitleResId()));
             binding.image.setOnClickListener(view -> {
-                main.openFragment(new WizardDetailsFragment(template), "WizardDetails");
+                main.openFragment(new CreateProjectFragment(template), "WizardDetails");
             });
 		}
 		

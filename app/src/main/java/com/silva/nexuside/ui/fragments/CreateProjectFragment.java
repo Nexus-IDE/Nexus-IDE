@@ -17,7 +17,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import com.google.android.material.transition.MaterialSharedAxis;
 import com.silva.nexuside.resources.R;
-import com.silva.nexuside.databinding.FragmentWizardDetailsBinding;
+import com.silva.nexuside.databinding.FragmentCreateProjectBinding;
 import com.silva.nexuside.enums.APILevel;
 import com.silva.nexuside.enums.ProjectTemplates;
 import com.silva.nexuside.project.CreateProjectTask;
@@ -32,9 +32,9 @@ import com.silva.nexuside.ui.activities.MainActivity;
 import com.silva.nexuside.ui.base.BaseFragment;
 import android.view.animation.AccelerateDecelerateInterpolator;
 
-public class WizardDetailsFragment extends BaseFragment {
+public class CreateProjectFragment extends BaseFragment {
     
-    private FragmentWizardDetailsBinding binding;
+    private FragmentCreateProjectBinding binding;
     
     private ProjectTemplates template;
     private String error;
@@ -48,7 +48,7 @@ public class WizardDetailsFragment extends BaseFragment {
     private List<APILevel> apiList = APILevel.getAvailableList();
     private List<String> apiLevels;
     
-    public WizardDetailsFragment(ProjectTemplates template) {
+    public CreateProjectFragment(ProjectTemplates template) {
     	this.template = template;
     }
     
@@ -59,7 +59,7 @@ public class WizardDetailsFragment extends BaseFragment {
     
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        binding = FragmentWizardDetailsBinding.inflate(inflater);
+        binding = FragmentCreateProjectBinding.inflate(inflater);
         binding.etSaveLocationName.setText(TEMPLATE_LOCATION_DIR);
         init();
         handleInsetts(binding.getRoot());

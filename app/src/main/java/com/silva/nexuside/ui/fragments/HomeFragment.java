@@ -28,7 +28,7 @@ public class HomeFragment extends BaseFragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
     	binding = FragmentHomeBinding.inflate(inflater);
     	
-        binding.createProject.setOnClickListener(view -> openFragment(new WizardTemplatesFragment(), "WizardTemplates"));
+        binding.createProject.setOnClickListener(view -> openFragment(new ProjectTemplatesFragment(), "WizardTemplates"));
         binding.openProject.setOnClickListener(view -> openFragment(new ProjectsFragment(), "Projects"));
         binding.settings.setOnClickListener(view -> openFragment(new SettingsFragment(new SettingsMainFragment()), "SettingsMain"));
         

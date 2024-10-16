@@ -10,16 +10,16 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import com.google.android.material.transition.MaterialSharedAxis;
 import com.silva.nexuside.ui.activities.MainActivity;
 import com.silva.nexuside.adapters.TemplatesAdapter;
-import com.silva.nexuside.databinding.FragmentWizardTemplatesBinding;
+import com.silva.nexuside.databinding.FragmentProjectTemplatesBinding;
 import com.silva.nexuside.enums.ProjectTemplates;
 import com.silva.nexuside.ui.fragments.HomeFragment;
 import com.silva.nexuside.ui.base.BaseFragment;
 import java.util.List;
 import android.view.animation.AccelerateDecelerateInterpolator;
 
-public class WizardTemplatesFragment extends BaseFragment {
+public class ProjectTemplatesFragment extends BaseFragment {
     
-    private FragmentWizardTemplatesBinding binding;
+    private FragmentProjectTemplatesBinding binding;
     
     private List<ProjectTemplates> templates = ProjectTemplates.getAvailableList();
     
@@ -32,7 +32,7 @@ public class WizardTemplatesFragment extends BaseFragment {
     
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-    	binding = FragmentWizardTemplatesBinding.inflate(inflater);
+    	binding = FragmentProjectTemplatesBinding.inflate(inflater);
         mainActivity = (MainActivity) getActivity();
         binding.templates.setLayoutManager(new GridLayoutManager(getContext(), 3));
         binding.templates.setAdapter(new TemplatesAdapter(getContext(), templates, mainActivity));
