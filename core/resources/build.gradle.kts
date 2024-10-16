@@ -52,7 +52,7 @@ materialThemeBuilder {
     }
 
     generatePaletteAttributes = true
-    packageName = "com.silva.nexuside.resources"
+    packageName = "com.silva.nexuside"
 }
 
 dependencies {
