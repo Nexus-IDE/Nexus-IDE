@@ -82,6 +82,8 @@ dependencies {
   implementation(libs.glide.glide)
   implementation(libs.glide.compiler)
   
+  implementation(libs.insetter)
+  
   implementation(project(":editor"))
   implementation(project(":util"))
   implementation(project(":core:resources"))

@@ -17,6 +17,9 @@ common-editor = { module = "io.github.Rosemoe.sora-editor:editor", version.ref =
 common-editor-textmate = { module = "io.github.Rosemoe.sora-editor:language-textmate", version.ref = "editor" }
 common-prdownloader = { module = "com.github.amitshekhariitbhu:PRDownloader", version = "1.0.1" }
 
+# UI
+insetter = { module = "dev.chrisbanes.insetter:insetter", version = "0.6.1" }
+
 # Google
 google-guava = { module = "com.google.guava:guava", version = "33.0.0-jre" }
 google-gson = { module = "com.google.code.gson:gson", version = "2.11.0" }

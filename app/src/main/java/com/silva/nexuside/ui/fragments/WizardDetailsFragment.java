@@ -62,6 +62,7 @@ public class WizardDetailsFragment extends BaseFragment {
         binding = FragmentWizardDetailsBinding.inflate(inflater);
         binding.etSaveLocationName.setText(TEMPLATE_LOCATION_DIR);
         init();
+        handleInsetts(binding.getRoot());
         return binding.getRoot();
     }
     
