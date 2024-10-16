@@ -80,15 +80,11 @@
                          app:cardCornerRadius="16dp"
                          android:id="@+id/create_project">
                          
-                         <Button
-                             style="@style/Widget.Material3.Button.IconButton"
+                         <ImageView
                              android:layout_width="wrap_content"
                              android:layout_height="wrap_content"
-                             android:clickable="false"
                              android:layout_margin="10dp"
-                             android:contentDescription="@string/create_project"
-                             android:drawableLeft="@drawable/ic_add"
-                             tools:ignore="RtlHardcoded" />
+                             android:src="@drawable/ic_add"/>
                              
                     </com.google.android.material.card.MaterialCardView>
 
@@ -116,15 +112,11 @@
                          app:cardCornerRadius="16dp"
                          android:id="@+id/open_project">
                          
-                         <Button
-                             style="@style/Widget.Material3.Button.IconButton"
+                         <ImageView
                              android:layout_width="wrap_content"
                              android:layout_height="wrap_content"
-                             android:clickable="false"
                              android:layout_margin="10dp"
-                             android:contentDescription="@string/open_project"
-                             android:drawableLeft="@drawable/ic_folder_open"
-                             tools:ignore="RtlHardcoded" />
+                             android:src="@drawable/ic_folder_open"/>
                              
                     </com.google.android.material.card.MaterialCardView>
 
@@ -152,15 +144,11 @@
                          app:cardCornerRadius="16dp"
                          android:id="@+id/settings">
                          
-                         <Button
-                             style="@style/Widget.Material3.Button.IconButton"
+                         <ImageView
                              android:layout_width="wrap_content"
                              android:layout_height="wrap_content"
-                             android:clickable="false"
                              android:layout_margin="10dp"
-                             android:contentDescription="@string/settings"
-                             android:drawableLeft="@drawable/ic_settings"
-                             tools:ignore="RtlHardcoded" />
+                             android:src="@drawable/ic_settings"/>
                              
                     </com.google.android.material.card.MaterialCardView>
 
