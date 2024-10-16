@@ -5,7 +5,7 @@ import android.os.Bundle
 import androidx.preference.Preference
 import androidx.preference.PreferenceManager
 
-import com.silva.nexuside.R;
+import com.silva.nexuside.resources.R
 import com.silva.nexuside.ui.base.BasePreferenceFragment
 
 class SettingsFragment : BasePreferenceFragment() {
