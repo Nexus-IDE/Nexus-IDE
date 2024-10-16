@@ -53,5 +53,7 @@
         <item name="windowNoTitle">true</item>
         <item name="windowActionBar">false</item>
         <item name="android:windowActivityTransitions">true</item>
+        <item name="android:fontFamily">@font/inter</item>
+        <item name="android:overScrollMode">never</item>
   </style>
 </resources>
