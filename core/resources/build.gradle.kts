@@ -42,9 +42,9 @@ materialThemeBuilder {
             create(name) {
                 primaryColor = color
                 lightThemeFormat = "Theme.Nexus.%s.Light"
-                lightThemeParent = "Theme.Nexus"
+                lightThemeParent = "Theme.Nexus.Monet"
                 darkThemeFormat = "Theme.Nexus.%s.Dark"
-                darkThemeParent = "Theme.Nexus"
+                darkThemeParent = "Theme.Nexus.Monet"
 
                 isDynamicColors = false
             }
