@@ -36,17 +36,14 @@ public class WizardDetailsFragment extends BaseFragment {
     
     private FragmentWizardDetailsBinding binding;
     
-    //commons
     private ProjectTemplates template;
     private String error;
     private int apiLevelPos = 0;
     
-    //template texts
     private String TEMPLATE_PKG_NAME = "com.example.myapp";
     private String TEMPLATE_APP_NAME = "MyApp";
     private String TEMPLATE_LOCATION_DIR = getExternalStorageDir() + "/NexusIDEProjects/";
     
-    //Arrays
     private List<String> languages = Arrays.asList("Java", "Kotlin");
     private List<APILevel> apiList = APILevel.getAvailableList();
     private List<String> apiLevels;
@@ -70,23 +67,18 @@ public class WizardDetailsFragment extends BaseFragment {
     
     public void init() {
         
-        //list api
         apiLevels = new ArrayList<>();
         for(APILevel apiLevel : apiList) {
         	apiLevels.add(apiLevel.getDescription());
         }
         
-        //language
     	ArrayAdapter<String> languageAdapter = new ArrayAdapter<>(getActivity(), android.R.layout.simple_list_item_1, languages);
         binding.etLanguage.setAdapter(languageAdapter);
         binding.etLanguage.setThreshold(1);
-        //binding.etLanguage.setText(languages.get(0).toString());
-        
-        //apiLevel
+
         ArrayAdapter<String> apiLevelAdapter = new ArrayAdapter<>(getActivity(), android.R.layout.simple_list_item_1, apiLevels);
         binding.etMinSdk.setAdapter(apiLevelAdapter);
         binding.etMinSdk.setThreshold(1);
-        //binding.etMinSdk.setText(apiLevels.get(5).toString());
         
         binding.etApplicationName.addTextChangedListener(new TextWatcher() {
             @Override
