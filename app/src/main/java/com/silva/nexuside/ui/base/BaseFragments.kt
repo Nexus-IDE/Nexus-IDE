@@ -35,6 +35,10 @@ open class BaseFragment() : Fragment() {
         exitTransition = sharedExit
         reenterTransition =  sharedReenter
     }
+    
+    override fun toString(): String {
+        return "BaseFragment"
+    }
 }
 
 open class BasePreferenceFragment() : PreferenceFragmentCompat() {
@@ -48,5 +52,9 @@ open class BasePreferenceFragment() : PreferenceFragmentCompat() {
     
     override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
         setPreferencesFromResource(0, rootKey)
+    }
+    
+    override fun toString(): String {
+        return "BasePreferenceFragment"
     }
 }

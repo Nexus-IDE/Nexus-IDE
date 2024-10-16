@@ -19,7 +19,7 @@ class SettingsFragment(
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = FragmentSettingsBinding.inflate(layoutInflater)
-        openFragment(startFragment)
+        openFragment(startFragment, startFragment.toString())
     }
     
     private fun openFragment(fragment: BaseFragment, lue: String) {
