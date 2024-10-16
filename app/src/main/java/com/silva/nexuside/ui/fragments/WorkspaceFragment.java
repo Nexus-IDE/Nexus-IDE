@@ -6,10 +6,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import androidx.fragment.app.Fragment;
 import com.silva.nexuside.databinding.FragmentWorkspaceBinding;
+import com.silva.nexuside.ui.base.BaseFragment;
 
-public class WorkspaceFragment extends Fragment {
+public class WorkspaceFragment extends BaseFragment {
     
-    FragmentWorkspaceBinding binding;
+    private FragmentWorkspaceBinding binding;
     
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -17,6 +18,4 @@ public class WorkspaceFragment extends Fragment {
         binding = FragmentWorkspaceBinding.inflate(inflater);
         return binding.getRoot();
     }
-    
-    
 }

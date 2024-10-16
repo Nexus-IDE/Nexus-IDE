@@ -9,24 +9,17 @@ import android.view.animation.AccelerateDecelerateInterpolator;
 import androidx.fragment.app.Fragment;
 import com.google.android.material.transition.MaterialSharedAxis;
 import com.silva.nexuside.ui.activities.MainActivity;
+import com.silva.nexuside.ui.base.BaseFragment;
 import com.silva.nexuside.databinding.FragmentHomeBinding;
 import com.silva.nexuside.R;
 
-public class HomeFragment extends Fragment {
+public class HomeFragment extends BaseFragment {
     
     private FragmentHomeBinding binding;
     
     @Override
     public void onCreate(Bundle savedInstanceState) {
     	super.onCreate(savedInstanceState);
-    	MaterialSharedAxis enterTransition = new MaterialSharedAxis(MaterialSharedAxis.X, false);
-    	enterTransition.setDuration(700);
-    	enterTransition.setInterpolator(new AccelerateDecelerateInterpolator());
-        setEnterTransition(enterTransition);
-        MaterialSharedAxis exitTransition = new MaterialSharedAxis(MaterialSharedAxis.X, true);
-    	enterTransition.setDuration(700);
-    	enterTransition.setInterpolator(new AccelerateDecelerateInterpolator());
-        setExitTransition(exitTransition);
     }
     
     @Override

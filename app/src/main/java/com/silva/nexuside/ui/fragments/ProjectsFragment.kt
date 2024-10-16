@@ -13,26 +13,15 @@ import com.silva.nexuside.databinding.FragmentProjectsBinding
 import android.view.animation.AccelerateDecelerateInterpolator
 import com.silva.nexuside.project.ProjectManager
 import com.silva.nexuside.adapters.ProjectsAdapter
+import com.silva.nexuside.ui.base.BaseFragment;
 import java.util.ArrayList
 
-class ProjectsFragment: Fragment() {
+class ProjectsFragment: BaseFragment() {
     
     private lateinit var binding: FragmentProjectsBinding
     
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        
-        val sharedEnter = MaterialSharedAxis(MaterialSharedAxis.X, false).apply {
-            duration = 700
-            interpolator = AccelerateDecelerateInterpolator()
-        }
-        enterTransition = sharedEnter
-        
-        val sharedExit = MaterialSharedAxis(MaterialSharedAxis.X, true).apply {
-            duration = 700
-            interpolator = AccelerateDecelerateInterpolator()
-        }
-        exitTransition = sharedExit
     }
     
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {

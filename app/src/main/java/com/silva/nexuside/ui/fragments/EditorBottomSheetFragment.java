@@ -6,10 +6,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import androidx.fragment.app.Fragment;
 import com.silva.nexuside.databinding.FragmentBottomsheetBinding;
+import com.silva.nexuside.ui.base.BaseFragment;
 
-public class EditorBottomSheetFragment extends Fragment {
+public class EditorBottomSheetFragment extends BaseFragment {
     
-    FragmentBottomsheetBinding binding;
+    private FragmentBottomsheetBinding binding;
     
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {

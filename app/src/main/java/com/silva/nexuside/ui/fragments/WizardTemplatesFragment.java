@@ -13,10 +13,11 @@ import com.silva.nexuside.adapters.TemplatesAdapter;
 import com.silva.nexuside.databinding.FragmentWizardTemplatesBinding;
 import com.silva.nexuside.enums.ProjectTemplates;
 import com.silva.nexuside.ui.fragments.HomeFragment;
+import com.silva.nexuside.ui.base.BaseFragment;
 import java.util.List;
 import android.view.animation.AccelerateDecelerateInterpolator;
 
-public class WizardTemplatesFragment extends Fragment {
+public class WizardTemplatesFragment extends BaseFragment {
     
     private FragmentWizardTemplatesBinding binding;
     
@@ -27,14 +28,6 @@ public class WizardTemplatesFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
     	super.onCreate(savedInstanceState);
-        MaterialSharedAxis enterTransition = new MaterialSharedAxis(MaterialSharedAxis.X, false);
-    	enterTransition.setDuration(700);
-    	enterTransition.setInterpolator(new AccelerateDecelerateInterpolator());
-        setEnterTransition(enterTransition);
-        MaterialSharedAxis exitTransition = new MaterialSharedAxis(MaterialSharedAxis.X, true);
-    	enterTransition.setDuration(700);
-    	enterTransition.setInterpolator(new AccelerateDecelerateInterpolator());
-        setExitTransition(exitTransition);
     }
     
     @Override

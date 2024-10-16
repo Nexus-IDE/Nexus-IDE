@@ -29,9 +29,10 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.regex.*;
 import com.silva.nexuside.ui.activities.MainActivity;
+import com.silva.nexuside.ui.base.BaseFragment;
 import android.view.animation.AccelerateDecelerateInterpolator;
 
-public class WizardDetailsFragment extends Fragment {
+public class WizardDetailsFragment extends BaseFragment {
     
     private FragmentWizardDetailsBinding binding;
     
@@ -57,14 +58,6 @@ public class WizardDetailsFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        MaterialSharedAxis enterTransition = new MaterialSharedAxis(MaterialSharedAxis.X, false);
-    	enterTransition.setDuration(700);
-    	enterTransition.setInterpolator(new AccelerateDecelerateInterpolator());
-        setEnterTransition(enterTransition);
-        MaterialSharedAxis exitTransition = new MaterialSharedAxis(MaterialSharedAxis.X, true);
-    	enterTransition.setDuration(700);
-    	enterTransition.setInterpolator(new AccelerateDecelerateInterpolator());
-        setExitTransition(exitTransition);
     }
     
     @Override
