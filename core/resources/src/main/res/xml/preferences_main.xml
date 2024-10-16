@@ -16,4 +16,10 @@
         android:summaryOn="Pref OFF"
         android:title="Pref"
         app:singleLineTitle="false" />
+        
+    <com.silva.nexuside.ui.components.ContainerPreference
+        android:key="pref_container"
+        android:title="Container"
+        android:cornerRadiusTop="16dp"
+        android:cornerRadiusBottom="16" />
 </androidx.preference.PreferenceScreen>
