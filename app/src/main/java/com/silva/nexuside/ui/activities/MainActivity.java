@@ -65,10 +65,9 @@ public class MainActivity extends AppCompatActivity{
     }
     
     public void openFragment(Fragment fragment, String tag) {
-    	getSupportFragmentManager().beginTransaction()
-        .replace(binding.fragment.getId(), fragment, tag)
-        .addToBackStack(null)
-        .commit();
+        getSupportFragmentManager().beginTransaction()
+            .replace(binding.fragment.getId(), fragment, tag)
+            .commit();
     }
     
     @SuppressWarnings("deprecation")
