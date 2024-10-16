@@ -31,7 +31,6 @@ class SettingsFragment(
     ) {
         parentFragmentManager.beginTransaction()
             .replace(binding.fragmentSettings.id, fragment, lue)
-            .addToBackStack(null)
             .commit()
     }
 
