@@ -1,0 +1,71 @@
+<resources>
+    <style name="Theme.Nexus.Pyro" parent="Theme.Nexus.Pyro.Light">
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:windowLightNavigationBar">true</item>
+        
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:windowActivityTransitions">true</item>
+        
+        <item name="android:fontFamily">@font/inter</item>
+        <item name="android:overScrollMode">never</item>
+    </style>
+
+    <style name="Theme.Nexus.Indigo" parent="Theme.Nexus.Indigo.Light">
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:windowLightNavigationBar">true</item>
+        
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:windowActivityTransitions">true</item>
+        
+        <item name="android:fontFamily">@font/inter</item>
+        <item name="android:overScrollMode">never</item>
+    </style>
+
+    <style name="Theme.Nexus.Flamingo" parent="Theme.Nexus.Flamingo.Light">
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:windowLightNavigationBar">true</item>
+        
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:windowActivityTransitions">true</item>
+        
+        <item name="android:fontFamily">@font/inter</item>
+        <item name="android:overScrollMode">never</item>
+    </style>
+
+    <style name="Theme.Nexus.Mint" parent="Theme.Nexus.Mint.Light">
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:windowLightNavigationBar">true</item>
+        
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:windowActivityTransitions">true</item>
+        
+        <item name="android:fontFamily">@font/inter</item>
+        <item name="android:overScrollMode">never</item>
+    </style>
+
+    <style name="Theme.Nexus.Emerald" parent="Theme.Nexus.Emerald.Light">
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:windowLightNavigationBar">true</item>
+        
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:windowActivityTransitions">true</item>
+        
+        <item name="android:fontFamily">@font/inter</item>
+        <item name="android:overScrollMode">never</item>
+    </style>
+</resources>
