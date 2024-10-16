@@ -22,7 +22,7 @@
             android:layout_height="wrap_content"
             android:ellipsize="marquee"
             android:maxLines="2"
-            android:textAppearance="?android:attr/textAppearanceBodyLarge" />
+            android:textAppearance="?android:attr/textAppearanceListItem" />
             
         <com.google.android.material.textview.MaterialTextView
             android:id="@android:id/summary"
@@ -34,7 +34,7 @@
             android:layout_gravity="start"
             android:maxLines="2"
             android:textAlignment="viewStart"
-            android:textAppearance="?attr/textAppearanceBodySmall" />
+            android:textColor="?android:attr/textColorSecondary" />
 	    
 	</RelativeLayout>
 	
