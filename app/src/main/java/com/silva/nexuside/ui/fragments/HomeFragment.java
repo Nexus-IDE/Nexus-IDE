@@ -11,6 +11,7 @@ import com.google.android.material.transition.MaterialSharedAxis;
 import com.silva.nexuside.ui.activities.MainActivity;
 import com.silva.nexuside.ui.base.BaseFragment;
 import com.silva.nexuside.databinding.FragmentHomeBinding;
+import com.silva.nexuside.ui.fragments.settings.SettingsFragment;
 import com.silva.nexuside.R;
 
 public class HomeFragment extends BaseFragment {
@@ -25,19 +26,19 @@ public class HomeFragment extends BaseFragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
     	binding = FragmentHomeBinding.inflate(inflater);
-        binding.createProject.setOnClickListener(view -> {
-            getParentFragmentManager().beginTransaction()
-                .replace(R.id.fragment, new WizardTemplatesFragment(), "WizardTemplates")
-                .addToBackStack(null)
-                .commit();
-        });
-        binding.openProject.setOnClickListener(v -> {
-            getParentFragmentManager().beginTransaction()
-                 .replace(R.id.fragment, new ProjectsFragment(), "Projects")
+    	
+        binding.createProject.setOnClickListener(view -> openFragment(new WizardTemplatesFragment(), "WizardTemplates"));
+        binding.openProject.setOnClickListener(view -> openFragment(new ProjectsFragment(), "Projects"));
+        binding.settings.setOnClickListener(view -> openFragment(new SettingsFragment(), "SettingsMain"));
+        
+        return binding.getRoot();
+    }
+    
+    private void openFragment(Fragment fragment, String lue) {
+        getParentFragmentManager().beginTransaction()
+                 .replace(R.id.fragment, fragment, lue)
                  .addToBackStack(null)
                  .commit();
-        });
-        return binding.getRoot();
     }
     
     @Override
