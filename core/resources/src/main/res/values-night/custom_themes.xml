@@ -55,7 +55,7 @@
         <item name="android:overScrollMode">never</item>
     </style>
 
-    <style name="Theme.Nexus.Emerald" parent="Theme.Nexus.Emerald.Dark">
+    <style name="Theme.Nexus.Esmerald" parent="Theme.Nexus.Esmerald.Dark">
         <item name="android:navigationBarColor">@android:color/transparent</item>
         <item name="android:statusBarColor" >@android:color/transparent</item>
         <item name="android:windowLightStatusBar">false</item>
