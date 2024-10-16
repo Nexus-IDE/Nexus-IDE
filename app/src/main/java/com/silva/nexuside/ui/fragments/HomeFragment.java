@@ -12,6 +12,7 @@ import com.silva.nexuside.ui.activities.MainActivity;
 import com.silva.nexuside.ui.base.BaseFragment;
 import com.silva.nexuside.databinding.FragmentHomeBinding;
 import com.silva.nexuside.ui.fragments.settings.SettingsFragment;
+import com.silva.nexuside.ui.fragments.settings.SettingsMainFragment;
 import com.silva.nexuside.R;
 
 public class HomeFragment extends BaseFragment {
@@ -29,7 +30,7 @@ public class HomeFragment extends BaseFragment {
     	
         binding.createProject.setOnClickListener(view -> openFragment(new WizardTemplatesFragment(), "WizardTemplates"));
         binding.openProject.setOnClickListener(view -> openFragment(new ProjectsFragment(), "Projects"));
-        binding.settings.setOnClickListener(view -> openFragment(new SettingsFragment(), "SettingsMain"));
+        binding.settings.setOnClickListener(view -> openFragment(new SettingsFragment(new SettingsMainFragment()), "SettingsMain"));
         
         return binding.getRoot();
     }
