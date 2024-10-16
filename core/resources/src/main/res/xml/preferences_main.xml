@@ -1,3 +1,19 @@
-<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.preference.PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-</PreferenceScreen>
+
+    <PreferenceCategory
+        android:title="Category"
+        app:iconSpaceReserved="false"
+        app:singleLineTitle="false" />
+
+    <SwitchPreferenceCompat
+        android:defaultValue="true"
+        android:icon="@drawable/androidide"
+        android:key="pref_switch_key"
+        android:layout="@layout/preference_material"
+        android:summaryOff="Pref ON"
+        android:summaryOn="Pref OFF"
+        android:title="Pref"
+        app:singleLineTitle="false" />
+</androidx.preference.PreferenceScreen>
