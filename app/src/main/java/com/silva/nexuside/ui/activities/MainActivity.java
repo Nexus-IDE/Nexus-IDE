@@ -16,6 +16,7 @@ import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
+import androidx.activity.EdgeToEdge;
 import com.downloader.Error;
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.silva.nexuside.resources.R;
@@ -46,6 +47,7 @@ public class MainActivity extends AppCompatActivity{
     
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        EdgeToEdge.enable(this);
     	super.onCreate(savedInstanceState);
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
