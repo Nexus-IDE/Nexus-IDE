@@ -73,8 +73,8 @@
                      android:orientation="vertical">
 
                     <com.google.android.material.card.MaterialCardView
-                         android:layout_height="100dp"
-                         android:layout_width="100dp"
+                         android:layout_height="70dp"
+                         android:layout_width="70dp"
                          style="?attr/materialCardViewFilledStyle"
                          android:clickable="true"
                          app:cardCornerRadius="16dp"
@@ -84,6 +84,7 @@
                              android:layout_width="wrap_content"
                              android:layout_height="wrap_content"
                              android:layout_margin="10dp"
+                             android:layout_gravity="center"
                              android:src="@drawable/ic_add"/>
                              
                     </com.google.android.material.card.MaterialCardView>
@@ -105,8 +106,8 @@
                      android:orientation="vertical">
 
                     <com.google.android.material.card.MaterialCardView
-                         android:layout_height="100dp"
-                         android:layout_width="100dp"
+                         android:layout_height="70dp"
+                         android:layout_width="70dp"
                          style="?attr/materialCardViewFilledStyle"
                          android:clickable="true"
                          app:cardCornerRadius="16dp"
@@ -116,6 +117,7 @@
                              android:layout_width="wrap_content"
                              android:layout_height="wrap_content"
                              android:layout_margin="10dp"
+                             android:layout_gravity="center"
                              android:src="@drawable/ic_folder_open"/>
                              
                     </com.google.android.material.card.MaterialCardView>
@@ -137,8 +139,8 @@
                      android:layout_marginLeft="10dp">
 
                     <com.google.android.material.card.MaterialCardView
-                         android:layout_height="100dp"
-                         android:layout_width="100dp"
+                         android:layout_height="70dp"
+                         android:layout_width="70dp"
                          style="?attr/materialCardViewFilledStyle"
                          android:clickable="true"
                          app:cardCornerRadius="16dp"
@@ -148,6 +150,7 @@
                              android:layout_width="wrap_content"
                              android:layout_height="wrap_content"
                              android:layout_margin="10dp"
+                             android:layout_gravity="center"
                              android:src="@drawable/ic_settings"/>
                              
                     </com.google.android.material.card.MaterialCardView>
