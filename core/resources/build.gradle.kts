@@ -31,5 +31,6 @@ android {
 dependencies {
     implementation(libs.androidx.annotation)
     implementation(libs.androidx.appcompat)
+    implementation(libs.androidx.preference)
     implementation(libs.google.material)
 }

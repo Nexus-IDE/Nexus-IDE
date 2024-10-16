@@ -67,6 +67,7 @@ dependencies {
   
   implementation(libs.androidx.annotation)
   implementation(libs.androidx.appcompat)
+  implementation(libs.androidx.preference)
   coreLibraryDesugaring(libs.androidx.desugar)
 
   implementation(libs.google.material)
