@@ -45,4 +45,8 @@ open class BasePreferenceFragment() : PreferenceFragmentCompat() {
         exitTransition = sharedExit
         reenterTransition =  sharedReenter
     }
+    
+    override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
+        setPreferencesFromResource(0, rootKey)
+    }
 }
