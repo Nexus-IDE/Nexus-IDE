@@ -1,6 +1,6 @@
-package com.silva.nexuside;
+package com.silva.nexuside
 
-import android.app.Application;
+import android.app.Application
 import com.google.android.material.color.DynamicColors
 
 class NexusIDEApp: Application {
