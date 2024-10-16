@@ -39,6 +39,7 @@ public class WizardTemplatesFragment extends BaseFragment {
         binding.exit.setOnClickListener(view -> {
                 mainActivity.onBackPressed();
         });
+        handleInsetts(binding.getRoot());
         return binding.getRoot();
     }
     
