@@ -2,4 +2,23 @@
 <androidx.preference.PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     
+    <PreferenceCategory
+        android:title="@string/appearance_category"
+        android:iconSpaceReserved="false"
+        android:singleLineTitle="false">
+        
+        <Preference
+            android:key="pref_ui_mode"
+            android:title="@string/ui_mode_title"
+            android:summary="@string/ui_mode_summary"
+            app:icon="@drawable/ic_brightness_4" />
+            
+        <Preference
+            android:key="pref_ui_theme"
+            android:title="@string/ui_theme_title"
+            android:summary="@string/ui_theme_summary"
+            app:icon="@drawable/ic_format_color_fill" />
+        
+    </PreferenceCategory>
+    
 </androidx.preference.PreferenceScreen>

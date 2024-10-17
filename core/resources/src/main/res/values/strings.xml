@@ -92,4 +92,24 @@
     <string name="about_us_title">Sobre nós</string>
     <string name="about_us_summary">Mais informações sobre nós da Nexus-IDE.</string>
     
+    <!-- editor settings -->
+    
+    <string name="appearance_category">Aparência</string>
+    
+    <string name="ui_mode_title">Modo da Ui</string>
+    <string name="ui_mode_summary">Escolha o tema entre claro e escuro.</string>
+    
+    <string name="ui_theme_title">Tema da Ui</string>
+    <string name="ui_theme_summary">Selecione um tema para o Nexus IDE.</string>
+    
+    <string name="ui_mode_value_followsys">Seguir o sistema</string>
+    <string name="ui_mode_value_light">Claro</string>
+    <string name="ui_mode_value_dark">Escuro</string>
+    
+    <string name="ui_theme_value_pyro">Pyro</string>
+    <string name="ui_theme_value_indigo">Indigo</string>
+    <string name="ui_theme_value_flamingo">Flamingo</string>
+    <string name="ui_theme_value_mint">Mint</string>
+    <string name="ui_theme_value_esmerald">Esmerald</string>
+    
 </resources>
