@@ -21,6 +21,7 @@ Done! Now just imagine and create!
 1. Open the releases page
 2. Click on the latest version
 3. Install APK
+
 ## 🚀 Contributors
 
 <a href="https://github.com/Nexus-IDE/Nexus-IDE/graphs/contributors">
