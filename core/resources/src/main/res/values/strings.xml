@@ -72,4 +72,24 @@
     
     <string name="no_files_opened">Nenhum arquivo aberto</string>
     
+    <!-- settings -->
+    
+    <string name="settings_category">Configurações</string>
+    
+    <string name="general_title">Geral</string>
+    <string name="general_summary">Configurações gerais do Nexus IDE.</string>
+    <string name="editor_title">Editor</string>
+    <string name="editor_summary">Configurações do Editor de Código.</string>
+    <string name="compile_title">Compilar & Instalar</string>
+    <string name="compile_summary">Configurações do compilador e instalador.</string>
+    <string name="plugin_title">Plugins</string>
+    <string name="plugin_summary">Explore e instale plugins para a IDE.</string>
+    <string name="git_title">Git</string>
+    <string name="git_summary">Configurações do Github</string>
+    
+    <string name="about_category">Sobre</string>
+    
+    <string name="about_us_title">Sobre nós</string>
+    <string name="about_us_summary">Mais informações sobre nós da Nexus-IDE.</string>
+    
 </resources>

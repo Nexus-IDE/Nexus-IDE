@@ -11,3 +11,5 @@ typealias Styles = com.silva.nexuside.resources.R.style
 typealias Ids = com.silva.nexuside.resources.R.id
 
 typealias Menus = com.silva.nexuside.resources.R.menu
+
+typealias Xmls = com.silva.nexuside.resources.R.xml
