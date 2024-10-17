@@ -7,31 +7,31 @@
         android:iconSpaceReserved="false"
         android:singleLineTitle="true" >
 
-        <com.silva.nexuside.ui.components.Preference
+        <com.silva.nexuside.ui.components.NexusPreference
             android:title="@string/general_title"
             android:summary="@string/general_summary"
             app:icon="@drawable/ic_palette"
             android:fragment="com.silva.nexuside.ui.fragments.settings.SettingsGeneralFragment" />
             
-        <com.silva.nexuside.ui.components.Preference
+        <com.silva.nexuside.ui.components.NexusPreference
             android:title="@string/editor_title"
             android:summary="@string/editor_summary"
             app:icon="@drawable/ic_edit"
             android:fragment="com.silva.nexuside.ui.fragments.settings.SettingsEditorFragment" />
             
-        <com.silva.nexuside.ui.components.Preference
+        <com.silva.nexuside.ui.components.NexusPreference
             android:title="@string/compiler_title"
             android:summary="@string/compiler_summary"
             app:icon="@drawable/ic_construction"
             android:fragment="com.silva.nexuside.ui.fragments.settings.SettingsCompilerFragment" />
             
-        <com.silva.nexuside.ui.components.Preference
+        <com.silva.nexuside.ui.components.NexusPreference
             android:title="@string/plugin_title"
             android:summary="@string/plugin_summary"
             app:icon="@drawable/ic_extensions"
             android:fragment="com.silva.nexuside.ui.fragments.settings.SettingsPluginsFragment" />
             
-        <com.silva.nexuside.ui.components.Preference
+        <com.silva.nexuside.ui.components.NexusPreference
             android:title="@string/git_title"
             android:summary="@string/git_summary"
             app:icon="@drawable/ic_github"
@@ -44,7 +44,7 @@
         android:iconSpaceReserved="false"
         android:singleLineTitle="true" >
         
-        <com.silva.nexuside.ui.components.Preference
+        <com.silva.nexuside.ui.components.NexusPreference
             android:title="@string/about_us_title"
             android:summary="@string/about_us_summary"
             app:icon="@drawable/ic_info"

@@ -10,7 +10,7 @@ import android.content.res.TypedArray
 import com.silva.nexuside.resources.Layouts
 import com.silva.nexuside.resources.R
 
-class Preference @JvmOverloads constructor(
+class NexusPreference @JvmOverloads constructor(
     context: Context,
     attrs: AttributeSet? = null
     defStyle: Int = 0
