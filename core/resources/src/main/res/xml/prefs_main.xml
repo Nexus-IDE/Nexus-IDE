@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.preference.PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:dividerHeight="0dp">
 
     <PreferenceCategory
         android:title="@string/settings_category"
         android:iconSpaceReserved="false"
-        android:singleLineTitle="true" >
+        android:singleLineTitle="false" >
 
         <com.silva.nexuside.ui.components.NexusPreference
             android:title="@string/general_title"
@@ -42,7 +43,7 @@
     <PreferenceCategory
         android:title="@string/about_category"
         android:iconSpaceReserved="false"
-        android:singleLineTitle="true" >
+        android:singleLineTitle="false" >
         
         <com.silva.nexuside.ui.components.NexusPreference
             android:title="@string/about_us_title"
