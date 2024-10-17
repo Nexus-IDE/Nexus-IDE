@@ -22,11 +22,6 @@ open class BaseFragment() : Fragment() {
         reenterTransition =  MaterialSharedAxis(MaterialSharedAxis.X, false)
     }
     
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-        view.setBackgroundColor(MaterialColors.getColor(view, android.R.attr.colorSurfaceContainerLow))
-    }
-    
     fun handleInsetts(rootView: View) {
         Insetter
             .builder()
@@ -46,11 +41,6 @@ open class BasePreferenceFragment() : PreferenceFragmentCompat() {
         returnTransition = MaterialSharedAxis(MaterialSharedAxis.X, false)
         exitTransition = MaterialSharedAxis(MaterialSharedAxis.X, true)
         reenterTransition =  MaterialSharedAxis(MaterialSharedAxis.X, false)
-    }
-    
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-        view.setBackgroundColor(MaterialColors.getColor(view, Styles.colorSurfaceContainerLow))
     }
     
     override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
