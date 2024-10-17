@@ -60,3 +60,4 @@
   <style name="Theme.Nexus.SwitchPreferenceCompat" parent="@style/Preference.SwitchPreferenceCompat.Material">
         <item name="widgetLayout">@layout/preference_material_switch</item>
   </style>
+</resources>
