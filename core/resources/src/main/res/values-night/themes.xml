@@ -55,26 +55,8 @@
         <item name="android:windowActivityTransitions">true</item>
         <item name="android:fontFamily">@font/inter</item>
         <item name="switchPreferenceCompatStyle">@style/Theme.Nexus.SwitchPreferenceCompat</item>
-        <item name="collapsingToolbarLayoutLargeStyle">@style/Widget.Nexus.CollapsingToolbar</item>
   </style>
   
   <style name="Theme.Nexus.SwitchPreferenceCompat" parent="@style/Preference.SwitchPreferenceCompat.Material">
         <item name="widgetLayout">@layout/preference_material_switch</item>
   </style>
-  
-  <style name="Widget.Nexus.CollapsingToolbar" parent="Widget.Material3.CollapsingToolbar.Large">
-        <item name="collapsedTitleTextAppearance">@style/TextAppearance.Nexus.CollapsingToolbar.Collapse</item>
-        <item name="expandedTitleTextAppearance">@style/TextAppearance.Nexus.CollapsingToolbar.Expande</item>
-        <item name="titleCollapseMode">scale</item>
-    </style>
-
-    <style name="TextAppearance.Nexus.CollapsingToolbar.Collapse" parent="TextAppearance.Material3.TitleLarge">
-        <item name="fontFamily">@font/inter</item>
-        <item name="android:fontFamily">@font/inter</item>
-    </style>
-
-    <style name="TextAppearance.Nexus.CollapsingToolbar.Expande" parent="TextAppearance.Material3.HeadlineMedium">
-        <item name="fontFamily">@font/inter</item>
-        <item name="android:fontFamily">@font/inter</item>
-    </style>
-</resources>
