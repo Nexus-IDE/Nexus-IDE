@@ -5,36 +5,36 @@
     <PreferenceCategory
         android:title="@string/settings_category"
         android:iconSpaceReserved="false"
-        android:singleLineTitle="false" >
+        android:singleLineTitle="true" >
 
-        <Preference
+        <com.silva.nexuside.ui.components.Preference
             android:title="@string/general_title"
             android:summary="@string/general_summary"
-            android:icon="@drawable/ic_palette"
+            app:icon="@drawable/ic_palette"
             android:fragment="com.silva.nexuside.ui.fragments.settings.SettingsGeneralFragment" />
             
-        <Preference
+        <com.silva.nexuside.ui.components.Preference
             android:title="@string/editor_title"
             android:summary="@string/editor_summary"
-            android:icon="@drawable/ic_edit"
+            app:icon="@drawable/ic_edit"
             android:fragment="com.silva.nexuside.ui.fragments.settings.SettingsEditorFragment" />
             
-        <Preference
+        <com.silva.nexuside.ui.components.Preference
             android:title="@string/compiler_title"
             android:summary="@string/compiler_summary"
-            android:icon="@drawable/ic_construction"
+            app:icon="@drawable/ic_construction"
             android:fragment="com.silva.nexuside.ui.fragments.settings.SettingsCompilerFragment" />
             
-        <Preference
+        <com.silva.nexuside.ui.components.Preference
             android:title="@string/plugin_title"
             android:summary="@string/plugin_summary"
-            android:icon="@drawable/ic_extensions"
+            app:icon="@drawable/ic_extensions"
             android:fragment="com.silva.nexuside.ui.fragments.settings.SettingsPluginsFragment" />
             
-        <Preference
+        <com.silva.nexuside.ui.components.Preference
             android:title="@string/git_title"
             android:summary="@string/git_summary"
-            android:icon="@drawable/ic_github"
+            app:icon="@drawable/ic_github"
             android:fragment="com.silva.nexuside.ui.fragments.settings.SettingsGitFragment" />
         
     </PreferenceCategory>
@@ -42,12 +42,12 @@
     <PreferenceCategory
         android:title="@string/about_category"
         android:iconSpaceReserved="false"
-        android:singleLineTitle="false" >
+        android:singleLineTitle="true" >
         
-        <Preference
+        <com.silva.nexuside.ui.components.Preference
             android:title="@string/about_us_title"
             android:summary="@string/about_us_summary"
-            android:icon="@drawable/ic_info"
+            app:icon="@drawable/ic_info"
             android:fragment="com.silva.nexuside.ui.fragments.settings.SettingsAboutFragment" />
         
     </PreferenceCategory>
