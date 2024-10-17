@@ -14,7 +14,7 @@ class Preference @JvmOverloads constructor(
     context: Context,
     attrs: AttributeSet? = null
     defStyle: Int = 0
-    } : Preference(context, attrs, defStyle) {
+    ) : Preference(context, attrs, defStyle) {
     
     private var mIcon: Drawable? = null
     
