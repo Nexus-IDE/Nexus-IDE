@@ -27,7 +27,7 @@ class NexusPreference @JvmOverloads constructor(
     }
     
     override fun onBindViewHolder(holder: PreferenceViewHolder) {
-        super.onBindView(holder)
+        super.onBindViewHolder(holder)
         val imageView = holder.itemView.findViewById<ImageView>(R.id.icon)
         imageView?.setImageDrawable(mIcon)
     }
