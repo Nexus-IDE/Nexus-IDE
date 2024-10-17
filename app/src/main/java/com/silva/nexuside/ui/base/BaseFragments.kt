@@ -24,7 +24,7 @@ open class BaseFragment() : Fragment() {
     
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        view.setBackgroundColor(MaterialColors.getColor(view, android.R.colorSurfaceContainerLow))
+        view.setBackgroundColor(MaterialColors.getColor(view, android.R.attr.colorSurfaceContainerLow))
     }
     
     fun handleInsetts(rootView: View) {
@@ -50,7 +50,7 @@ open class BasePreferenceFragment() : PreferenceFragmentCompat() {
     
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        view.setBackgroundColor(MaterialColors.getColor(view, android.R.colorSurfaceContainerLow))
+        view.setBackgroundColor(MaterialColors.getColor(view, Styles.colorSurfaceContainerLow))
     }
     
     override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
