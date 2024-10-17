@@ -80,8 +80,8 @@
     <string name="general_summary">Configurações gerais do Nexus IDE.</string>
     <string name="editor_title">Editor</string>
     <string name="editor_summary">Configurações do Editor de Código.</string>
-    <string name="compile_title">Compilar &amp; Instalar</string>
-    <string name="compile_summary">Configurações do compilador e instalador.</string>
+    <string name="compiler_title">Compilar &amp; Instalar</string>
+    <string name="compiler_summary">Configurações do compilador e instalador.</string>
     <string name="plugin_title">Plugins</string>
     <string name="plugin_summary">Explore e instale plugins para a IDE.</string>
     <string name="git_title">Git</string>
