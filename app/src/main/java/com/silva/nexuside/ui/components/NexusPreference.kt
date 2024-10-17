@@ -25,20 +25,20 @@ class NexusPreference @JvmOverloads constructor(
         a.recycle()
     }
     
-    override fun onBindView(view: View) {
-        super.onBindView(view)
-        val imageView = view.findViewById<ImageView>(R.id.icon)
+    override fun onBindView(holder: PreferenceViewHolder) {
+        super.onBindView(holder)
+        val imageView = holder.findViewById(R.id.icon) as? ImageView
         imageView?.setImageDrawable(mIcon)
     }
     
-    fun setIcon(icon: Drawable?) {
+    override fun setIcon(icon: Drawable?) {
         if ((icon == null && mIcon != null) || (icon != null && icon != mIcon)) {
             mIcon = icon
             notifyChanged()
         }
     }
     
-    fun getIcon(): Drawable? {
+    override fun getIcon(): Drawable? {
         return mIcon
     }
     
