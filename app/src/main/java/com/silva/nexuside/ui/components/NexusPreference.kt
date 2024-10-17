@@ -12,7 +12,7 @@ import com.silva.nexuside.resources.R
 
 class NexusPreference @JvmOverloads constructor(
     context: Context,
-    attrs: AttributeSet? = null
+    attrs: AttributeSet? = null,
     defStyle: Int = 0
     ) : Preference(context, attrs, defStyle) {
     
