@@ -6,6 +6,7 @@ import android.util.AttributeSet
 import android.view.View
 import android.widget.ImageView
 import androidx.preference.Preference
+import androidx.preference.PreferenceViewHolder
 import android.content.res.TypedArray
 import com.silva.nexuside.resources.Layouts
 import com.silva.nexuside.resources.R
@@ -25,9 +26,9 @@ class NexusPreference @JvmOverloads constructor(
         a.recycle()
     }
     
-    override fun onBindView(holder: PreferenceViewHolder) {
+    override fun onBindViewHolder(holder: PreferenceViewHolder) {
         super.onBindView(holder)
-        val imageView = holder.findViewById(R.id.icon) as? ImageView
+        val imageView = holder.itemView.findViewById<ImageView>(R.id.icon)
         imageView?.setImageDrawable(mIcon)
     }
     
