@@ -6,7 +6,7 @@ typealias Strings = com.silva.nexuside.resources.R.string
 
 typealias Colors = com.silva.nexuside.resources.R.color
 
-typealias Styles = com.silva.nexuside.resources.R.style
+typealias Styles = com.silva.nexuside.resources.R.attr
 
 typealias Ids = com.silva.nexuside.resources.R.id
 

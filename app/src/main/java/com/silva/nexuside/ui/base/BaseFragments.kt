@@ -11,6 +11,7 @@ import com.google.android.material.appbar.MaterialToolbar
 import com.google.android.material.color.MaterialColors
 import com.google.android.material.transition.MaterialSharedAxis
 import dev.chrisbanes.insetter.Insetter
+import com.silva.nexuside.resources.Styles
 
 open class BaseFragment() : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -19,6 +20,11 @@ open class BaseFragment() : Fragment() {
         returnTransition = MaterialSharedAxis(MaterialSharedAxis.X, false)
         exitTransition = MaterialSharedAxis(MaterialSharedAxis.X, true)
         reenterTransition =  MaterialSharedAxis(MaterialSharedAxis.X, false)
+    }
+    
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        view.setBackgroundColor(MaterialColors.getColor(view, Styles.colorSurfaceContainerLow))
     }
     
     fun handleInsetts(rootView: View) {
@@ -40,6 +46,11 @@ open class BasePreferenceFragment() : PreferenceFragmentCompat() {
         returnTransition = MaterialSharedAxis(MaterialSharedAxis.X, false)
         exitTransition = MaterialSharedAxis(MaterialSharedAxis.X, true)
         reenterTransition =  MaterialSharedAxis(MaterialSharedAxis.X, false)
+    }
+    
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        view.setBackgroundColor(MaterialColors.getColor(view, Styles.colorSurfaceContainerLow))
     }
     
     override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
