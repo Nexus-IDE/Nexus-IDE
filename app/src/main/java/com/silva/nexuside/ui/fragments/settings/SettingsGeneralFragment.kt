@@ -37,7 +37,7 @@ class SettingsGeneralFragment : BasePreferenceFragment() {
                     getContext()?.getString(Strings.ui_mode_value_light),
                     getContext()?.getString(Strings.ui_mode_value_dark),
                 )
-            val adapter = items?.let { OptionsAdapter(it) }
+            val adapter = OptionsAdapter(items!!)
             binding.listview.adapter = adapter
 
             MaterialAlertDialogBuilder(requireContext())
