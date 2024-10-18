@@ -30,21 +30,25 @@ class SettingsGeneralFragment : BasePreferenceFragment() {
 
         val uiMode: Preference? = findPreference("pref_ui_mode")
         uiMode?.setOnPreferenceClickListener {
-            val binding = LayoutDialogSelectListviewBinding.inflate(inflater)
             val items = listOf(
                 getContext()?.getString(Strings.ui_mode_value_followsys) ?: "Default FollowSys",
                 getContext()?.getString(Strings.ui_mode_value_light) ?: "Default Light",
                 getContext()?.getString(Strings.ui_mode_value_dark) ?: "Default Dark"
             )
             
-            val adapter = OptionsAdapter(items)
-            binding.listview.adapter = adapter
+            val itemsSelected = mutableListOf(
+                true,
+                false,
+                false
+            )
 
             MaterialAlertDialogBuilder(requireContext())
                 .setTitle(getString(Strings.ui_mode_title))
                 .setPositiveButton(getString(Strings.save)) { dialog, which -> }
                 .setNegativeButton(getString(Strings.cancel), null)
-                .setView(binding.root)
+                .setMultiChoiceItems(items.toTypedArray, itemsSelected.toBooleanArray()) { dialog, which, isChecked ->
+                    itemsSelected[which] = isChecked
+                }
                 .show()
             true
         }
