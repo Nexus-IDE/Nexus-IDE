@@ -32,8 +32,8 @@ jobs:
           git config --global user.email "devsuay@gmail.com"
           git add .
           git commit -m "chore: Format Code" -m "fornat code with ktfmt with github actions"
-          git branch -M dev
-          git push origin dev
+          git branch -M main
+          git push origin main
         env:
           TOKEN: ${{ secrets.SUPER_TOKEN }}
         continue-on-error: true
