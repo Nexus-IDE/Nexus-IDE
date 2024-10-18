@@ -6,9 +6,7 @@ import android.view.ViewGroup
 import android.widget.BaseAdapter
 import com.silva.nexuside.databinding.LayoutCheckOptionsBinding
 
-class OptionsAdapter(
-    private val arr: List<String>
-) : BaseAdapter() {
+class OptionsAdapter(private val arr: List<String>) : BaseAdapter() {
 
     override fun getCount(): Int {
         return arr.size
@@ -27,7 +25,12 @@ class OptionsAdapter(
         val view: View
 
         if (convertView == null) {
-            binding = LayoutCheckOptionsBinding.inflate(LayoutInflater.from(parent?.context), parent, false)
+            binding =
+                LayoutCheckOptionsBinding.inflate(
+                    LayoutInflater.from(parent?.context),
+                    parent,
+                    false,
+                )
             view = binding.root
             view.tag = binding
         } else {

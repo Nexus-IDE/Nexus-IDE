@@ -9,5 +9,5 @@ data class Project(
     var packageName: String? = null,
     var path: File? = null,
     var language: String? = null,
-    var minSdk: Int = 21
+    var minSdk: Int = 21,
 )
