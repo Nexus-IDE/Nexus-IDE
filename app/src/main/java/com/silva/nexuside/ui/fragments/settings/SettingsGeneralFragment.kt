@@ -38,9 +38,8 @@ class SettingsGeneralFragment : BasePreferenceFragment() {
                 .setTitle(getString(Strings.ui_mode_title))
                 .setPositiveButton(getString(Strings.save)) { dialog, which -> }
                 .setNegativeButton(getString(Strings.cancel), null)
-                .setSingleChoiceItems(items, 1) { dialog, which ->
-                    
-                }
+                .setSingleChoiceItems(items.toTypedArray(), 1) { dialog, which -> }
+                .create()
                 .show()
             true
         }
