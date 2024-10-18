@@ -33,19 +33,13 @@ class SettingsGeneralFragment : BasePreferenceFragment() {
                 getContext()?.getString(Strings.ui_mode_value_light) ?: "Default Light",
                 getContext()?.getString(Strings.ui_mode_value_dark) ?: "Default Dark"
             )
-            
-            val itemsSelected = mutableListOf(
-                true,
-                false,
-                false
-            )
 
             MaterialAlertDialogBuilder(requireContext())
                 .setTitle(getString(Strings.ui_mode_title))
                 .setPositiveButton(getString(Strings.save)) { dialog, which -> }
                 .setNegativeButton(getString(Strings.cancel), null)
-                .setMultiChoiceItems(items.toTypedArray(), itemsSelected.toBooleanArray()) { dialog, which, isChecked ->
-                    itemsSelected[which] = isChecked
+                .setSingleChoiceItems(items, 1) { dialog, which ->
+                    
                 }
                 .show()
             true
