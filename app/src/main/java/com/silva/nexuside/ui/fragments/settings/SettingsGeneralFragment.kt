@@ -35,24 +35,24 @@ class SettingsGeneralFragment : BasePreferenceFragment() {
         uiMode?.setOnPreferenceClickListener {
             val listView: LayoutDialogSelectListviewBinding = LayoutDialogSelectListviewBinding.inflate(inflater)
             val items: listOf(
-                getContext().getString(Strings.ui_mode_value_followsys),
-                getContext().getString(Strings.ui_mode_value_light),
-                getContext().getString(Strings.ui_mode_value_dark))
+                getContext()?.getString(Strings.ui_mode_value_followsys),
+                getContext()?.getString(Strings.ui_mode_value_light),
+                getContext()?.getString(Strings.ui_mode_value_dark))
             val adapter: OptionsAdapter(items)
             binding.listview.adapter = adapter
             
-            MaterialAlertDialogBuilder(this)
+            MaterialAlertDialogBuilder(requireContext())
                 .setTitle(Strings.ui_mode_title)
                 .setPositiveButton(Strings.save) { dialog, which ->
                     
                 }
-                .setNegativeButton(Strings.cancel)
+                .setNegativeButton(Strings.cancel, null)
                 .setView(binding.root)
                 .create()
                 .show()
             true
         }
-        
+        return super.onCreateView(inflater, container, savedInstanceState)
     }
         
 }

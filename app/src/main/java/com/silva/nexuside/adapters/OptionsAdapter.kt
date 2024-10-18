@@ -24,7 +24,7 @@ class OptionsAdapter(
     }
     
     override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
-        val binding: LayoutCheckOptionsBinding = LayoutCheckOptionsBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        val binding: LayoutCheckOptionsBinding = LayoutCheckOptionsBinding.inflate(LayoutInflater.from(parent?.context), parent?, false)
         binding.text.text = arr[position]
         return binding.root
     }
