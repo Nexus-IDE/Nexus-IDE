@@ -6,8 +6,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.preference.Preference
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
-import com.silva.nexuside.adapters.OptionsAdapter
-import com.silva.nexuside.databinding.LayoutDialogSelectListviewBinding
 import com.silva.nexuside.resources.Strings
 import com.silva.nexuside.resources.Xmls
 import com.silva.nexuside.ui.base.BasePreferenceFragment
@@ -46,7 +44,7 @@ class SettingsGeneralFragment : BasePreferenceFragment() {
                 .setTitle(getString(Strings.ui_mode_title))
                 .setPositiveButton(getString(Strings.save)) { dialog, which -> }
                 .setNegativeButton(getString(Strings.cancel), null)
-                .setMultiChoiceItems(items.toTypedArray, itemsSelected.toBooleanArray()) { dialog, which, isChecked ->
+                .setMultiChoiceItems(items.toTypedArray(), itemsSelected.toBooleanArray()) { dialog, which, isChecked ->
                     itemsSelected[which] = isChecked
                 }
                 .show()
