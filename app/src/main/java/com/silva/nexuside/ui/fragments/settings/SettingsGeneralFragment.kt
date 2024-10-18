@@ -26,7 +26,7 @@ class SettingsGeneralFragment : BasePreferenceFragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?,
-    ): View? {
+    ): View {
 
         val uiMode: Preference? = findPreference("pref_ui_mode")
         uiMode?.setOnPreferenceClickListener {
@@ -37,7 +37,7 @@ class SettingsGeneralFragment : BasePreferenceFragment() {
                     getContext()?.getString(Strings.ui_mode_value_light),
                     getContext()?.getString(Strings.ui_mode_value_dark),
                 )
-            val adapter = OptionsAdapter(items)
+            val adapter = itens?.let { OptionsAdapter(it) }
             binding.listview.adapter = adapter
 
             MaterialAlertDialogBuilder(requireContext())
@@ -45,7 +45,6 @@ class SettingsGeneralFragment : BasePreferenceFragment() {
                 .setPositiveButton(getString(Strings.save)) { dialog, which -> }
                 .setNegativeButton(getString(Strings.cancel), null)
                 .setView(binding.root)
-                .create()
                 .show()
             true
         }
