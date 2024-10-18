@@ -7,6 +7,8 @@
     <string name="permission_message">O Nexus IDE precisa de acesso ao armazenamento para funcionar corretamente.</string>
     
     <!-- common -->
+    <string name="save">Salvar</string>
+    <string name="cancel">Cancelar</string>
     <string name="create">Criar</string>
     <string name="exit">Sair</string>
     
@@ -56,7 +58,6 @@
     <string name="undo">Desfazer</string>
     <string name="redo">Refazer</string>
     <string name="execute">Executar</string>
-    <string name="save">Salvar</string>
     <string name="search">Procurar</string>
     <string name="reload_color_scheme">Recarregar esquema de cores</string>
     
