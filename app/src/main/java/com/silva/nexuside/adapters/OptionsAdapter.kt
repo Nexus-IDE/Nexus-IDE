@@ -38,7 +38,7 @@ class OptionsAdapter(private val arr: List<String>) : BaseAdapter() {
             binding = view.tag as LayoutCheckOptionsBinding
         }
 
-        binding.text.text = arr[position]
+        binding.item1.text = arr[position]
 
         return view
     }
