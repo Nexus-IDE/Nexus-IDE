@@ -31,13 +31,13 @@ class SettingsGeneralFragment : BasePreferenceFragment() {
         val uiMode: Preference? = findPreference("pref_ui_mode")
         uiMode?.setOnPreferenceClickListener {
             val binding = LayoutDialogSelectListviewBinding.inflate(inflater)
-            val items =
-                listOf(
-                    getContext()?.getString(Strings.ui_mode_value_followsys),
-                    getContext()?.getString(Strings.ui_mode_value_light),
-                    getContext()?.getString(Strings.ui_mode_value_dark),
-                )
-            val adapter = OptionsAdapter(items!!)
+            val items = listOf(
+                getContext()?.getString(Strings.ui_mode_value_followsys) ?: "Default FollowSys",
+                getContext()?.getString(Strings.ui_mode_value_light) ?: "Default Light",
+                getContext()?.getString(Strings.ui_mode_value_dark) ?: "Default Dark"
+            )
+            
+            val adapter = OptionsAdapter(items)
             binding.listview.adapter = adapter
 
             MaterialAlertDialogBuilder(requireContext())
