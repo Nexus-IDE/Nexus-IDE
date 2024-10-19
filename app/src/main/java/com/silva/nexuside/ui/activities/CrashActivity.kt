@@ -10,11 +10,12 @@ import com.blankj.utilcode.util.DeviceUtils
 import com.blankj.utilcode.util.ClipboardUtils
 
 import com.silva.nexuside.databinding.ActivityCrashBinding
+import com.silva.nexuside.BuildConfig
 
 class CrashActivity : AppCompatActivity() {
 
     private var _binding: ActivityCrashBinding? = null
-    private var binding
+    private var binding: ActivityCrashBinding
         get() = _binding!!
         
     private val deviceInfo: String

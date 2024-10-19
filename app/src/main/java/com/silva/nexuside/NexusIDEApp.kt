@@ -4,6 +4,9 @@ import android.app.Application
 import android.content.Intent
 import com.google.android.material.color.DynamicColors
 import com.silva.nexuside.di.preferencesModule
+import com.silva.nexuside.ui.activities.CrashActivity
+import com.blankj.utilcode.util.ThrowableUtils
+import kotlin.system.exitProcess
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
 import org.koin.core.context.startKoin
@@ -25,10 +28,10 @@ class NexusIDEApp : Application() {
         try {
           startActivity(
             Intent(this, CrashActivity::class.java).apply {
-            putExtra("key_extra_error", ThrowableUtils.getFullStackTrace(th))
-            flags = Intent.FLAG_ACTIVITY_NEW_TASK or
-            Intent.FLAG_ACTIVITY_CLEAR_TASK or
-            Intent.FLAG_ACTIVITY_CLEAR_TOP
+               intent.putExtra("key_extra_error", ThrowableUtils.getFullStackTrace(th))
+               intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or
+               Intent.FLAG_ACTIVITY_CLEAR_TASK or
+               Intent.FLAG_ACTIVITY_CLEAR_TOP
             }
           )
 
