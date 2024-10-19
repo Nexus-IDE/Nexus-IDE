@@ -9,6 +9,7 @@ import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.silva.nexuside.resources.Strings
 import com.silva.nexuside.resources.Xmls
 import com.silva.nexuside.ui.base.BasePreferenceFragment
+import com.silva.nexuside.utils.ThemeUtils
 
 class SettingsGeneralFragment : BasePreferenceFragment() {
 
@@ -38,7 +39,13 @@ class SettingsGeneralFragment : BasePreferenceFragment() {
                 .setTitle(getString(Strings.ui_mode_title))
                 .setPositiveButton(getString(Strings.save)) { dialog, which -> }
                 .setNegativeButton(getString(Strings.cancel), null)
-                .setSingleChoiceItems(items.toTypedArray(), 1) { dialog, which -> }
+                .setSingleChoiceItems(items.toTypedArray(), 0) { dialog, which -> 
+                    when(which) {
+                        0 -> ThemeUtils.setFollowSysTheme()
+                        1 -> ThemeUtils.setLightTheme()
+                        2 -> ThemeUtils.setDarkTheme()
+                    }
+                }
                 .create()
                 .show()
             true
