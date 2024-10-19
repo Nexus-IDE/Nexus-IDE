@@ -30,7 +30,7 @@ class SettingsGeneralFragment : BasePreferenceFragment() {
         val uiMode: Preference? = findPreference("pref_ui_mode")
         uiMode?.setOnPreferenceClickListener {
         
-            val selected = 0
+            var selected = 0
         
             val items = listOf(
                 getContext()?.getString(Strings.ui_mode_value_followsys) ?: "Default FollowSys",
