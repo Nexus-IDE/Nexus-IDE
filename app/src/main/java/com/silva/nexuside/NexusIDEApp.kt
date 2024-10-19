@@ -16,17 +16,16 @@ class NexusIDEApp : Application() {
     private var uncaughtException: Thread.UncaughtExceptionHandler? = null
 
     override fun onCreate() {
+        super.onCreate()
         uncaughtException = Thread.getDefaultUncaughtExceptionHandler()
-        Thread.setDefaultUncaughtExceptionHandler { thread, throwable ->
-            uncaughtException(thread, throwable)
-        }
+        Thread.setDefaultUncaughtExceptionHandler(this::uncaughtException)
         
         DynamicColors.applyToActivitiesIfAvailable(this)
     }
     
     private fun uncaughtException(thread: Thread, th: Throwable) {
         try {
-          val intent = Intent(this, CrashActivity::class.java).apply {
+          val intent = Intent(this, CrashActivity::class.kt).apply {
               putExtra("key_extra_error", ThrowableUtils.getFullStackTrace(th))
               flags = Intent.FLAG_ACTIVITY_NEW_TASK or
               Intent.FLAG_ACTIVITY_CLEAR_TASK or
