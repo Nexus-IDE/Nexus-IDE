@@ -5,7 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import androidx.fragment.app.Fragment;
-import com.silva.nexuside.resources.databinding.FragmentBottomsheetBinding;
+import com.silva.nexuside.databinding.FragmentBottomsheetBinding;
 import com.silva.nexuside.ui.base.BaseFragment;
 
 public class EditorBottomSheetFragment extends BaseFragment {

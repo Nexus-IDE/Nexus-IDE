@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.silva.nexuside.adapters.ProjectsAdapter
-import com.silva.nexuside.resources.databinding.FragmentProjectsBinding
+import com.silva.nexuside.databinding.FragmentProjectsBinding
 import com.silva.nexuside.project.ProjectManager
 import com.silva.nexuside.ui.base.BaseFragment
 

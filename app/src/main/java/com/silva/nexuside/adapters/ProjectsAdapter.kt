@@ -4,7 +4,7 @@ import android.net.Uri
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.silva.nexuside.resources.databinding.LayoutProjectItemBinding
+import com.silva.nexuside.databinding.LayoutProjectItemBinding
 
 class ProjectsAdapter(private val arr: List<String>) :
     RecyclerView.Adapter<ProjectsAdapter.ViewHolder>() {

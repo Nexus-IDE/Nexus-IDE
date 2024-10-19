@@ -10,7 +10,7 @@ import androidx.fragment.app.Fragment;
 import com.google.android.material.transition.MaterialSharedAxis;
 import com.silva.nexuside.ui.activities.MainActivity;
 import com.silva.nexuside.ui.base.BaseFragment;
-import com.silva.nexuside.resources.databinding.FragmentHomeBinding;
+import com.silva.nexuside.databinding.FragmentHomeBinding;
 import com.silva.nexuside.ui.fragments.settings.SettingsFragment;
 import com.silva.nexuside.ui.fragments.settings.SettingsMainFragment;
 import com.silva.nexuside.R;

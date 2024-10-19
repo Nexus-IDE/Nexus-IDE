@@ -3,7 +3,7 @@ package com.silva.nexuside.adapters;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 import androidx.recyclerview.widget.RecyclerView;
-import com.silva.nexuside.resources.databinding.LayoutSymbolItemBinding;
+import com.silva.nexuside.databinding.LayoutSymbolItemBinding;
 import com.silva.nexuside.models.Symbol;
 import com.silva.editor.NexusEditor;
 
