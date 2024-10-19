@@ -24,20 +24,25 @@ class NexusIDEApp : Application() {
     }
     
     private fun uncaughtException(thread: Thread, th: Throwable) {
-        try {
-          val intent = Intent(this, CrashActivity::class.java).apply {
-              putExtra("key_extra_error", ThrowableUtils.getFullStackTrace(th))
-              flags = Intent.FLAG_ACTIVITY_NEW_TASK or
-              Intent.FLAG_ACTIVITY_CLEAR_TASK or
-              Intent.FLAG_ACTIVITY_CLEAR_TOP
-          }
-          startActivity(intent)
+        Thread {
+             try {
+                 val intent = Intent(this, CrashActivity::class.java).apply {
+                     putExtra("key_extra_error", ThrowableUtils.getFullStackTrace(th))
+                     flags = Intent.FLAG_ACTIVITY_NEW_TASK or
+                           Intent.FLAG_ACTIVITY_CLEAR_TASK or
+                           Intent.FLAG_ACTIVITY_CLEAR_TOP
+                 }
+                 startActivity(intent)
 
-          uncaughtException?.uncaughtException(thread, th)
-          exitProcess(1)
-        } catch (e: Throwable) {
-          e.printStackTrace()
-        }
+                 android.os.Handler(mainLooper).postDelayed({
+                     uncaughtException?.uncaughtException(thread, th)
+                         exitProcess(1)
+                 }, 2000)
+
+         } catch (e: Throwable) {
+             e.printStackTrace()
+         }
+        }.start()
     }
 
     fun configureKoin() {
