@@ -34,5 +34,5 @@ dependencies {
   implementation(libs.google.gson)
   implementation(libs.common.editor)
   implementation(libs.common.editor.textmate)
-  implementation(project(":util"))
+  implementation(project(":core:utils"))
 }
