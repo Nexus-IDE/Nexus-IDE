@@ -90,4 +90,5 @@ dependencies {
   implementation(project(":editor"))
   implementation(project(":util"))
   implementation(project(":core:resources"))
+  implementation(project(":core:settings"))
 }
