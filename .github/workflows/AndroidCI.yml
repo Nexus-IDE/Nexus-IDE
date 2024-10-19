@@ -74,14 +74,8 @@ jobs:
           name: nexus-release
           compression-level: 0
           path: ${{ steps.sign_apk.outputs.signedReleaseFile }}
-
-      - name: Upload APK
-        uses: actions/upload-artifact@v4
-        with:
-          name: nexus-${{ matrix.build-type }}
-          path: app/build/outputs/apk/${{ matrix.build-type }}/app-${{ matrix.build-type }}.apk
           
-      - name: Send APK to Telegram
+      - name: Send Release APK to Telegram
         continue-on-error: true
         run: |
           curl -X POST "https://api.telegram.org/bot${{ secrets.NEXUS_BOT_TOKEN }}/sendDocument" \
@@ -89,3 +83,21 @@ jobs:
             -F message_thread_id="${{ secrets.NEXUS_CI_TOPIC_ID }}" \
             -F caption="${{ github.event.head_commit.message }} by ${{ github.actor }}" \
             -F document=@"app/build/outputs/apk/release/app-release-unsigned-signed.apk"
+
+      - name: Upload APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: nexus-${{ matrix.build-type }}
+          compression-level: 0
+          path: app/build/outputs/apk/${{ matrix.build-type }}/app-${{ matrix.build-type }}.apk
+          
+          
+      - name: Send Debug APK to Telegram
+        if: matrix.build-type == 'debug'
+        continue-on-error: true
+        run: |
+          curl -X POST "https://api.telegram.org/bot${{ secrets.NEXUS_BOT_TOKEN }}/sendDocument" \
+            -F chat_id="${{ secrets.NEXUS_CHAT_ID }}" \
+            -F message_thread_id="${{ secrets.NEXUS_CI_DEBUG_TOPIC_ID }}" \
+            -F caption="${{ github.event.head_commit.message }} by ${{ github.actor }}" \
+            -F document=@"app/build/outputs/apk/debug/app-debug.apk"

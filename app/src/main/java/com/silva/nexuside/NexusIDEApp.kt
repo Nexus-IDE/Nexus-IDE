@@ -33,11 +33,7 @@ class NexusIDEApp : Application() {
                            Intent.FLAG_ACTIVITY_CLEAR_TOP
                  }
                  startActivity(intent)
-
-                 android.os.Handler(mainLooper).postDelayed({
-                     uncaughtException?.uncaughtException(thread, th)
-                         exitProcess(1)
-                 }, 2000)
+                 exitProcess(1)
 
          } catch (e: Throwable) {
              e.printStackTrace()
