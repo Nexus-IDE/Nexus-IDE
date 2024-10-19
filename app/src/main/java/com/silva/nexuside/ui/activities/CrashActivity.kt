@@ -1,11 +1,13 @@
 package com.silva.nexuside.ui.activities
 
 import android.os.Bundle
+import android.os.Build
 
 import androidx.appcompat.app.AppCompatActivity
 import androidx.activity.EdgeToEdge
 
 import com.blankj.utilcode.util.DeviceUtils
+import com.blankj.utilcode.util.ClipboardUtils
 
 import com.silva.nexuside.databinding.ActivityCrashBinding
 
@@ -41,8 +43,8 @@ class CrashActivity : AppCompatActivity() {
             .toString()
     
     override fun onCreate(savedInstanceState: Bundle?) {
-        EdgeToEdge.enable(this)
         super.onCreate(savedInstanceState)
+        EdgeToEdge.enable(this)
         _binding = ActivityCrashBinding.inflate(getLayoutInflater())
         setContentView(binding.root)
         

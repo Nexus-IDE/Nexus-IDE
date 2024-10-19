@@ -14,7 +14,9 @@ class NexusIDEApp : Application() {
 
     override fun onCreate() {
         uncaughtException = Thread.getDefaultUncaughtExceptionHandler()
-        Thread.setDefaultUncaughtExceptionHandler(this::uncaughtException)
+        Thread.setDefaultUncaughtExceptionHandler { thread, throwable ->
+            uncaughtException(thread, throwable)
+        }
         
         DynamicColors.applyToActivitiesIfAvailable(this)
     }
