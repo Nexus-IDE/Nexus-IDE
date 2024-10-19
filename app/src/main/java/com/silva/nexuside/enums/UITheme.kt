@@ -22,7 +22,7 @@ enum class UITheme(
     }
     
     @StyleRes
-    fun getStyleResId(): Int {
+    fun getThemeResId(): Int {
         return styleResId
     }
     
