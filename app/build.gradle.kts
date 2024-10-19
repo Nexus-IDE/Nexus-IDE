@@ -91,6 +91,5 @@ dependencies {
     implementation(project(":feature:editor"))
 
     implementation(project(":core:utils"))
-    implementation(project(":core:resources"))
     implementation(project(":core:settings"))
 }

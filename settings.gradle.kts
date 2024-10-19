@@ -24,7 +24,6 @@ include(":app")
 include(":feature:editor") 
 
 include(
-    ":core:resources",
     ":core:settings",
     ":core:utils"
 )
