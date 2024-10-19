@@ -29,6 +29,9 @@ class SettingsGeneralFragment : BasePreferenceFragment() {
 
         val uiMode: Preference? = findPreference("pref_ui_mode")
         uiMode?.setOnPreferenceClickListener {
+        
+            val selected = 0
+        
             val items = listOf(
                 getContext()?.getString(Strings.ui_mode_value_followsys) ?: "Default FollowSys",
                 getContext()?.getString(Strings.ui_mode_value_light) ?: "Default Light",
@@ -37,14 +40,16 @@ class SettingsGeneralFragment : BasePreferenceFragment() {
 
             MaterialAlertDialogBuilder(requireContext())
                 .setTitle(getString(Strings.ui_mode_title))
-                .setPositiveButton(getString(Strings.save)) { dialog, which -> }
-                .setNegativeButton(getString(Strings.cancel), null)
-                .setSingleChoiceItems(items.toTypedArray(), 0) { dialog, which -> 
-                    when(which) {
+                .setPositiveButton(getString(Strings.save)) { dialog, which -> 
+                    when(selected) {
                         0 -> ThemeUtils.setFollowSysTheme()
                         1 -> ThemeUtils.setLightTheme()
                         2 -> ThemeUtils.setDarkTheme()
                     }
+                }
+                .setNegativeButton(getString(Strings.cancel), null)
+                .setSingleChoiceItems(items.toTypedArray(), selected) { dialog, which -> 
+                    selected = which
                 }
                 .create()
                 .show()
