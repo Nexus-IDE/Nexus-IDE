@@ -25,4 +25,6 @@ android {
 dependencies {
     implementation(libs.androidx.datastore)
     implementation(libs.androidx.lifecycle.runtime)
+    implementation(libs.androidx.lifecycle.viewmodel)
+    implementation(libs.kotlinx.coroutines.core)
 }
