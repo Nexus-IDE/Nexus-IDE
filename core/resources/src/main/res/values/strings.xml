@@ -7,6 +7,7 @@
     <string name="permission_message">O Nexus IDE precisa de acesso ao armazenamento para funcionar corretamente.</string>
     
     <!-- common -->
+    <string name="copy">Copiar</string>
     <string name="save">Salvar</string>
     <string name="cancel">Cancelar</string>
     <string name="create">Criar</string>
