@@ -84,6 +84,9 @@ dependencies {
   
   implementation(libs.insetter)
   
+  implementation(libs.androidx.datastore)
+  implementation(libs.koin.android)
+  
   implementation(project(":editor"))
   implementation(project(":util"))
   implementation(project(":core:resources"))
