@@ -7,7 +7,7 @@ import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.GravityCompat;
 import com.silva.nexuside.resources.R;
-import com.silva.nexuside.databinding.ActivityEditorBinding;
+import com.silva.nexuside.resources.databinding.ActivityEditorBinding;
 import com.google.android.material.transition.MaterialSharedAxis;
 
 public class EditorActivity extends AppCompatActivity {

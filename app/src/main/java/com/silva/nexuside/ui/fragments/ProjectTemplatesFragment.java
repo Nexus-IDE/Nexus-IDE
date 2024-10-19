@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import com.google.android.material.transition.MaterialSharedAxis;
 import com.silva.nexuside.ui.activities.MainActivity;
 import com.silva.nexuside.adapters.TemplatesAdapter;
-import com.silva.nexuside.databinding.FragmentProjectTemplatesBinding;
+import com.silva.nexuside.resources.databinding.FragmentProjectTemplatesBinding;
 import com.silva.nexuside.enums.ProjectTemplates;
 import com.silva.nexuside.ui.fragments.HomeFragment;
 import com.silva.nexuside.ui.base.BaseFragment;

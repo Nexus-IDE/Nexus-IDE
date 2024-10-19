@@ -25,14 +25,16 @@ android {
     }
   }
 
-  buildFeatures { viewBinding = true }
+  buildFeatures {
+    viewBinding = true 
+  }
   
   kotlinOptions {
     jvmTarget = "17"
   }
   
 }
-/*
+
 materialThemeBuilder {
     themes {
         for ((name, color) in listOf(
@@ -56,10 +58,9 @@ materialThemeBuilder {
     }
 
     generatePaletteAttributes = true
-    packageName = "com.silva.nexuside"
+    packageName = "com.silva.nexuside.resources"
 }
 
-*/
 dependencies {
     implementation(libs.androidx.annotation)
     implementation(libs.androidx.appcompat)
