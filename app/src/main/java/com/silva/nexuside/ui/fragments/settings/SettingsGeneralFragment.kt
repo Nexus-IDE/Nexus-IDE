@@ -28,11 +28,12 @@ class SettingsGeneralFragment : BasePreferenceFragment() {
 
         val uiMode: Preference? = findPreference("pref_ui_mode")
         uiMode?.setOnPreferenceClickListener {
-            val items = listOf(
-                getContext()?.getString(Strings.ui_mode_value_followsys) ?: "Default FollowSys",
-                getContext()?.getString(Strings.ui_mode_value_light) ?: "Default Light",
-                getContext()?.getString(Strings.ui_mode_value_dark) ?: "Default Dark"
-            )
+            val items =
+                listOf(
+                    getContext()?.getString(Strings.ui_mode_value_followsys) ?: "Default FollowSys",
+                    getContext()?.getString(Strings.ui_mode_value_light) ?: "Default Light",
+                    getContext()?.getString(Strings.ui_mode_value_dark) ?: "Default Dark",
+                )
 
             MaterialAlertDialogBuilder(requireContext())
                 .setTitle(getString(Strings.ui_mode_title))

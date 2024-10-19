@@ -1,9 +1,10 @@
 plugins {
   alias(libs.plugins.android.library)
+  alias(libs.plugins.kotlin.android)
 }
 
 android {
-  namespace = "com.silva.editor"
+  namespace = "com.silva.util"
   compileSdk = 34
   
   defaultConfig {
@@ -23,16 +24,14 @@ android {
   }
 
   buildFeatures { viewBinding = true }
+  
+  kotlinOptions {
+    jvmTarget = "17"
+  }
 }
 
 dependencies {
-  implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
-
   implementation(libs.androidx.appcompat)
   implementation(libs.google.material)
-  implementation(libs.google.guava)
-  implementation(libs.google.gson)
-  implementation(libs.common.editor)
-  implementation(libs.common.editor.textmate)
-  implementation(project(":util"))
+  implementation(libs.common.prdownloader)
 }

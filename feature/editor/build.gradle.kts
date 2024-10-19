@@ -3,7 +3,7 @@ plugins {
 }
 
 android {
-  namespace = "com.silva.util"
+  namespace = "com.silva.editor"
   compileSdk = 34
   
   defaultConfig {
@@ -26,7 +26,13 @@ android {
 }
 
 dependencies {
+  implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
+
   implementation(libs.androidx.appcompat)
   implementation(libs.google.material)
-  implementation(libs.common.prdownloader)
+  implementation(libs.google.guava)
+  implementation(libs.google.gson)
+  implementation(libs.common.editor)
+  implementation(libs.common.editor.textmate)
+  implementation(project(":core:utils"))
 }

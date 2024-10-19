@@ -1,7 +1,6 @@
 plugins {
   alias(libs.plugins.android.library)
   alias(libs.plugins.kotlin.android)
-  id("dev.rikka.tools.materialthemebuilder")
 }
 
 android {
@@ -27,8 +26,13 @@ android {
   }
 
   buildFeatures { viewBinding = true }
+  
+  kotlinOptions {
+    jvmTarget = "17"
+  }
+  
 }
-
+/*
 materialThemeBuilder {
     themes {
         for ((name, color) in listOf(
@@ -55,6 +59,7 @@ materialThemeBuilder {
     packageName = "com.silva.nexuside"
 }
 
+*/
 dependencies {
     implementation(libs.androidx.annotation)
     implementation(libs.androidx.appcompat)
