@@ -15,7 +15,7 @@ import com.silva.nexuside.BuildConfig
 class CrashActivity : AppCompatActivity() {
 
     private var _binding: ActivityCrashBinding? = null
-    private var binding: ActivityCrashBinding
+    private val binding: ActivityCrashBinding
         get() = _binding!!
         
     private val deviceInfo: String
@@ -45,7 +45,6 @@ class CrashActivity : AppCompatActivity() {
     
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        EdgeToEdge.enable(this)
         _binding = ActivityCrashBinding.inflate(getLayoutInflater())
         setContentView(binding.root)
         
