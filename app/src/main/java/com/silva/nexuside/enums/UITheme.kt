@@ -36,7 +36,7 @@ enum class UITheme(
     
     fun getValueOf(name: String): UITheme? {
         for (theme in values()) {
-            if (theme.name().equals(name))
+            if (theme.name == name)
                 return theme
         }
         return null
