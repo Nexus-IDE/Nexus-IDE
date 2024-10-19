@@ -1,4 +1,4 @@
-package com.silva.nexuside.core.settings.repositories
+package com.silva.nexuside.settings.repositories
 
 import androidx.datastore.core.DataStore
 import androidx.datastore.preferences.core.Preferences
