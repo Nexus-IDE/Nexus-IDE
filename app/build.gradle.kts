@@ -58,6 +58,10 @@ android {
             keyPassword = "testkey"
         }
     }
+    
+    kotlinOptions {
+        jvmTarget = "17"
+    }
 }
 
 dependencies {
