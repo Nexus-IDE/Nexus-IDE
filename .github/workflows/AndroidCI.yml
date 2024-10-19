@@ -78,7 +78,7 @@ jobs:
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
-          name: app-${{ matrix.build-type }}
+          name: nexus-${{ matrix.build-type }}
           path: app/build/outputs/apk/${{ matrix.build-type }}/app-${{ matrix.build-type }}.apk
           
       - name: Send APK to Telegram

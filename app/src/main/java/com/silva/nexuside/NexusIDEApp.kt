@@ -25,7 +25,7 @@ class NexusIDEApp : Application() {
     
     private fun uncaughtException(thread: Thread, th: Throwable) {
         try {
-          val intent = Intent(this, CrashActivity::class.kt).apply {
+          val intent = Intent(this, CrashActivity::class.java).apply {
               putExtra("key_extra_error", ThrowableUtils.getFullStackTrace(th))
               flags = Intent.FLAG_ACTIVITY_NEW_TASK or
               Intent.FLAG_ACTIVITY_CLEAR_TASK or
