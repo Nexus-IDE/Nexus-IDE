@@ -20,5 +20,11 @@ dependencyResolutionManagement {
 rootProject.name = "NexusIDE"
 
 include(":app")
-include(":editor", ":util") 
-include(":core:resources", ":core:settings")
+
+include(":feature-editor") 
+
+include(
+    ":core:resources",
+    ":core:settings",
+    ":core:utils"
+)

@@ -87,8 +87,9 @@ dependencies {
   implementation(libs.androidx.datastore)
   implementation(libs.koin.android)
   
-  implementation(project(":editor"))
-  implementation(project(":util"))
+  implementation(project(":feature:editor"))
+  
+  implementation(project(":core:utils"))
   implementation(project(":core:resources"))
   implementation(project(":core:settings"))
 }
