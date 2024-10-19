@@ -69,6 +69,9 @@ dependencies {
   implementation(libs.androidx.annotation)
   implementation(libs.androidx.appcompat)
   implementation(libs.androidx.preference)
+  implementation(libs.androidx.datastore)
+  implementation(libs.androidx.lifecycle.runtime)
+  implementation(libs.androidx.lifecycle.viewmodel)
   coreLibraryDesugaring(libs.androidx.desugar)
 
   implementation(libs.google.material)
@@ -83,6 +86,8 @@ dependencies {
   implementation(libs.glide.compiler)
   
   implementation(libs.insetter)
+  
+  implementation(libs.koin.android)
   
   implementation(project(":editor"))
   implementation(project(":util"))
