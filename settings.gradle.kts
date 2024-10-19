@@ -21,7 +21,7 @@ rootProject.name = "NexusIDE"
 
 include(":app")
 
-include(":feature-editor") 
+include(":feature:editor") 
 
 include(
     ":core:resources",
