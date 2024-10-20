@@ -21,6 +21,7 @@ class NexusIDEApp : Application() {
         Thread.setDefaultUncaughtExceptionHandler(this::uncaughtException)
         
         DynamicColors.applyToActivitiesIfAvailable(this)
+        configureKoin()
     }
     
     private fun uncaughtException(thread: Thread, th: Throwable) {
