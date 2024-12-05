@@ -1,24 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.preference.PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
-    
-    <PreferenceCategory
-        android:title="@string/appearance_category"
-        android:iconSpaceReserved="false"
-        android:singleLineTitle="false">
-        
-        <Preference
-            android:key="pref_ui_mode"
-            android:title="@string/ui_mode_title"
-            android:summary="@string/ui_mode_summary"
-            app:icon="@drawable/ic_brightness_4" />
-            
-        <Preference
-            android:key="pref_ui_theme"
-            android:title="@string/ui_theme_title"
-            android:summary="@string/ui_theme_summary"
-            app:icon="@drawable/ic_format_color_fill" />
-        
-    </PreferenceCategory>
-    
+  xmlns:app="http://schemas.android.com/apk/res-auto">
+
+  <PreferenceCategory
+    android:title="@string/appearance_category"
+    android:iconSpaceReserved="false"
+    android:layout="@layout/preference_material_category"
+    android:singleLineTitle="false" />
+
+  <Preference
+    android:key="pref_ui_mode"
+    android:title="@string/ui_mode_title"
+    android:summary="@string/ui_mode_summary"
+    android:layout="@layout/preference_material_top"
+    app:icon="@drawable/ic_brightness_4" />
+
+  <Preference
+    android:key="pref_ui_theme"
+    android:title="@string/ui_theme_title"
+    android:summary="@string/ui_theme_summary"
+    android:layout="@layout/preference_material_bottom"
+    app:icon="@drawable/ic_format_color_fill" />
+
+
 </androidx.preference.PreferenceScreen>
