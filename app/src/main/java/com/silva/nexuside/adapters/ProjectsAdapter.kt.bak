@@ -36,7 +36,7 @@ class ProjectsAdapter(val arr: List<String>, val mOnClickListener: ProjectClickL
         return arr.size
     }
     
-    interface ProjectClickListener {
+    open interface ProjectClickListener {
         fun onClick(arr: List<String>, position: Int)
     }
 }
