@@ -19,7 +19,7 @@ androidx-lifecycle-viewmodel = { module = "androidx.lifecycle:lifecycle-viewmode
 # Common
 common-editor = { module = "io.github.Rosemoe.sora-editor:editor", version.ref = "editor" }
 common-editor-textmate = { module = "io.github.Rosemoe.sora-editor:language-textmate", version.ref = "editor" }
-common-prdownloader = { module = "com.github.MindorksOpenSource:PRDownloader", version = "0.6.0" }
+common-prdownloader = { module = "com.github.MindorksOpenSource:PRDownloader", version = "0.7.0" }
 common-utilcode = { module = "com.blankj:utilcodex", version = "1.31.1" }
 
 # UI
