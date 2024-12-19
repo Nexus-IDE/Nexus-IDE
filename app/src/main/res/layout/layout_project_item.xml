@@ -11,7 +11,8 @@
 	<RelativeLayout
 	    android:layout_width="match_parent"
 	    android:layout_height="match_parent"
-	    android:background="?colorSurfaceVariant"
+	    android:background="?colorSurfaceContainerLow"
+	    android:foreground="?selectableItemBackground"
 	    android:orientation="vertical"
 	    android:paddingHorizontal="16dp"
 	    android:paddingVertical="12dp">

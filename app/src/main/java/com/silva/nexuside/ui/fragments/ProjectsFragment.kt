@@ -10,6 +10,7 @@ import com.silva.nexuside.adapters.ProjectsAdapter
 import com.silva.nexuside.databinding.FragmentProjectsBinding
 import com.silva.nexuside.project.ProjectManager
 import com.silva.nexuside.ui.base.BaseFragment
+import com.silva.nexuside.ui.activities.EditorActivity
 
 class ProjectsFragment : BaseFragment() {
 
@@ -57,6 +58,10 @@ class ProjectsFragment : BaseFragment() {
             binding.projects.layoutManager = LinearLayoutManager(requireContext())
             val adapter = ProjectsAdapter(projectList)
             binding.projects.adapter = adapter
+            adapter.setOnClickListener { arr, position ->
+                val intent = Intent(requireActivity(), EditorActivity::class.java)
+                startActivity(intent)
+            }
         }
     }
 }
