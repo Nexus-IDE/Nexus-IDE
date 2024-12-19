@@ -6,8 +6,7 @@
 	android:layout_height="wrap_content"
 	style="?attr/materialCardViewFilledStyle"
 	android:layout_marginHorizontal="16dp"
-    android:layout_marginVertical="8dp"
-    android:id="@+id/rootView">
+    android:layout_marginVertical="8dp">
 	
 	<RelativeLayout
 	    android:layout_width="match_parent"
@@ -16,7 +15,8 @@
 	    android:foreground="?selectableItemBackground"
 	    android:orientation="vertical"
 	    android:paddingHorizontal="16dp"
-	    android:paddingVertical="12dp">
+	    android:paddingVertical="12dp"
+	    android:id="@+id/rootView">
 	    
 	    <com.google.android.material.textview.MaterialTextView
             android:id="@android:id/title"
