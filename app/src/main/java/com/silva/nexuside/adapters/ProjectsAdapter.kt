@@ -22,7 +22,7 @@ class ProjectsAdapter(private val arr: List<String>) :
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.binding.title.text = Uri.parse(arr[position]).lastPathSegment
         holder.binding.summary.text = arr[position]
-        holder.itemView.setOnClickListener { itemClickListener?.invoke(arr, position) }
+        holder.binding.rootView.setOnClickListener { itemClickListener?.invoke(arr, position) }
     }
     
     fun setOnClickListener(listener: (List<String>, Int) -> Unit) {

@@ -6,7 +6,8 @@
 	android:layout_height="wrap_content"
 	style="?attr/materialCardViewFilledStyle"
 	android:layout_marginHorizontal="16dp"
-    android:layout_marginVertical="8dp">
+    android:layout_marginVertical="8dp"
+    android:id="@+id/rootView">
 	
 	<RelativeLayout
 	    android:layout_width="match_parent"
