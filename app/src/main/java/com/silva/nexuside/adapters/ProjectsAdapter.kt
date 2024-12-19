@@ -6,10 +6,12 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.silva.nexuside.databinding.LayoutProjectItemBinding
 
-class ProjectsAdapter(private val arr: List<String>) :
+class ProjectsAdapter(val arr: List<String>, val mOnClickListener: ProjectClickListener) :
     RecyclerView.Adapter<ProjectsAdapter.ViewHolder>() {
     
-    private var itemClickListener: ((List<String>, Int) -> Unit) ? = null
+    companion object {
+        var onClickListener: ProjectClickListener? = null
+    }
 
     class ViewHolder(var binding: LayoutProjectItemBinding) : RecyclerView.ViewHolder(binding.root)
 
@@ -20,16 +22,21 @@ class ProjectsAdapter(private val arr: List<String>) :
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+        onClickListener = mOnClickListener
         holder.binding.title.text = Uri.parse(arr[position]).lastPathSegment
         holder.binding.summary.text = arr[position]
-        holder.binding.rootView.setOnClickListener { itemClickListener?.invoke(arr, position) }
-    }
-    
-    fun setOnClickListener(listener: (List<String>, Int) -> Unit) {
-        itemClickListener = listener
+        holder.binding.rootView.setOnClickListener {
+            if (onClickListener != null) {
+                onClickListener?.onClick(arr, position)
+            }
+        }
     }
 
     override fun getItemCount(): Int {
         return arr.size
+    }
+    
+    open interface ProjectClickListener() {
+        fun onClick(arr: List<String>, position: Int)
     }
 }

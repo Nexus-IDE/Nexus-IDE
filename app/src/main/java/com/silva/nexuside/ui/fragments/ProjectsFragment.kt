@@ -57,12 +57,11 @@ class ProjectsFragment : BaseFragment() {
             binding.noProjectsFound.visibility = View.GONE
             binding.projects.visibility = View.VISIBLE
             binding.projects.layoutManager = LinearLayoutManager(requireContext())
-            val adapter = ProjectsAdapter(projectList)
-            binding.projects.adapter = adapter
-            adapter.setOnClickListener { arr, position ->
+            val adapter = ProjectsAdapter(projectList, ProjectsAdapter.ProjectClickListener { arr, position ->
                 val intent = Intent(requireActivity(), EditorActivity::class.java)
                 startActivity(intent)
-            }
+            })
+            binding.projects.adapter = adapter
         }
     }
 }
