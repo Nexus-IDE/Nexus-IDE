@@ -57,7 +57,7 @@ class ProjectsFragment : BaseFragment() {
             binding.noProjectsFound.visibility = View.GONE
             binding.projects.visibility = View.VISIBLE
             binding.projects.layoutManager = LinearLayoutManager(requireContext())
-            val adapter = ProjectsAdapter(projectList, ProjectsAdapter.ProjectClickListener {
+            val adapter = ProjectsAdapter(projectList, object : ProjectsAdapter.ProjectClickListener {
                 override fun onClick(arr: List<String>, position: Int) {
                     val intent = Intent(requireActivity(), EditorActivity::class.java)
                     startActivity(intent)
