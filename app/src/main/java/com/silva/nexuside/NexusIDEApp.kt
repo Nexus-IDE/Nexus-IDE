@@ -16,11 +16,11 @@ class NexusIDEApp : Application() {
     private var uncaughtException: Thread.UncaughtExceptionHandler? = null
 
     override fun onCreate() {
+        DynamicColors.applyToActivitiesIfAvailable(this)
         super.onCreate()
         uncaughtException = Thread.getDefaultUncaughtExceptionHandler()
         Thread.setDefaultUncaughtExceptionHandler(this::uncaughtException)
         
-        DynamicColors.applyToActivitiesIfAvailable(this)
         configureKoin()
     }
     
