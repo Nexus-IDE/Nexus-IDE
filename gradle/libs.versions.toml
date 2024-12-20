@@ -38,7 +38,7 @@ glide-compiler = { module = "com.github.bumptech.glide:compiler", version.ref = 
 koin-android = { group = "io.insert-koin", name = "koin-android", version.ref = "koin"}
 
 # Kotlin
-kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version = "1.9.0" }
+kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version = "1.10.1" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
