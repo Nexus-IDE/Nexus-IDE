@@ -59,6 +59,7 @@ class ProjectsFragment : BaseFragment() {
             binding.projects.layoutManager = LinearLayoutManager(requireContext())
             val adapter = ProjectsAdapter(projectList, object : ProjectsAdapter.ProjectClickListener {
                 override fun onClick(arr: List<String>, position: Int) {
+                    Toast.makeText(requireContext(), "Clicked", Toast.LENGTH_SHORT).show()
                     val intent = Intent(requireActivity(), EditorActivity::class.java)
                     startActivity(intent)
                 }
